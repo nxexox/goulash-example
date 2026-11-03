@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% from "_macros.html" import search_form, fact_value, region_badge, completeness, shortlist_form %}
+{% block title %}{{ q or 'Поиск' }}{% endblock %}
+{% block content %}
+{{ search_form(q, f) }}
+
+<div class="notes-bar">
+  {% for word, fixed in result.corrections %}
+    <div class="note info">Исправили опечатку: «{{ word }}» → искали «{{ fixed }}…»</div>
+  {% endfor %}
+  {% if result.unmatched %}
+    <div class="note warn">Не нашли в базе: {{ result.unmatched|join(', ') }}. Попробуйте синоним или категорию.</div>
+  {% endif %}
+  {% if result.relaxed %}
+    <div class="note warn">Нет поставщиков, у которых совпали бы все слова. Показаны частичные совпадения.</div>
+  {% endif %}
+  {% for h in result.query.hints %}<div class="note">{{ h }}</div>{% endfor %}
+</div>
+
+{% macro hit_card(h) %}
+{% set s = h.card %}
+{% set back = request.url.path ~ '?' ~ request.url.query %}
+<article class="card" data-id="{{ s.id }}">
+  <div class="card-head">
+    <div>
+      <h3><a href="/supplier/{{ s.id }}{% if result.region %}?region={{ result.region|urlencode }}{% endif %}">{{ s.name }}</a></h3>
+      <div class="meta">
+        {% if s.city %}{{ s.city }}{% elif s.country %}{{ s.country }}{% else %}город не указан{% endif %}
+        {% if s.website %} · <a href="{{ s.website }}" target="_blank" rel="noopener nofollow">{{ s.domain or s.website }}</a>{% endif %}
+        · проверено {{ s.last_seen|ago }}
+      </div>
+    </div>
+    <div class="card-actions">
+      <label class="cmp"><input type="checkbox" class="cmp-box" value="{{ s.id }}"> Сравнить</label>
+      {{ shortlist_form(s, back) }}
+    </div>
+  </div>
+  <div class="badges">
+    {% if not h.exact %}<span class="badge mid">Совпадение только по категории</span>{% endif %}
+    {{ region_badge(h.region_fit, result.region) }}
+    {% for t in s.category_titles[:4] %}<span class="tag">{{ t }}</span>{% endfor %}
+  </div>
+  {% if s.description %}<p class="desc">{{ s.description[:260] }}{% if s.description|length > 260 %}…{% endif %}</p>{% endif %}
+  <dl class="facts">
+    <div><dt>Контакты</dt><dd>
+      {% for p in s.phones[:2] %}<a href="tel:{{ p.value|replace(' ', '')|replace('(', '')|replace(')', '')|replace('-', '') }}">{{ p.value }}</a>{% endfor %}
+      {% for e in s.emails[:1] %}<a href="mailto:{{ e.value }}">{{ e.value }}</a>{% endfor %}
+      {% if not s.phones and not s.emails %}<span class="unknown">нет данных</span>{% endif %}
+    </dd></div>
+    <div><dt>Мин. заказ</dt><dd>{{ fact_value(s, 'moq') }}</dd></div>
+    <div><dt>Цена</dt><dd>{{ fact_value(s, 'price') }}</dd></div>
+    <div><dt>Документы</dt><dd>{{ fact_value(s, 'certificates') }}</dd></div>
+    <div><dt>Доставка</dt><dd>{{ fact_value(s, 'delivery') }}</dd></div>
+  </dl>
+  <div class="card-foot">
+    <ul class="reasons">{% for r in h.reasons %}<li>{{ r }}</li>{% endfor %}</ul>
+    <div class="complete">Полнота {{ completeness(s) }}</div>
+  </div>
+</article>
+{% endmacro %}
+
+{% if result.hits %}
+  {% if result.region %}
+    <h2 class="section-title">Связаны с регионом «{{ result.region }}» <span class="muted">{{ result.in_region|length }}</span></h2>
+    {% for h in result.in_region %}{{ hit_card(h) }}{% else %}<p class="muted">Нет поставщиков с подтверждённой связью с регионом.</p>{% endfor %}
+    {% if result.out_of_region %}
+      <h2 class="section-title">Доставка в регион не подтверждена <span class="muted">{{ result.out_of_region|length }}</span></h2>
+      <p class="muted small">Подходят по товару, но ни офиса, ни доставки в регион в источниках не нашли. Уточните у поставщика.</p>
+      {% for h in result.out_of_region %}{{ hit_card(h) }}{% endfor %}
+    {% endif %}
+  {% else %}
+    <h2 class="section-title">Найдено <span class="muted">{{ result.hits|length }}</span></h2>
+    {% for h in result.hits %}{{ hit_card(h) }}{% endfor %}
+  {% endif %}
+{% elif q or f.category or f.region %}
+  <div class="empty">
+    <h2>Ничего не нашли</h2>
+    <p>Попробуйте более общее слово или выберите категорию.</p>
+  </div>
+{% endif %}
+
+{% if result.discovery_logged %}
+  <div class="note info">Мало результатов — запрос «{{ q }}» записан в очередь на поиск новых источников. Фоновый сбор учтёт его при следующем обходе.</div>
+{% endif %}
+{% endblock %}

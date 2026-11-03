@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% from "_macros.html" import fact_value, region_badge, completeness, shortlist_form %}
+{% block title %}Сравнение{% endblock %}
+{% block content %}
+<h1>Сравнение поставщиков</h1>
+{% if cards|length < 2 %}
+  <div class="empty">
+    <p>Отметьте «Сравнить» у 2–6 поставщиков в результатах поиска.</p>
+  </div>
+{% else %}
+<form class="inline compare-region" method="get">
+  <input type="hidden" name="ids" value="{{ cards|map(attribute='id')|join(',') }}">
+  <select name="region" onchange="this.form.submit()" aria-label="Регион доставки">
+    <option value="">Регион доставки — не выбран</option>
+    {% for r in REGIONS %}<option value="{{ r }}" {% if region == r %}selected{% endif %}>{{ r }}</option>{% endfor %}
+  </select>
+</form>
+<div class="table-scroll">
+<table class="compare">
+  <thead>
+    <tr><th></th>{% for s in cards %}<th><a href="/supplier/{{ s.id }}">{{ s.name }}</a>
+      <div class="muted small">{{ s.city or s.country or '' }}</div></th>{% endfor %}</tr>
+  </thead>
+  <tbody>
+    {% if region %}<tr><th>Регион «{{ region }}»</th>{% for s in cards %}<td>{{ region_badge(s.region_fit(region), region) }}</td>{% endfor %}</tr>{% endif %}
+    <tr><th>Категории</th>{% for s in cards %}<td>{{ s.category_titles|join(', ') or '—' }}</td>{% endfor %}</tr>
+    <tr><th>Телефон</th>{% for s in cards %}<td>{% for p in s.phones[:2] %}<div>{{ p.value }}</div>{% else %}<span class="unknown">нет данных</span>{% endfor %}</td>{% endfor %}</tr>
+    <tr><th>E-mail</th>{% for s in cards %}<td>{% for e in s.emails[:2] %}<div>{{ e.value }}</div>{% else %}<span class="unknown">нет данных</span>{% endfor %}</td>{% endfor %}</tr>
+    <tr><th>Сайт</th>{% for s in cards %}<td>{% if s.website %}<a href="{{ s.website }}" target="_blank" rel="noopener nofollow">{{ s.domain or s.website }}</a>{% else %}<span class="unknown">нет</span>{% endif %}</td>{% endfor %}</tr>
+    {% for key, (title, _) in FIELDS.items() %}
+    <tr><th>{{ title }}</th>{% for s in cards %}<td>{{ fact_value(s, key) }}</td>{% endfor %}</tr>
+    {% endfor %}
+    <tr><th>Полнота</th>{% for s in cards %}<td>{{ completeness(s) }}</td>{% endfor %}</tr>
+    <tr><th>Проверено</th>{% for s in cards %}<td>{{ s.last_seen|ago }}</td>{% endfor %}</tr>
+    <tr><th>Заметки</th>{% for s in cards %}<td class="small">{% for n in s.notes[:2] %}<div>{{ n.text|truncate(120) }}</div>{% else %}—{% endfor %}</td>{% endfor %}</tr>
+    <tr><th>Статус</th>{% for s in cards %}<td>{{ shortlist_form(s, request.url.path ~ '?' ~ request.url.query) }}</td>{% endfor %}</tr>
+  </tbody>
+</table>
+</div>
+<p class="muted small">Наведите на значение, чтобы увидеть фрагмент источника. «Нет данных» означает, что значение не найдено, а не что его нет.</p>
+{% endif %}
+{% endblock %}

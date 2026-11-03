@@ -1,0 +1,10 @@
+# Render Blueprint: free Docker web service. Database is external (Neon free tier), set DATABASE_URL in the dashboard.
+services:
+  - type: web
+    name: goulash-suppliers
+    runtime: docker
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: DATABASE_URL
+        sync: false

@@ -1,0 +1,240 @@
+[
+  {
+    "source_url": "https://food-fresh.ru/",
+    "contacts": [
+      "mailto:food-fresh.ru@mail.ru",
+      "tel:+74991100263",
+      "tel:+79035326445"
+    ],
+    "jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://food-fresh.ru/",
+            "url": "https://food-fresh.ru/",
+            "name": "Поставщик продуктов для ресторанов и кафе оптом в Москве и МО | Фуд Фреш",
+            "isPartOf": {
+              "@id": "https://food-fresh.ru/#website"
+            },
+            "datePublished": "2023-10-12T09:15:05+00:00",
+            "dateModified": "2026-10-27T16:46:22+00:00",
+            "description": "Продукты оптом для ресторанов и кафе: заказ до 18:00 — доставим завтра, НДС 10 % и 22 %, отсрочка по договору, мин. заказ 10 000 ₽. Тел. 8 (499) 110-02-63",
+            "breadcrumb": {
+              "@id": "https://food-fresh.ru/#breadcrumb"
+            },
+            "inLanguage": "ru-RU",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://food-fresh.ru/"
+                ]
+              }
+            ],
+            "about": {
+              "@id": "https://food-fresh.ru/#organization"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://food-fresh.ru/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная страница"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://food-fresh.ru/#website",
+            "url": "https://food-fresh.ru/",
+            "name": "Food Fresh",
+            "description": "",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://food-fresh.ru/?s={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            ],
+            "inLanguage": "ru-RU",
+            "publisher": {
+              "@id": "https://food-fresh.ru/#organization"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://food-fresh.ru/#organization",
+            "name": "Фуд Фреш",
+            "alternateName": "Food Fresh",
+            "url": "https://food-fresh.ru/",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://food-fresh.ru/#/schema/logo/image/",
+              "url": "https://food-fresh.ru/wp-content/themes/foodfresh/assets/img/logo.svg",
+              "contentUrl": "https://food-fresh.ru/wp-content/themes/foodfresh/assets/img/logo.svg",
+              "caption": "Фуд Фреш"
+            },
+            "image": {
+              "@id": "https://food-fresh.ru/#/schema/logo/image/"
+            },
+            "description": "Оптовые и мелкооптовые поставки продуктов питания для ресторанов, кафе, гостиниц и столовых по Москве и Московской области.",
+            "telephone": "+7 (499) 110-02-63",
+            "email": "food-fresh.ru@mail.ru",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "ул. Дунаевского, д. 4",
+              "addressLocality": "Москва",
+              "postalCode": "121165",
+              "addressCountry": "RU"
+            },
+            "location": [
+              {
+                "@type": "Place",
+                "name": "Офис",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "ул. Дунаевского, д. 4",
+                  "addressLocality": "Москва",
+                  "postalCode": "121165",
+                  "addressCountry": "RU"
+                }
+              },
+              {
+                "@type": "Place",
+                "name": "Склад и самовывоз",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Бережковская наб., 12А",
+                  "addressLocality": "Москва",
+                  "addressCountry": "RU"
+                }
+              }
+            ],
+            "areaServed": [
+              "Москва",
+              "Московская область"
+            ]
+          },
+          {
+            "@type": "WholesaleStore",
+            "@id": "https://food-fresh.ru/#sklad",
+            "name": "Фуд Фреш — склад и самовывоз",
+            "url": "https://food-fresh.ru/",
+            "image": {
+              "@id": "https://food-fresh.ru/#/schema/logo/image/"
+            },
+            "telephone": "+7 (499) 110-02-63",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Бережковская наб., 12А",
+              "addressLocality": "Москва",
+              "postalCode": "121059",
+              "addressCountry": "RU"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "08:00",
+                "closes": "20:00"
+              }
+            ],
+            "areaServed": [
+              "Москва",
+              "Московская область"
+            ],
+            "parentOrganization": {
+              "@id": "https://food-fresh.ru/#organization"
+            }
+          }
+        ]
+      }
+    ],
+    "jsonld_errors": 0,
+    "products": [],
+    "condition_evidence": [
+      "Поставщик продуктов для ресторанов и кафе оптом в Москве и МО | Фуд Фреш",
+      "Доставка и оплата",
+      "Доставка по Москве в пределах МКАД - бесплатно",
+      "от 10 000 руб.",
+      "Доставка и оплата",
+      "Доставка",
+      "Продукты оптом для ресторанов и кафе",
+      "Доставка по Москве и области, самовывоз с Бережковской наб.",
+      "Быстрая доставка",
+      "от 39,20 ₽/кг",
+      "от 39 ₽/кг",
+      "от 155,69 ₽/кг",
+      "от 91 ₽/кг",
+      "от 238 ₽/кг",
+      "от 336 ₽/кг",
+      "от 65 ₽/кг",
+      "от 151,63 ₽/кг",
+      "от 252,21 ₽/кг",
+      "от 10,13 ₽/шт.",
+      "от 336 ₽/кг",
+      "Минимальный заказ от 10 000 рублей",
+      "  разделе Доставка и оплата",
+      "от 74,36 ₽/шт.",
+      "от 475 ₽",
+      "от 66,53 ₽/шт.",
+      "от 48,62 ₽/шт.",
+      "от 1 050 ₽/кг",
+      "от 133,65 ₽/кг",
+      "от 752,64 ₽/кг",
+      "от 448 ₽/кг"
+    ]
+  },
+  {
+    "source_url": "https://www.ingredico.ru/",
+    "contacts": [
+      "mailto:info@ingredico.ru",
+      "tel:+7%20495%20980-25-18"
+    ],
+    "jsonld": [],
+    "jsonld_errors": 0,
+    "products": [],
+    "condition_evidence": []
+  },
+  {
+    "source_url": "https://tkdip.ru/",
+    "contacts": [
+      "mailto:dip@tkdip.ru",
+      "tel:+73432887388",
+      "tel:+73433630489",
+      "tel:+73433790039"
+    ],
+    "jsonld": [],
+    "jsonld_errors": 0,
+    "products": [],
+    "condition_evidence": [
+      "Продукты оптом в Екатеринбурге и с доставкой по всей России купить в ТК \"ДИП\"",
+      "Продукты питания, бытовая химия и промтовары оптом",
+      "Продажа оптом продуктов питания и промышленных товаров",
+      "Доставка изотермическими фургонами",
+      "Наша компания - надежный поставщик продуктов питания оптом для сегмента HoReCa, розничных сетей и производственных предприятий в регионах Урал, Ханты-Мансийский автономный округ (ХМАО) и Ямало-Ненецкий автономный округ (ЯНАО). Мы предлагаем широкий ассортимент бакалеи, консервации, специй, бытовой химии, а также профессиональных смесей для хлебобулочного и кондитерского производства, маринадов и ингредиентов для ресторанов, кафе и столовых.",
+      "Какие продукты у нас можно купить оптом?",
+      "Шоколад, глазури, сливки, сгущенное молоко оптом для выпечки и десертов",
+      "Бытовая химия оптом: моющие и чистящие средства для профессионального и бытового использования",
+      "Инсектициды оптом",
+      "Доставка и сервис",
+      "География наших поставок охватывает Екатеринбург, Челябинск, Тюмень, Сургут, Ханты-Мансийск, Новый Уренгой, Салехард и другие города региона Урал, ХМАО и ЯНАО. Мы обеспечиваем своевременную доставку и индивидуальный подход к каждому клиенту.",
+      "Продукты питания оптом"
+    ]
+  }
+]

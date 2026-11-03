@@ -1,0 +1,19 @@
+{
+  "records": 12,
+  "domains": 12,
+  "first": {
+    "inserted": 0,
+    "updated": 0,
+    "unchanged": 12
+  },
+  "replay": {
+    "inserted": 0,
+    "updated": 0,
+    "unchanged": 12
+  },
+  "synthetic_change": {
+    "inserted": 0,
+    "updated": 1,
+    "unchanged": 0
+  }
+}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% from "_macros.html" import search_form %}
+{% block content %}
+<section class="hero">
+  <h1>Найдите поставщика продуктов, ингредиентов или упаковки</h1>
+  <p class="lead">Поиск по товару и региону доставки, сравнение условий и контактов, вопросы для первого звонка.
+    Каждый факт — со ссылкой на источник и датой проверки.</p>
+  {{ search_form(big=True) }}
+  <div class="examples">
+    Например:
+    {% for e in examples %}<a href="{{ search_url(q=e) }}">{{ e }}</a>{% endfor %}
+  </div>
+</section>
+
+<section class="stats">
+  <div><b>{{ stats.suppliers }}</b><span>поставщиков в базе</span></div>
+  <div><b>{{ stats.enriched }}</b><span>сайтов разобрано</span></div>
+  <div><b>{{ stats.facts }}</b><span>фактов с источниками</span></div>
+  <div><b>{{ stats.regions }}</b><span>регионов</span></div>
+  <div><b>{{ stats.updated|ago }}</b><span>последнее обновление</span></div>
+</section>
+
+<section class="grid2">
+  <div class="panel">
+    <h2>Категории</h2>
+    <div class="chips">
+      {% for cid, title, n in categories %}<a class="chip" href="{{ search_url(category=cid) }}">{{ title }} <i>{{ n }}</i></a>{% endfor %}
+    </div>
+  </div>
+  <div class="panel">
+    <h2>Регионы офисов</h2>
+    <div class="chips">
+      {% for r, n in regions %}<a class="chip" href="{{ search_url(region=r) }}">{{ r }} <i>{{ n }}</i></a>{% endfor %}
+    </div>
+    <p class="muted small">Регион офиса ≠ зона доставки. Подтверждённую доставку показываем отдельно.</p>
+  </div>
+</section>
+{% endblock %}

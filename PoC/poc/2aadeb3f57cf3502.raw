@@ -1,0 +1,1138 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="Keywords" />
+<meta name="description" content="Description" />
+<link href="/bitrix/cache/css/s1/sppi/kernel_main/kernel_main.css?175189164844417" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/sppi/page_c8a318501b8b51185cc7cbc64a3e32e7/page_c8a318501b8b51185cc7cbc64a3e32e7.css?1751630317743" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/sppi/template_cafb5d313bf3cab20a14dd5cd9dc4650/template_cafb5d313bf3cab20a14dd5cd9dc4650.css?175163023135882" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1793736886','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'81154f43c281d2a213ed71026dff049b'});</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/sppi/kernel_main/kernel_main.js?1751891648299465"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_db.min.js?14902648325062"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_frame_cache.min.js?148467389711191"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js','/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/json/json2.min.js','/bitrix/js/main/core/core_ls.js','/bitrix/js/main/core/core_fx.js','/bitrix/js/main/session.js','/bitrix/js/main/core/core_popup.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/core/core_date.js','/bitrix/js/main/utils.js','/bitrix/templates/sppi/js/jquery.js','/bitrix/templates/sppi/js/jcarousellite.js','/bitrix/templates/sppi/js/jquery.lightbox-0.5.js','/bitrix/templates/sppi/js/scripts.js','/bitrix/templates/sppi/components/bitrix/news.index/members_header/script.js','/bitrix/templates/sppi/components/bitrix/menu/main_menu_top/script.js','/bitrix/templates/sppi/components/bitrix/menu/left_menu/script.js','/bitrix/templates/sppi/components/bitrix/menu/main_menu_bottom/script.js']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css','/bitrix/js/main/core/css/core_popup.css','/bitrix/js/main/core/css/core_date.css','/bitrix/templates/sppi/components/bitrix/news/sppi_members/bitrix/news.detail/.default/style.css','/bitrix/templates/sppi/css/jquery.lightbox-0.5.css','/bitrix/templates/sppi/components/bitrix/news.index/members_header/style.css','/bitrix/templates/sppi/components/bitrix/menu/main_menu_top/style.css','/bitrix/templates/sppi/components/bitrix/menu/left_menu/style.css','/bitrix/templates/sppi/components/bitrix/news.index/last-news_on-main/style.css','/bitrix/templates/sppi/components/bitrix/system.auth.form/sppi_auth/style.css','/bitrix/templates/sppi/components/bitrix/menu/main_menu_bottom/style.css','/bitrix/templates/sppi/styles.css']); </script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/sppi/template_209a4f18f2d507f6afd21cd158dcd99a/template_209a4f18f2d507f6afd21cd158dcd99a.js?1751630231123127"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "928318c2273ce1499da194d815862201"]); _ba.push(["host", "sppiunion.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+		<title>Живодан Рус, ООО</title>
+
+		<link rel="icon" href="/bitrix/templates/sppi/favicon.ico">
+
+			</head>
+	<body>
+	<div id="panel">
+			</div>
+ 		<div class="centermap">
+	        <!--- Что бы вставить картинку шапки без надписи 10 лет, то поменяйте класс блока с head на head2 ---->
+	        <!--- Что бы вставить картинку шапки без надписи 10 лет, то поменяйте класс блока с head на head2 ---->
+	        <!--- Что бы вставить картинку шапки без надписи 10 лет, то поменяйте класс блока с head на head2 ---->
+	        <div class="head">
+	            <a class="logo" href="/" title=""><img src="/bitrix/templates/sppi/images/logo.gif" alt="" /></a>
+	            <div class="icons">
+	                <p><a href="/" title=""><img src="/bitrix/templates/sppi/images/ic1.gif" alt="" /></a></p>
+	                <p><a href="/map.php" title=""><img src="/bitrix/templates/sppi/images/ic2.gif" alt="" /></a></p>
+	            </div>
+	        </div>
+			<div class="content">
+	           
+<div class="fotos">
+	<div class="prev">
+		<a href="#" title=""><img src="/bitrix/templates/sppi/images/prev.gif" alt="" /></a>
+	</div>
+	<div class="phots">   
+								<ul>
+														<li id="bx_4009546559_1">
+			
+						<a href="/uchastniki/id1" title="ИРЕКС ТРИЭР, ООО">
+							<img src="/upload/iblock/d3f/d3f62ce8e30f2f46611513c4d69a2deb.png" alt="ИРЕКС ТРИЭР, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_4">
+			
+						<a href="/uchastniki/id4" title="Тереза -Интер, ООО ">
+							<img src="/upload/iblock/225/22567b118bcc95f8b24b8a5ba1cbbd32.jpg" alt="Тереза -Интер, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_6">
+			
+						<a href="/uchastniki/id6" title="СОЮЗСНАБ, АО ">
+							<img src="/upload/iblock/f86/f86645d3f14fe2b4b429d9a7ae54f020.jpg" alt="СОЮЗСНАБ, АО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_55">
+			
+						<a href="/uchastniki/id55" title="Зеленые линии, ООО ">
+							<img src="/upload/iblock/1e4/1e4cdb9c09bbdf0c53612a9d2c46bf0d.jpg" alt="Зеленые линии, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_46">
+			
+						<a href="/uchastniki/id46" title="Новозаймс РУС, ООО">
+							<img src="/upload/iblock/7ce/7ce85ab25e95251906e768a3cd7a3153.jpg" alt="Новозаймс РУС, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_47">
+			
+						<a href="/uchastniki/id47" title="Скорпио-Аромат, ООО ">
+							<img src="/upload/iblock/4a7/4a718f974736cae9cd9c93467fee7fc1.png" alt="Скорпио-Аромат, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_50">
+			
+						<a href="/uchastniki/id50" title="Инжиниринговый центр &quot;Протеин-Продукт&quot;, АО ">
+							<img src="/upload/iblock/87c/87cd2592a4121ba8255f676ce448fecb.jpg" alt="Инжиниринговый центр &quot;Протеин-Продукт&quot;, АО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_51">
+			
+						<a href="/uchastniki/id51" title="Аспасвит, ООО">
+							<img src="/upload/iblock/6b8/6b8c1c2889f354416cf68f2039be7614.jpg" alt="Аспасвит, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_52">
+			
+						<a href="/uchastniki/id52" title="Коммерческо-производственная фирма «МИЛОРАДА», ООО ">
+							<img src="/upload/iblock/424/424a4956279c9210d8c8014ad9e4b1a2.jpg" alt="Коммерческо-производственная фирма «МИЛОРАДА», ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_61">
+			
+						<a href="/uchastniki/id61" title="ОМЕГА ФУД ТЕХНОЛОДЖИС, ООО ">
+							<img src="/upload/iblock/823/823fc787e3905c4695abe3d2b9fcf740.png" alt="ОМЕГА ФУД ТЕХНОЛОДЖИС, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_54">
+			
+						<a href="/uchastniki/id54" title="Группа компаний ПТИ, ООО ">
+							<img src="/upload/iblock/696/6966a411e254dc60853b2c09dd0443a5.png" alt="Группа компаний ПТИ, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_63">
+			
+						<a href="/uchastniki/id63" title="Аромадон, ООО ">
+							<img src="/upload/iblock/521/5215c9572ce32eeb624ac0dec83d4792.png" alt="Аромадон, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_59">
+			
+						<a href="/uchastniki/id59" title="Балтийская Группа, АО ">
+							<img src="/upload/iblock/749/749d9da35b736c092936742fc2912180.png" alt="Балтийская Группа, АО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_67">
+			
+						<a href="/uchastniki/id67" title="АГРАНА Фрут Московский регион, ООО">
+							<img src="/upload/iblock/158/158c6b0835c47a12ceab2d0fd496e98f.png" alt="АГРАНА Фрут Московский регион, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_60">
+			
+						<a href="/uchastniki/id60" title="ПРОТЕИН-ПЛЮС, ООО ">
+							<img src="/upload/iblock/a95/a95aaf10377f3cfd127d26fb55f2b27a.jpg" alt="ПРОТЕИН-ПЛЮС, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_69">
+			
+						<a href="/uchastniki/id69" title="ЭФКО Пищевые Ингредиенты, ООО ">
+							<img src="/upload/iblock/58c/58cedbfc526e2982a56a05b79b3024e5.png" alt="ЭФКО Пищевые Ингредиенты, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_70">
+			
+						<a href="/uchastniki/id70" title="Макарон-Сервис, ООО">
+							<img src="/upload/iblock/472/472ad9531986b72d70b4237322169479.png" alt="Макарон-Сервис, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_71">
+			
+						<a href="/uchastniki/id71" title="Кока-Кола Софт Дринк Консалтинг, ООО ">
+							<img src="/upload/iblock/24d/24d0cd6692f486ffbf302ec7e9a6c2e3.jpg" alt="Кока-Кола Софт Дринк Консалтинг, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_72">
+			
+						<a href="/uchastniki/id72" title="ЭКО РЕСУРС, АО ">
+							<img src="/upload/iblock/6b7/6b73d7347ac486b90972784b4d740c50.png" alt="ЭКО РЕСУРС, АО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_73">
+			
+						<a href="/uchastniki/id73" title="Пуратос, АО ">
+							<img src="/upload/iblock/926/926f7b6dd4180fa42521bd8f0925ba79.png" alt="Пуратос, АО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_74">
+			
+						<a href="/uchastniki/id74" title="КИМА ЛИМИТЕД, ООО ">
+							<img src="/upload/iblock/a94/a945d530c929e5de0c06397a5707e89a.jpg" alt="КИМА ЛИМИТЕД, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_75">
+			
+						<a href="/uchastniki/id75" title="Русские ингредиенты, ООО ">
+							<img src="/upload/iblock/a7a/a7ae082f3ea96d852e4e3f22cf0ba907.jpg" alt="Русские ингредиенты, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_576">
+			
+						<a href="/uchastniki/id576" title="Вердэ ООО">
+							<img src="/upload/iblock/b4a/b4ae8e5ae97aae00b77b5d80fbcd645f.png" alt="Вердэ ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_77">
+			
+						<a href="/uchastniki/id77" title="ДСМ Восточная Европа, ООО">
+							<img src="/upload/iblock/e33/e33dbd7d0d8b9f4aa6cd8926cce3a842.png" alt="ДСМ Восточная Европа, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_80">
+			
+						<a href="/uchastniki/id80" title="БАРГУС, ООО ">
+							<img src="/upload/iblock/86c/86cd20c0ebeadc9635602c729e762537.jpg" alt="БАРГУС, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_82">
+			
+						<a href="/uchastniki/id82" title="Союзоптторг, ООО">
+							<img src="/upload/iblock/559/55928e80f742c3f39efb8eac86cf9c6f.jpg" alt="Союзоптторг, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_83">
+			
+						<a href="/uchastniki/id83" title="ВКУСАРОМ, ООО ">
+							<img src="/upload/iblock/2a5/2a518f5f9aff96ce6dfb0d5bb2395ee6.png" alt="ВКУСАРОМ, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_85">
+			
+						<a href="/uchastniki/id85" title="Торговый Дом «Солнечные Продукты», ООО ">
+							<img src="/upload/iblock/534/534e10dff7270655e8d0756365cd2cec.png" alt="Торговый Дом «Солнечные Продукты», ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_86">
+			
+						<a href="/uchastniki/id86" title="ОЛВИН, ООО ">
+							<img src="/upload/iblock/8e9/8e915b2cd1fe9b14c9d8e1c68879e448.png" alt="ОЛВИН, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_368">
+			
+						<a href="/uchastniki/id368" title="Партнер-М, ЗАО ">
+							<img src="/upload/iblock/23f/23fece17484715248b132682d4791f10.png" alt="Партнер-М, ЗАО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_369">
+			
+						<a href="/uchastniki/id369" title="Штерн Ингредиентс, Коммандитное Товарищество, ООО ">
+							<img src="/upload/iblock/66d/66d7d25f7a442f0687dd397819fbe6b9.png" alt="Штерн Ингредиентс, Коммандитное Товарищество, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_371">
+			
+						<a href="/uchastniki/id371" title="ТФС Групп, ООО ">
+							<img src="/upload/iblock/23c/23c0cda4e553d4638c5a29823a0aac6b.png" alt="ТФС Групп, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_372">
+			
+						<a href="/uchastniki/id372" title="ИНТЕРНЕШНЛ ФЛЕЙВОРС ЭНД ФРЭГРАНСИЗ И. Ф. Ф. (РУС), ООО / IFF.  (ООО «И.Ф.Ф. (Рус)»/IFF)">
+							<img src="/upload/iblock/330/330911344244230f032069f28191d856.png" alt="ИНТЕРНЕШНЛ ФЛЕЙВОРС ЭНД ФРЭГРАНСИЗ И. Ф. Ф. (РУС), ООО / IFF.  (ООО «И.Ф.Ф. (Рус)»/IFF)" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_373">
+			
+						<a href="/uchastniki/id373" title="Ярмарка ППИ, ООО ">
+							<img src="/upload/iblock/adf/adf6c4db51bc7fba6e26aab4fc3cd12a.png" alt="Ярмарка ППИ, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_374">
+			
+						<a href="/uchastniki/id374" title="Фабрика ароматов «ФАБАРОМ», ООО ">
+							<img src="/upload/iblock/ea8/ea8b9cfa1aec2eee66f713767d6dc585.png" alt="Фабрика ароматов «ФАБАРОМ», ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_405">
+			
+						<a href="/uchastniki/id405" title="Дёлер Нэйчрэл Фуд Энд Бевэридж Ингредиентс, ООО ">
+							<img src="/upload/iblock/812/81264202b545649547f87b6dc503100b.png" alt="Дёлер Нэйчрэл Фуд Энд Бевэридж Ингредиентс, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_406">
+			
+						<a href="/uchastniki/id406" title="Пфанл Бакмиттель, ООО / Pfahnl Backmittel, ООО ">
+							<img src="/upload/iblock/a43/a43bccd7c20636ac62ef563465d0c4c4.png" alt="Пфанл Бакмиттель, ООО / Pfahnl Backmittel, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_407">
+			
+						<a href="/uchastniki/id407" title="Leko Style, компания / ТПК Леко Стайл, ООО ">
+							<img src="/upload/iblock/3c4/3c409aacd0ea8ecb8079be90f1bbf417.jpg" alt="Leko Style, компания / ТПК Леко Стайл, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_481">
+			
+						<a href="/uchastniki/id481" title="ЛасенорРусия, ООО ">
+							<img src="/upload/iblock/a09/a09fe09bcc22774b83ccaea20b566364.jpg" alt="ЛасенорРусия, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_482">
+			
+						<a href="/uchastniki/id482" title="Бакальдрин Рус, ООО ">
+							<img src="/upload/iblock/609/609794d7f216e5221aa1a2aaf7f4e17c.jpg" alt="Бакальдрин Рус, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_483">
+			
+						<a href="/uchastniki/id483" title="Крист и Ко, ООО ">
+							<img src="/upload/iblock/580/58070149d4effbb85e8251f9a3b7a5c5.png" alt="Крист и Ко, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_484">
+			
+						<a href="/uchastniki/id484" title="МАРС, ООО ">
+							<img src="/upload/iblock/b5d/b5d06a63b72c28d1b02010eef7a56f23.png" alt="МАРС, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_485">
+			
+						<a href="/uchastniki/id485" title="САФ-НЕВА, ООО ">
+							<img src="/upload/iblock/d9c/d9c080f097bc636bf259e18c2e3b1240.png" alt="САФ-НЕВА, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_486">
+			
+						<a href="/uchastniki/id486" title="АКВАНОВА РУС, АО">
+							<img src="/upload/iblock/311/311e57b32756a069ea4c6a43988c9aad.png" alt="АКВАНОВА РУС, АО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_487">
+			
+						<a href="/uchastniki/id487" title="АМЕТИС, АО">
+							<img src="/upload/iblock/2e0/2e033e49ee7013f3021e1210834e3fcf.png" alt="АМЕТИС, АО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_488">
+			
+						<a href="/uchastniki/id488" title="АЛЬМИ, ООО ">
+							<img src="/upload/iblock/fdb/fdbcb86cee851a2fdffdd131dfdf5246.png" alt="АЛЬМИ, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_633">
+			
+						<a href="/uchastniki/id633" title="Профессиональные биотехнологии, ООО">
+							<img src="/upload/iblock/e22/e22547e585dc451ce6f2c0525adcb77b.png" alt="Профессиональные биотехнологии, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_632">
+			
+						<a href="/uchastniki/id632" title="ИСТАГРО ДОН, ООО">
+							<img src="/upload/iblock/bec/bec36e4662b3894a55e26dfd76960632.png" alt="ИСТАГРО ДОН, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_631">
+			
+						<a href="/uchastniki/id631" title="ФУД СИСТЕМС, ООО">
+							<img src="/upload/iblock/09b/09b8c3dfcd2437f3735e7d4374eb1312.png" alt="ФУД СИСТЕМС, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1316">
+			
+						<a href="/uchastniki/id1316" title="БиэМСи –Фуд ингредиентс, ООО">
+							<img src="/upload/iblock/a19/a194d8e367720a723bbc426c7adb2464.png" alt="БиэМСи –Фуд ингредиентс, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1149">
+			
+						<a href="/uchastniki/id1149" title="Эр Ликид, ООО">
+							<img src="/upload/iblock/c08/c08b1639635e7f9db87f294273a38e00.png" alt="Эр Ликид, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1148">
+			
+						<a href="/uchastniki/id1148" title="Узловский молочный комбинат, ООО">
+							<img src="/upload/iblock/bf5/bf5fb98158c7b11bb98c741c38b6ef22.png" alt="Узловский молочный комбинат, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1147">
+			
+						<a href="/uchastniki/id1147" title="Софос Протеин Биотехнолоджи, ООО">
+							<img src="/upload/iblock/303/303d75a49b7cab9ae7110779ff54732c.png" alt="Софос Протеин Биотехнолоджи, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1146">
+			
+						<a href="/uchastniki/id1146" title="Джи Эф Эф Групп, ООО">
+							<img src="/upload/iblock/67b/67b6d6963b57456a7f4e10c808318712.png" alt="Джи Эф Эф Групп, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1145">
+			
+						<a href="/uchastniki/id1145" title="Виртекс, АО">
+							<img src="/upload/iblock/094/094c1cc1d032037dea0d84b1b161a456.png" alt="Виртекс, АО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1144">
+			
+						<a href="/uchastniki/id1144" title="Торговый Дом «Дар», ООО">
+							<img src="/upload/iblock/bdf/bdfe20f0b18a51da2f4f527ac84cd2e5.png" alt="Торговый Дом «Дар», ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1134">
+			
+						<a href="/uchastniki/id1134" title="Симрайз Рогово, ООО">
+							<img src="/upload/iblock/951/95134a65c47ff79fa9737fb582d21d91.png" alt="Симрайз Рогово, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1133">
+			
+						<a href="/uchastniki/id1133" title="Ингрелэнд РУС, ООО">
+							<img src="/upload/iblock/ba7/ba7d16242c01df944380416d4ee459d8.png" alt="Ингрелэнд РУС, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1132">
+			
+						<a href="/uchastniki/id1132" title="РИР, ООО">
+							<img src="/upload/iblock/834/834a54b2ce7371bcce4e447fc6cfe74a.png" alt="РИР, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1003">
+			
+						<a href="/uchastniki/id1003" title="ВКУСАРОМА, УК ООО">
+							<img src="/upload/iblock/2bf/2bf9a49d9ba3377afea6b6b6700a16fe.png" alt="ВКУСАРОМА, УК ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1002">
+			
+						<a href="/uchastniki/id1002" title="БЕРТА НПП, ООО">
+							<img src="/upload/iblock/d91/d910b3fce4bd2db863e09fa984f72c5f.png" alt="БЕРТА НПП, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1001">
+			
+						<a href="/uchastniki/id1001" title="ЗВЕЗДА, Концерн ООО">
+							<img src="/upload/iblock/353/35365615041f7f5452b6bf9e42979cf9.png" alt="ЗВЕЗДА, Концерн ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_1000">
+			
+						<a href="/uchastniki/id1000" title="Живодан Рус, ООО">
+							<img src="/upload/iblock/c6f/c6fd8fad95dec7ec3c22cfdaea441a30.png" alt="Живодан Рус, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_999">
+			
+						<a href="/uchastniki/id999" title="МАКОШЬ, ООО">
+							<img src="/upload/iblock/292/2920e465e9f2296460f9fb46451f2910.png" alt="МАКОШЬ, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_968">
+			
+						<a href="/uchastniki/id968" title="АМАРАНТ ФУДС, ООО ">
+							<img src="/upload/iblock/be7/be702a3d54ea1b3713c11473f4e4cb20.png" alt="АМАРАНТ ФУДС, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_967">
+			
+						<a href="/uchastniki/id967" title="Кемикал Лидерс, ООО">
+							<img src="/upload/iblock/0cc/0cc4df9ae23d3b1132f8fe6995d207ba.png" alt="Кемикал Лидерс, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_966">
+			
+						<a href="/uchastniki/id966" title="НьюБио, ООО">
+							<img src="/upload/iblock/e94/e9491ecea515d1180096ebd8f05e2785.png" alt="НьюБио, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_965">
+			
+						<a href="/uchastniki/id965" title="Пищепромпродукт, ООО  ">
+							<img src="/upload/iblock/5d9/5d9a4afd0635814fa815dd52b012d905.png" alt="Пищепромпродукт, ООО  " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_964">
+			
+						<a href="/uchastniki/id964" title="Кема Клаб, ООО">
+							<img src="/upload/iblock/5bc/5bc81ed8fd5e01de314664c87d4abd49.png" alt="Кема Клаб, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_934">
+			
+						<a href="/uchastniki/id934" title="НАТУРАФОЛИКА, ООО">
+							<img src="/upload/iblock/9c3/9c3af6febc5027f822bdadab72d01fd5.png" alt="НАТУРАФОЛИКА, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_933">
+			
+						<a href="/uchastniki/id933" title="ИНСВИТ, ООО">
+							<img src="/upload/iblock/a12/a122a9d9bd2300451e3fb6fbebb3489f.png" alt="ИНСВИТ, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_932">
+			
+						<a href="/uchastniki/id932" title="Файн Ингредиентс, АО">
+							<img src="/upload/iblock/3db/3dbf5cd735407c0ba43837ca85821203.png" alt="Файн Ингредиентс, АО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_931">
+			
+						<a href="/uchastniki/id931" title="Ялога-НТ, ООО">
+							<img src="/upload/iblock/58f/58f3c9533f81bf3512eaeee1454cb67b.png" alt="Ялога-НТ, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_930">
+			
+						<a href="/uchastniki/id930" title="АМАДЕЙ, ООО">
+							<img src="/upload/iblock/05f/05f7422e579a4395f281fdc7385a3353.png" alt="АМАДЕЙ, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_818">
+			
+						<a href="/uchastniki/id818" title="Производственное объединение «Рассвет», ООО">
+							<img src="/upload/iblock/e24/e2426ad3a273b1d5029eb0c8b6dbdca9.png" alt="Производственное объединение «Рассвет», ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_817">
+			
+						<a href="/uchastniki/id817" title="СЕЛЛ-Сервис, ООО">
+							<img src="/upload/iblock/567/56738f55db1e560fee6d7b9b6b8fdb0c.png" alt="СЕЛЛ-Сервис, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_816">
+			
+						<a href="/uchastniki/id816" title="ЭССЕНЧА, ООО">
+							<img src="/upload/iblock/065/065f6f782b183626c4937aa87952dc27.png" alt="ЭССЕНЧА, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_815">
+			
+						<a href="/uchastniki/id815" title="РУСТАРК, ООО">
+							<img src="/upload/iblock/5da/5da546bfa7a7e8fe8444b17419526fae.png" alt="РУСТАРК, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_814">
+			
+						<a href="/uchastniki/id814" title="Производственное объединение «ГАММИ», ЗАО">
+							<img src="/upload/iblock/87f/87fa9d13b1a731b94190a9d50cfa684a.png" alt="Производственное объединение «ГАММИ», ЗАО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_753">
+			
+						<a href="/uchastniki/id753" title="АКАДЕМИЯ-Т, ООО ">
+							<img src="/upload/iblock/c2a/c2ac7b5a12b5b54b79d83ca98d62ef64.png" alt="АКАДЕМИЯ-Т, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_620">
+			
+						<a href="/uchastniki/id620" title="ОХК «УРАЛХИМ», АО">
+							<img src="/upload/iblock/47e/47e12cb89a9e3fa332b76fa4aba8e0c1.png" alt="ОХК «УРАЛХИМ», АО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_531">
+			
+						<a href="/uchastniki/id531" title="Омиа Алгол Рус, АО">
+							<img src="/upload/iblock/8d9/8d9bc14939df6de9cc0697197ed75cbc.png" alt="Омиа Алгол Рус, АО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_530">
+			
+						<a href="/uchastniki/id530" title="Барентц Рус, ООО">
+							<img src="/upload/iblock/a02/a0281cb6522b9afaa2befa47f940e2eb.png" alt="Барентц Рус, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_702">
+			
+						<a href="/uchastniki/id702" title="АДТ, ООО">
+							<img src="/upload/iblock/622/622950dc0d0bcc5c04da44369ec5c888.png" alt="АДТ, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_703">
+			
+						<a href="/uchastniki/id703" title=" Ангел Ист Рус, ООО">
+							<img src="/upload/iblock/907/9075838afe0dea9631acb80c94ce0e90.png" alt=" Ангел Ист Рус, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_704">
+			
+						<a href="/uchastniki/id704" title="ЮНИОН КЭМИКАЛ СОЛЮШЕНС, ООО ">
+							<img src="/upload/iblock/3f6/3f63a4ed8b39def5ac6a835dc1570237.png" alt="ЮНИОН КЭМИКАЛ СОЛЮШЕНС, ООО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_705">
+			
+						<a href="/uchastniki/id705" title="ЛЮМЭКС-ЦЕНТРУМ, ООО">
+							<img src="/upload/iblock/c56/c56ac421b530c8307dab986f307b29a4.png" alt="ЛЮМЭКС-ЦЕНТРУМ, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_718">
+			
+						<a href="/uchastniki/id718" title="ЭЙВА-ПРО, ООО">
+							<img src="/upload/iblock/2d9/2d99f5b42a439a2fa68c75682a2184c3.png" alt="ЭЙВА-ПРО, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_44">
+			
+						<a href="/uchastniki/id44" title="Международная промышленная академия, НОЧУ ДПО ">
+							<img src="/upload/iblock/c57/c57714b70b052e13337eb54e84284fd1.jpg" alt="Международная промышленная академия, НОЧУ ДПО " />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_45">
+			
+						<a href="/uchastniki/id45" title="Пищепромиздат, ООО">
+							<img src="/upload/iblock/10c/10c85ad979af4f9da8cafc288f169e52.png" alt="Пищепромиздат, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_88">
+			
+						<a href="/uchastniki/id88" title="Формула, ООО">
+							<img src="/upload/iblock/6f6/6f6a184f807bd4948a934ef4022b0416.png" alt="Формула, ООО" />
+						</a>
+						
+					</li>
+														<li id="bx_4009546559_66">
+			
+						<a href="/uchastniki/id66" title="Индастри Ньюс Медиа, ООО ">
+							<img src="/upload/iblock/b3c/b3cfcb0d3401e390343837337cb6290d.jpg" alt="Индастри Ньюс Медиа, ООО " />
+						</a>
+						
+					</li>
+							</ul>
+			</div>
+	<div class="next">
+	    <a href="#" title=""><img src="/bitrix/templates/sppi/images/next.gif" alt="" /></a>
+	</div>
+ 	<div class="clear"></div>
+</div>
+<div class="clear"></div> 				
+<div class="menu" id="catalog_menu_LkGdQn">
+    <ul id="ul_catalog_menu_LkGdQn">
+    	     <!-- first level-->
+    		<li >
+	    		<a href="/">
+					СППИ				</a>	
+    		</li>
+	      <!--   <li class="one"><a href="/"   title="СППИ">СППИ</a></li>
+	        <li><a href="/organi_upravleniya/"  title="Органы управления ">Органы управления </a></li>
+	        <li><a href="/uchastniki/"  title="Участники">Участники</a></li>
+	        <li><a href="/programma/"  title="Программа работы">Программа работы</a></li>
+	        <li><a href="/comitets/"  title="Комитеты">Комитеты</a></li>
+	        <li class="last"><a href="/contacts/"  title="Контакты">Контакты</a></li> -->
+	         <!-- first level-->
+    		<li >
+	    		<a href="/organi_upravleniya/">
+					Органы управления				</a>	
+    		</li>
+	      <!--   <li class="one"><a href="/"   title="СППИ">СППИ</a></li>
+	        <li><a href="/organi_upravleniya/"  title="Органы управления ">Органы управления </a></li>
+	        <li><a href="/uchastniki/"  title="Участники">Участники</a></li>
+	        <li><a href="/programma/"  title="Программа работы">Программа работы</a></li>
+	        <li><a href="/comitets/"  title="Комитеты">Комитеты</a></li>
+	        <li class="last"><a href="/contacts/"  title="Контакты">Контакты</a></li> -->
+	         <!-- first level-->
+    		<li class="active">
+	    		<a href="/uchastniki/">
+					Участники				</a>	
+    		</li>
+	      <!--   <li class="one"><a href="/"   title="СППИ">СППИ</a></li>
+	        <li><a href="/organi_upravleniya/"  title="Органы управления ">Органы управления </a></li>
+	        <li><a href="/uchastniki/"  title="Участники">Участники</a></li>
+	        <li><a href="/programma/"  title="Программа работы">Программа работы</a></li>
+	        <li><a href="/comitets/"  title="Комитеты">Комитеты</a></li>
+	        <li class="last"><a href="/contacts/"  title="Контакты">Контакты</a></li> -->
+	         <!-- first level-->
+    		<li >
+	    		<a href="/about/napravlenij.php">
+					Приоритеты				</a>	
+    		</li>
+	      <!--   <li class="one"><a href="/"   title="СППИ">СППИ</a></li>
+	        <li><a href="/organi_upravleniya/"  title="Органы управления ">Органы управления </a></li>
+	        <li><a href="/uchastniki/"  title="Участники">Участники</a></li>
+	        <li><a href="/programma/"  title="Программа работы">Программа работы</a></li>
+	        <li><a href="/comitets/"  title="Комитеты">Комитеты</a></li>
+	        <li class="last"><a href="/contacts/"  title="Контакты">Контакты</a></li> -->
+	         <!-- first level-->
+    		<li >
+	    		<a href="/comitets/">
+					Комитеты				</a>	
+    		</li>
+	      <!--   <li class="one"><a href="/"   title="СППИ">СППИ</a></li>
+	        <li><a href="/organi_upravleniya/"  title="Органы управления ">Органы управления </a></li>
+	        <li><a href="/uchastniki/"  title="Участники">Участники</a></li>
+	        <li><a href="/programma/"  title="Программа работы">Программа работы</a></li>
+	        <li><a href="/comitets/"  title="Комитеты">Комитеты</a></li>
+	        <li class="last"><a href="/contacts/"  title="Контакты">Контакты</a></li> -->
+	         <!-- first level-->
+    		<li >
+	    		<a href="/contacts/">
+					Контакты				</a>	
+    		</li>
+	      <!--   <li class="one"><a href="/"   title="СППИ">СППИ</a></li>
+	        <li><a href="/organi_upravleniya/"  title="Органы управления ">Органы управления </a></li>
+	        <li><a href="/uchastniki/"  title="Участники">Участники</a></li>
+	        <li><a href="/programma/"  title="Программа работы">Программа работы</a></li>
+	        <li><a href="/comitets/"  title="Комитеты">Комитеты</a></li>
+	        <li class="last"><a href="/contacts/"  title="Контакты">Контакты</a></li> -->
+	        </ul>
+    <div class="clear"></div>
+</div>
+
+
+<script>
+	BX.ready(function () {
+		window.obj_catalog_menu_LkGdQn = new BX.Main.Menu.CatalogHorizontal('catalog_menu_LkGdQn');
+	});
+</script>				<div class="page_layout ">
+					<div class="left">
+						
+<ul class="links">
+
+
+	
+	
+					<li ><a href="/about/" class="root-item">О союзе</a></li>
+			<ul>
+		
+	
+	
+
+	
+	
+		
+							<li class="second-level "><a href="/programma/" >Программа работ</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li class="second-level "><a href="/about/vstupit.php" >Вступить в союз</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li class="second-level "><a href="/about/ust111.php" >Уставные документы</a></li>
+			
+		
+	
+	
+
+			</ul>	
+	
+		
+							<li><a href="/news/" class="root-item">Новости</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li><a href="/bulleten.php" class="root-item">Бюллетень СППИ</a></li>
+			
+		
+	
+	
+
+	
+	
+					<li ><a href="/vistavki/" class="root-item">Выставки</a></li>
+			<ul>
+		
+	
+	
+
+	
+	
+		
+							<li class="second-level "><a href="/vistavki/apm2026-forum/" >Форум «ИНДУСТРИЯ ИНГРЕДИЕНТОВ»</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li class="second-level "><a href="/vistavki/ite/" >GIS [Global Ingredients Show]</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li class="second-level "><a href="/vistavki/modenbakery/" >MODERN BAKERY MOSCOW +</a></li>
+			
+		
+	
+	
+
+			</ul>	
+	
+		
+							<li><a href="/scool_tech.php" class="root-item">Обучение</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li><a href="/osoboe_mnenie.php" class="root-item">Особое мнение</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li><a href="/bioteh_2030/" class="root-item">БиоТех2030</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li><a href="/opr.php" class="root-item">Обзоры потребительских рынков</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li><a href="/market_food_ingred.php" class="root-item">Рынок пищевых ингредиентов</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li><a href="/journals/" class="root-item">Журнал Пищевые Ингредиенты</a></li>
+			
+		
+	
+	
+
+	
+	
+		
+							<li><a href="/bfi-online/" class="root-item">Журнал Бизнес пищевых ингредиентов</a></li>
+			
+		
+	
+	
+
+
+</ul>
+						<div class="banner">
+						                        </div>
+                		<div class="clear"></div>
+						</div>
+						<div class="center">
+                			<h1>Живодан Рус, ООО</h1>
+                			
+				<!-- </div> -->
+				
+				 
+
+
+
+
+	</body>
+
+<a href="/files/docs/reestr-uchastnikov/SPPI_Reestr_uchastnikov2026.pdf"><b>РЕЕСТР участников СППИ</b></a><br>
+ <br>
+ <div class="news-detail members-detail">
+					<img
+			class="detail_picture"
+			border="0"
+			src="/upload/iblock/ce9/ce91df64b63a2d7650573e0b29c4f1af.png"
+			width="1"
+			height="1"
+			alt="Живодан Рус, ООО"
+			title="Живодан Рус, ООО"
+			/>
+						<img
+					class="detail_picture"
+					src="/upload/iblock/883/8834312440fc5dee69eaf6c0feed6599.png"
+				>
+									<!-- <h1> --><!-- </h1> -->
+		
+	<div style="clear:both"></div>
+	<br />
+	
+		<!-- :&nbsp; -->
+									115035, Москва,<br>
+Космодамианская набережная, д. 52, стр. 5, <br>
+9 этаж
+							<br />
+	
+		<!-- :&nbsp; -->
+									<a href="mailto:russia.secretary@givaudan.com">russia.secretary@givaudan.com							<br />
+	
+		<!-- :&nbsp; -->
+									<a href="https://www.givaudan.com/">https://www.givaudan.com/</a>							<br />
+				<div class="detail-text">
+		<span class="detail-text__title">Сфера деятельности.</span>
+			<br>
+Givaudan — мировой лидер в области ароматов и вкусов. Основные направления деятельности компании включают разработку и производство ароматических веществ для парфюмерии и продуктов питания. Ассортимент охватывает широкий спектр вкусовых решений для напитков, кондитерских изделий и продуктов питания, а также инновационные ароматы для косметики и бытовой химии. Givaudan активно работает над устойчивым развитием и внедрением новых технологий.		</div>
+	</div><p><a href="/uchastniki/">Возврат к списку</a></p>
+<br></div>
+
+<div class="right">
+<div class="news">
+								<h2 id="bx_2012578437_iblock_8">Новости</h2>
+	
+													<div class="new" id="bx_2012578437_1315">
+						<p class="tema">
+							<a href="/news/1315/" title="25 лет СППИ: от восьми смельчаков до голоса индустрии"?>25 лет СППИ: от восьми смельчаков до голоса индустрии</a>
+							<span>19.06.2026</span>
+						</p>
+						<p class="new_preview_text">
+													</p>
+					</div>
+
+				
+													<div class="new" id="bx_2012578437_998">
+						<p class="tema">
+							<a href="/news/998/" title="Обновленный INNOFOOD-2024: фудтех как часть биоэкономики"?>Обновленный INNOFOOD-2024: фудтех как часть биоэкономики</a>
+							<span>30.09.2024</span>
+						</p>
+						<p class="new_preview_text">
+													</p>
+					</div>
+
+				
+													<div class="new" id="bx_2012578437_997">
+						<p class="tema">
+							<a href="/news/997/" title="Международный форум «БИОПРОМ: промышленность и технологии для человека» состоится 7–8 октября 2024 в Геленджике"?>Международный форум «БИОПРОМ: промышленность и технологии для человека» состоится 7–8 октября 2024 в Геленджике</a>
+							<span>02.09.2024</span>
+						</p>
+						<p class="new_preview_text">
+													</p>
+					</div>
+
+				
+								<p class="all"><a href="/news/" title=""></a></p>
+	</div>
+				<h2>Личный кабинет</h2>
+				<ul class="auth">
+					<li>
+					<div class="_auth_reg_head"><a href="javascript:void(0)" onclick="openAuthorizePopup();yaCounter23721991.reachGoal('AUTHORIZE_HEADER'); return true;" class="dashed">Авторизоваться на сайте</a>
+					</div>
+					</li>	
+				</ul>
+
+<script>
+	function openAuthorizePopup()
+	{
+		var authPopup = BX.PopupWindowManager.create("AuthorizePopup", null, {
+			autoHide: true,
+			//	zIndex: 0,
+			offsetLeft: 0,
+			offsetTop: 0,
+			overlay : true,
+			draggable: {restrict:true},
+			closeByEsc: true,
+			closeIcon: { right : "16px", top : "12px"},
+			content: '<div style="width:400px;height:325px; text-align: center;"><span style="position:absolute;left:50%; top:50%"><img src="/bitrix/templates/sppi/components/bitrix/system.auth.form/sppi_auth/images/wait.gif"/></span></div>',
+			events: {
+				onAfterPopupShow: function()
+				{
+					BX.ajax.post(
+							'/bitrix/templates/sppi/components/bitrix/system.auth.form/sppi_auth/ajax.php',
+							{
+								backurl: '/uchastniki/id1000',
+								forgotPassUrl: '/auth?forgot_password=yes'
+							},
+							BX.delegate(function(result)
+							{
+								this.setContent(result);
+							},
+							this)
+					);
+				}
+			}
+		});
+
+		authPopup.show();
+	}
+</script><div class="banner">
+	    </div>
+</div>
+<div class="clear-fix"></div>
+</div>
+<footer>
+<div class="foot">
+	
+<div class="menu2" id="catalog_menu_g8taYv">
+    <ul id="ul_catalog_menu_g8taYv">
+    	     <!-- first level-->
+	    		<a href="/"  title="">
+					СППИ				</a>	
+	         <!-- first level-->
+	    		<a href="/organi_upravleniya/"  title="">
+					Органы управления				</a>	
+	         <!-- first level-->
+	    		<a href="/uchastniki/" class="active" title="">
+					Участники				</a>	
+	         <!-- first level-->
+	    		<a href="/about/napravlenij.php"  title="">
+					Приоритеты				</a>	
+	         <!-- first level-->
+	    		<a href="/comitets/"  title="">
+					Комитеты				</a>	
+	         <!-- first level-->
+	    		<a href="/contacts/"  title="">
+					Контакты				</a>	
+	        </ul>
+    <div class="clear"></div>
+</div>
+
+
+<script>
+	BX.ready(function () {
+		window.obj_catalog_menu_g8taYv = new BX.Main.Menu.CatalogHorizontal('catalog_menu_g8taYv');
+	});
+</script>
+           	
+            <p class="copy">2009-2026 © СППИ Все права защищены.<br>копирование информации только с разрешения администрации сайта</p>
+            <!-- <p class="site"><a href="http://www.kastoom.ru" title="">разработка сайта: <img src="/images/kast.gif" alt=""></a> </p> -->
+            <div class="clear"></div>
+</div>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+</footer>
+</body>

@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% from "_macros.html" import region_badge, completeness, shortlist_form %}
+{% block title %}{{ s.name }}{% endblock %}
+{% block content %}
+<a class="back" href="javascript:history.back()">← к результатам</a>
+<div class="sup-head">
+  <div>
+    <h1>{{ s.name }}</h1>
+    <div class="meta">
+      {% if s.city %}{{ s.city }}{% if s.region %}, {{ s.region }}{% endif %}{% elif s.country %}{{ s.country }}{% endif %}
+      {% if s.website %} · <a href="{{ s.website }}" target="_blank" rel="noopener nofollow">{{ s.website }}</a>{% endif %}
+    </div>
+    <div class="badges">
+      {% if region %}{{ region_badge(s.region_fit(region), region) }}{% endif %}
+      {% for t in s.category_titles %}<span class="tag">{{ t }}</span>{% endfor %}
+    </div>
+  </div>
+  <div class="card-actions">
+    <label class="cmp"><input type="checkbox" class="cmp-box" value="{{ s.id }}"> Сравнить</label>
+    {{ shortlist_form(s, request.url.path) }}
+  </div>
+</div>
+
+<div class="sup-grid">
+  <section class="panel">
+    <h2>Контакты</h2>
+    <dl class="kv">
+      <dt>Телефон</dt><dd>{% for p in s.phones %}<div><a href="tel:{{ p.value|replace(' ', '')|replace('(', '')|replace(')', '')|replace('-', '') }}">{{ p.value }}</a> <a class="src" href="{{ p.source_url }}" target="_blank" rel="noopener">источник</a></div>{% else %}<span class="unknown">нет данных</span>{% endfor %}</dd>
+      <dt>E-mail</dt><dd>{% for e in s.emails %}<div><a href="mailto:{{ e.value }}">{{ e.value }}</a> <a class="src" href="{{ e.source_url }}" target="_blank" rel="noopener">источник</a></div>{% else %}<span class="unknown">нет данных</span>{% endfor %}</dd>
+      <dt>Сайт</dt><dd>{% if s.website %}<a href="{{ s.website }}" target="_blank" rel="noopener nofollow">{{ s.website }}</a>{% else %}<span class="unknown">не найден</span>{% endif %}</dd>
+      <dt>Адрес</dt><dd>{{ s.address or s.city or '' }}{% if not (s.address or s.city) %}<span class="unknown">нет данных</span>{% endif %}</dd>
+      {% if s.facts.inn %}<dt>ИНН</dt><dd>{% for f in s.facts.inn %}{{ f.value }} {% endfor %}<span class="muted small">(контрольная сумма верна)</span></dd>{% endif %}
+    </dl>
+  </section>
+
+  <section class="panel">
+    <h2>Перед звонком</h2>
+    <div class="complete">Полнота карточки {{ completeness(s) }}</div>
+    {% if s.questions %}
+      <p class="muted small">Этого нет в открытых источниках — спросите:</p>
+      <ol class="questions">{% for q in s.questions %}<li>{{ q }}</li>{% endfor %}</ol>
+    {% else %}<p>Ключевые условия найдены, проверьте их актуальность.</p>{% endif %}
+  </section>
+</div>
+
+<section class="panel">
+  <h2>Условия и документы</h2>
+  <table class="facts-table">
+    <thead><tr><th>Поле</th><th>Значение</th><th>Откуда</th></tr></thead>
+    <tbody>
+    {% for key, (title, _) in FIELDS.items() %}
+      {% set items = s.facts.get(key, []) %}
+      {% if items %}
+        {% for f in items %}
+        <tr>
+          {% if loop.first %}<th rowspan="{{ items|length }}">{{ title }}</th>{% endif %}
+          <td><b>{{ f.value }}</b>{% if f.evidence %}<div class="evidence">«{{ f.evidence }}»</div>{% endif %}</td>
+          <td class="small"><a href="{{ f.source_url }}" target="_blank" rel="noopener">{{ f.source_url|truncate(48, True, '…') }}</a><div class="muted">{{ f.observed_at|date }} · {{ f.method }}</div></td>
+        </tr>
+        {% endfor %}
+      {% else %}
+        <tr><th>{{ title }}</th><td colspan="2"><span class="unknown">нет данных</span></td></tr>
+      {% endif %}
+    {% endfor %}
+    {% if s.facts.delivery_note %}
+      <tr><th>Из текста о доставке</th><td colspan="2" class="evidence">«{{ s.facts.delivery_note[0].value }}»</td></tr>
+    {% endif %}
+    </tbody>
+  </table>
+  <p class="muted small">Факты извлечены правилами из текста страниц и не проверены вручную. Цены и MOQ — ориентир, не оферта.</p>
+</section>
+
+{% if s.description or s.products or s.rubrics %}
+<section class="panel">
+  <h2>О компании и ассортимент</h2>
+  {% if s.description %}<p class="pre">{{ s.description }}</p>{% endif %}
+  {% if s.rubrics %}<h3>Рубрики в каталоге</h3><div class="chips">{% for r in s.rubrics %}<span class="chip">{{ r }}</span>{% endfor %}</div>{% endif %}
+  {% if s.products %}<h3>Товары</h3><div class="chips">{% for p in s.products[:40] %}<span class="chip">{{ p }}</span>{% endfor %}</div>{% endif %}
+</section>
+{% endif %}
+
+<section class="panel" id="notes">
+  <h2>Заметки</h2>
+  <form method="post" action="/supplier/{{ s.id }}/notes" class="note-form">
+    <textarea name="text" rows="3" placeholder="Например: звонил 05.11, прайс пришлют на почту, минималка 30 тыс." required></textarea>
+    <button class="btn primary">Добавить</button>
+  </form>
+  {% for n in s.notes %}
+    <div class="user-note">
+      <div class="pre">{{ n.text }}</div>
+      <div class="muted small">{{ n.created_at|date }}
+        <form method="post" action="/notes/{{ n.id }}/delete" class="inline"><input type="hidden" name="supplier_id" value="{{ s.id }}"><button class="linkbtn">удалить</button></form>
+      </div>
+    </div>
+  {% else %}<p class="muted small">Заметок пока нет. Заметки видны всем пользователям прототипа.</p>{% endfor %}
+</section>
+
+<section class="panel">
+  <h2>Источники</h2>
+  <ul class="sources">
+    {% for o in s.sources %}<li><a href="{{ o.source_url }}" target="_blank" rel="noopener">{{ o.title }}</a> <span class="muted small">— получено {{ o.observed_at|date }}</span></li>{% endfor %}
+    {% if s.enriched_at %}<li>Сайт компании <span class="muted small">— разобран {{ s.enriched_at|date }}</span></li>{% endif %}
+  </ul>
+  <p class="muted small">В базе с {{ s.first_seen|date }}, последнее подтверждение {{ s.last_seen|date }}.</p>
+</section>
+{% endblock %}

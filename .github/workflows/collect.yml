@@ -1,0 +1,31 @@
+# Scheduled background collection: walks catalog pages from the saved checkpoint, refreshes supplier sites,
+# writes straight into the production database. Needs repository secret DATABASE_URL (Neon connection string).
+name: collect
+
+on:
+  schedule:
+    - cron: "0 3 * * 1"   # Mondays 03:00 UTC
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: "Listing pages per source"
+        default: "10"
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q .
+      - run: python -m goulash crawl --pages ${{ inputs.pages || '10' }} --max-jobs 400 --threads 4
+      - run: python -m goulash stats

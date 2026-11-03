@@ -1,0 +1,1611 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="canonical" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor" />
+	<meta property="og:locale" content="en_IN" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Exhibitor List | WorldFood Moscow 2026" />
+	<meta property="og:url" content="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor" />
+	<meta property="og:site_name" content="Exhibitor List | WorldFood Moscow 2026" />
+	<meta name="twitter:card" content="Exhibitor List | WorldFood Moscow 2026" />
+	<meta name="twitter:title" content="" />
+		<meta name="description" content="Ознакомьтесь со списком участников прямо сейчас, чтобы получить представление о брендах и компаниях, представленных на выставке">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<meta name="title" content="">-->
+	<meta name="keywords" content="">
+	<title>Exhibitor List | WorldFood Moscow 2026</title>
+
+	<!-- Bootstrap CSS -->
+	<link href="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/fa/all.css" rel="stylesheet">
+	<link href="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/css/style.css" rel="stylesheet">
+
+	<link href="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/css/fancyBox.css" rel="stylesheet">
+	<link href="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/dist/css/bootstrap-select.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/swiper/swiper.css" />
+	<!-- MDB-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+
+	<!---<style>
+		@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Mukta:wght@200;300;400;500;600;700;800&family=Tiro+Devanagari+Marathi&display=swap');
+	</style>-->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/css/validationEngine.jquery.css">
+
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+
+
+	<!-- end-css -->
+	<link rel="shortcut icon" href="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/expoworldfood-favicon.png" type="image/x-icon" /></head>
+
+<body>
+		<div id="request">
+		<div class="mloader"></div>
+	</div>
+	<!--<div >-->
+		<input type="hidden" name="baseurl" id="baseurl" value="https://exhibitors-itegroup.exhibitoronlinemanual.com/" />
+		<!-- <input type="hidden" name="language" id="language" value="ru"> -->
+
+<style>
+	.register_now {
+		background: #83A600;
+		color: #ffffff !important;
+		border: 1px solid #83A600;
+		padding: 10px 20px;
+		text-decoration: none;
+	}
+
+	.register_now:hover {
+		background: #ffffff;
+		border: 1px solid #83A600;
+		color: #83A600 !important;
+		text-decoration: none;
+	}
+
+	.register_now_std {
+		background: #83A600;
+		color: #ffffff !important;
+		border: 1px solid #83A600;
+		padding: 10px 20px;
+		text-decoration: none;
+	}
+
+	.register_now_std:hover {
+		background: #ffffff;
+		border: 1px solid #83A600;
+		color: #83A600 !important;
+		text-decoration: none;
+	}
+
+	ul li{
+		list-style-type:none;
+	}
+	@media(max-width:991px){
+		.mob_header_banner{
+			height:60px !important;
+		}
+	}
+</style>
+<nav class="navbar navbar-expand-lg bg-white shadow bg-light sticky-top">
+	<div class="container">
+		<a class="navbar-brand" href="https://world-food.ru/ru/"   target="_blank">
+			<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2044/WF26_1700x200_portal_catalog.jpg" alt="" title="" class="img-fluid mob_header_banner"  style="height:107px">			<!--<img src="images/logo.jpg">-->
+		</a>		<div class=" navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto">
+							<!-- <li >
+			<img class="group list-group-image img-fluid mb-3" src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/dummy-banner2.png" alt="" abudawood="">
+		</li> -->
+			</ul>
+
+			<form class="d-flex">
+				<div class="d-inline-flex mb-3"><a class="register_now" target="_blank" href="https://world-food.ru/ru/visit/" class="">Получите билет</a></div>
+				<div class="d-inline-flex mb-3" style="margin-left:15px;"> <a class="register_now_std" target="_blank" href="https://world-food.ru/ru/exhibit/book-a-stand/" class="">Забронируйте стенд</a></div>			</form>
+			<div class="lang-disp-mobile">
+			<input type="hidden" name="language" id="language" value="ru">
+				<input type="text" id="exhibitor_list_sequence" name="exhibitor_list_sequence" value="2">
+			<div id="image-container" class="">
+				<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/russia.png" class="img-fluid" alt="Language Image" style="width:24px;"> 
+						<!-- <img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/uk.png" class="img-fluid" alt="Language Image" style="width:24px;">
+						<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/russia.png" class="img-fluid" alt="Language Image" style="width:24px;">
+						<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/china.png" class="img-fluid" alt="Language Image" style="width:24px;"> -->
+						<a class="text-dark text-decoration-none" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/en/Exhibitor">EN</a>
+						<a class="text-dark " href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor">RU</a>
+						<!-- <a class="text-dark text-decoration-none" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/cn/Exhibitor">CN</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+
+  
+<style>
+	.subcategory-option {
+		margin-left: 30px !important;
+	}
+
+	.subsubcategory-option {
+		margin-left: 50px !important;
+	}
+
+	.subsector-option {
+		margin-left: 30px !important;
+	}
+
+	.swiper-slide {
+		text-align: center;
+		padding: 10px;
+	}
+
+	.key-img-box img {
+		max-width: 60px;
+		margin: 0 auto;
+	}
+
+	html:not([dir="rtl"]) .swiper-button-next {
+		right: 0;
+		color: #000;
+	}
+
+	html:not([dir="rtl"]) .swiper-button-prev {
+		left: 0;
+		color: #000;
+	}
+
+	.key-img-box {
+		cursor: pointer;
+	}
+
+	.keysector-img-title {
+		font-size: 12px;
+		cursor: pointer;
+		white-space: normal;
+		/* Allow text wrapping */
+		overflow-wrap: break-word;
+		/* Break long words if needed */
+		word-break: break-word;
+	}
+
+	/* .sector-title-main {
+	max-width: 120px;   
+	margin: 0 auto;
+	line-height: 1.2;
+	word-break: normal;
+	overflow-wrap: break-word;
+} */
+</style>
+<!-- Co located Events-->
+<section>
+
+		<!--<div class="container">
+		<div class="row co-located-events">
+			<div class="col-md-12">
+
+				<div class="">
+					<h5>Co-located events</h5>
+					<a href="#" class="btn active">Saitex 2023</a>
+					<a href="#" class="btn">Africa's Big 7 2023</a>
+				</div>
+			</div>
+		</div>
+	</div>-->
+</section>
+<!-- Co located Events-->
+<!-- Search Box Start-->
+<section>
+	<div class="container">
+		<div class="row">
+						<div class="col-md-12">
+				<!--search box start-->
+								<!-- <div class="row mb-4">
+					<div class="col-md-12 text-center">
+						<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/ad-banner.png" class="img-fluid">
+					</div>
+				</div> -->
+				<div class="row bg-white rounded-10 searchBox "> <!--pl-pr-0-->
+					<div class="col-md-8 search-box">
+						<div class="row">
+							<!--<form class="d-flex search-box">-->
+							<div class="col-md-3 mb-2 pl-0">
+								<div class="input-group flex-nowrap ">
+									<span style="padding-right: 0px;" class="input-group-text"
+										onclick="return searchFilter();"><i
+											class="fa-solid fa-magnifying-glass"></i></span>
+									<input type="text" class="form-control rounded-10"
+										placeholder="Поиск" name="keyword_search" id="keyword_search"
+										value="">
+								</div>
+							</div>
+
+															<div class="col-md-3  mb-2 ps-0" id="CountrySearch">
+									<select name="country_id" id="country_id" class="select selectpicker"
+										data-live-search="true" onchange="searchFilter();"
+										placeholder="Страна">
+										<option value="">Все</option>
+																																	<option value="Armenia" >
+													Армения</option>
+																							<option value="Belarus" >
+													Беларусь</option>
+																							<option value="Middle East" >
+													Ближний Восток</option>
+																							<option value="Brazil" >
+													Бразилия</option>
+																							<option value="Vietnam" >
+													Вьетнам</option>
+																							<option value="Georgia" >
+													Грузия</option>
+																							<option value="Egypt" >
+													Египет</option>
+																							<option value="India" >
+													Индия</option>
+																							<option value="Indonesia" >
+													Индонезия</option>
+																							<option value="Jordan" >
+													Иордания</option>
+																							<option value="Spain" >
+													Испания</option>
+																							<option value="Kazakhstan" >
+													Казахстан</option>
+																							<option value="China" >
+													Китай</option>
+																							<option value="Kyrgyzstan" >
+													Кыргызстан</option>
+																							<option value="Malaysia" >
+													Малайзия</option>
+																							<option value="Netherlands" >
+													Нидерланды</option>
+																							<option value="United Arab Emirates" >
+													Объединенные Арабские Эмираты</option>
+																							<option value="Oman" >
+													Оман</option>
+																							<option value="Korea, Republic Of" >
+													Республика Корея</option>
+																							<option value="Russia" >
+													Россия</option>
+																							<option value="Saudi Arabia" >
+													Саудовская Аравия</option>
+																							<option value="Tajikistan" >
+													Таджикистан</option>
+																							<option value="Thailand" >
+													Таиланд</option>
+																							<option value="Tunisia" >
+													Тунис</option>
+																							<option value="Turkmenistan" >
+													Туркменистан</option>
+																							<option value="Turkey" >
+													Турция</option>
+																							<option value="Uzbekistan" >
+													Узбекистан</option>
+																							<option value="Sri Lanka" >
+													Шри-Ланка</option>
+																							<option value="Ecuador" >
+													Эквадор</option>
+																							<option value="Ethiopia" >
+													Эфиопия</option>
+																														</select>
+								</div>
+														<input type="hidden" name="all_selected_categories" id="all_selected_categories">
+							<input type="hidden" name="all_selected_subcategories" id="all_selected_subcategories">
+							<input type="hidden" name="all_selected_sub_subcategories" id="all_selected_sub_subcategories">
+
+															<div class="col-md-3  mb-2 ps-0 ProductSectorSearch">
+									<input type="hidden" name="CountPrdSector" id="CountPrdSector" value="">
+									<input type="hidden" name="selected_product_category" id="selected_product_category">
+									<input type="hidden" name="selected_sub_product_category" id="selected_sub_product_category">
+									<select multiple="multiple" name="event_prod_cat_id[]" id="event_prod_cat_id" class="event_prod_cat_id select selectpicker show-tick" onchange="toggleSubcategories(), searchFilter();" data-live-search="true" placeholder="Выбор продукта">
+    								<optgroup label="ВЫБЕРИТЕ ИНТЕРЕСУЮЩИЙ ВАС РАЗДЕЛ ВЫСТАВКИ:">
+
+											<option class="category-option has-subcategories" value="1025">АЛКОГОЛЬНЫЕ НАПИТКИ&nbsp;</option><option class="d-none subcategory-option  subcat_1025" data-parent="1025" value="1814" >Вино</option><option class="d-none subcategory-option  subcat_1025" data-parent="1025" value="1773" >Крепкие алкогольные напитки, ликеры</option><option class="d-none subcategory-option  subcat_1025" data-parent="1025" value="1495" >Пиво и сидр</option><option class="d-none subcategory-option  subcat_1025" data-parent="1025" value="1699" >Прочие алкогольные напитки</option><option class="d-none subcategory-option  subcat_1025" data-parent="1025" value="1666" >Слабоалкогольные напитки, коктейли</option><option class="category-option has-subcategories" value="1200">БАКАЛЕЯ&nbsp;</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1750" >Готовые смеси для выпечки</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1492" >Добавки для выпечки, дрожжи</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1520" >Крупы</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1725" >Макаронные изделия и лапша</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1602" >Мука и крахмал</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1692" >Орехи, семена и сухофрукты</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1645" >Продукты быстрого приготовления (лапша, супы, пюре, бульон)</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1706" >Прочая бакалея</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1779" >Сахар, соль</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1768" >Снеки, чипсы, сухарики, попкорн</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1772" >Специи, приправы, пряности</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1504" >Сухие завтраки (каши, мюсли, хлопья)</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1558" >Сушеное мясо</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1559" >Сушеные морепродукты</option><option class="d-none subcategory-option  subcat_1200" data-parent="1200" value="1800" >Уксус</option><option class="category-option has-subcategories" value="1415">БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ&nbsp;</option><option class="d-none subcategory-option  subcat_1415" data-parent="1415" value="1689" >Безалкогольное пиво и вино</option><option class="d-none subcategory-option  subcat_1415" data-parent="1415" value="1514" >Газированные напитки и лимонады</option><option class="d-none subcategory-option  subcat_1415" data-parent="1415" value="1653" >Квас</option><option class="d-none subcategory-option  subcat_1415" data-parent="1415" value="1681" >Минеральная вода</option><option class="d-none subcategory-option  subcat_1415" data-parent="1415" value="1683" >Морс, кисель</option><option class="d-none subcategory-option  subcat_1415" data-parent="1415" value="1709" >Прочие безалкогольные напитки</option><option class="d-none subcategory-option  subcat_1415" data-parent="1415" value="1652" >Соки, нектары, смузи</option><option class="d-none subcategory-option  subcat_1415" data-parent="1415" value="1561" >Сухие смеси для приготовления напитков</option><option class="d-none subcategory-option  subcat_1415" data-parent="1415" value="1640" >Холодный чай/кофе</option><option class="d-none subcategory-option  subcat_1415" data-parent="1415" value="1568" >Энергетические напитки</option><option class="category-option has-subcategories" value="1226">ИНГРЕДИЕНТЫ&nbsp;</option><option class="d-none subcategory-option  subcat_1226" data-parent="1226" value="1643" >Ингредиенты для производства БАДов и функционального питания</option><option class="d-none subcategory-option  subcat_1226" data-parent="1226" value="1606" >Пищевые ароматизаторы</option><option class="d-none subcategory-option  subcat_1226" data-parent="1226" value="1607" >Пищевые ингредиенты</option><option class="d-none subcategory-option  subcat_1226" data-parent="1226" value="1605" >Пищевые концентраты и добавки</option><option class="d-none subcategory-option  subcat_1226" data-parent="1226" value="1604" >Пищевые красители</option><option class="d-none subcategory-option  subcat_1226" data-parent="1226" value="1707" >Прочие ингредиенты</option><option class="category-option has-subcategories" value="1622">ЗАМОРОЖЕННЫЕ ПРОДУКТЫ, ПОЛУФАБРИКАТЫ И ГОТОВАЯ КУЛИНАРИЯ&nbsp;</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1749" >Готовая кулинария</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1616" >Замороженная мясная продукция</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1618" >Замороженная пицца и пироги</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1614" >Замороженная рыбная продукция</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1619" >Замороженные готовые блюда</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1621" >Замороженные овощи, фрукты, ягоды</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1612" >Замороженные торты и десерты</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1639" >Мороженое, замороженный йогурт и сорбеты</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1763" >Полуфабрикаты</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1705" >Прочие замороженные продукты, полуфабрикаты и готовая кулинария</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1782" >Суши, роллы</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1757" >Сэндвичи и салаты</option><option class="d-none subcategory-option  subcat_1622" data-parent="1622" value="1555" >Тесто и замороженная выпечка</option><option class="category-option has-subcategories" value="1536">КОНДИТЕРСКИЕ И ХЛЕБОБУЛОЧНЫЕ ИЗДЕЛИЯ&nbsp;</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1698" >Восточные сладости, халва</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1551" >Диетические кондитерские изделия</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1523" >Жевательная резинка и освежающие драже</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1651" >Желе</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1671" >Зефир, мармелад и пастила</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1513" >Карамель и драже</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1537" >Кондитерские пасты, десертный мед</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1538" >Кондитерские снеки</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1507" >Конфетные изделия</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1603" >Мучные кондитерские изделия</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1688" >Новогодние подарки</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1701" >Прочие кондитерские и хлебобулочные изделия</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1783" >Сиропы</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1755" >Сухари, сушки</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1506" >Торты и пирожные</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1491" >Хлебобулочные изделия</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1503" >Хлебцы</option><option class="d-none subcategory-option  subcat_1536" data-parent="1536" value="1528" >Шоколад и какао-продукты</option><option class="category-option has-subcategories" value="1052">КОНСЕРВАЦИЯ&nbsp;</option><option class="d-none subcategory-option  subcat_1052" data-parent="1052" value="1650" >Варенье, джемы</option><option class="d-none subcategory-option  subcat_1052" data-parent="1052" value="1512" >Консервированные готовые блюда</option><option class="d-none subcategory-option  subcat_1052" data-parent="1052" value="1511" >Мясная консервация</option><option class="d-none subcategory-option  subcat_1052" data-parent="1052" value="1510" >Плодовоовощная консервация</option><option class="d-none subcategory-option  subcat_1052" data-parent="1052" value="1700" >Прочая консервация</option><option class="d-none subcategory-option  subcat_1052" data-parent="1052" value="1508" >Рыбная консервация</option><option class="category-option has-subcategories" value="1693">МАСЛОЖИРОВАЯ ПРОДУКЦИЯ И СОУСЫ&nbsp;</option><option class="d-none subcategory-option  subcat_1693" data-parent="1693" value="1482" >Животные жиры</option><option class="d-none subcategory-option  subcat_1693" data-parent="1693" value="1673" >Майонезы, кетчупы</option><option class="d-none subcategory-option  subcat_1693" data-parent="1693" value="1594" >Маргарины, спреды</option><option class="d-none subcategory-option  subcat_1693" data-parent="1693" value="1711" >Прочая масло-жировая продукция</option><option class="d-none subcategory-option  subcat_1693" data-parent="1693" value="1799" >Растительные масла</option><option class="d-none subcategory-option  subcat_1693" data-parent="1693" value="1758" >Соусы и маринады</option><option class="category-option has-subcategories" value="1547">МОЛОЧНАЯ ПРОДУКЦИЯ И СЫРЫ&nbsp;</option><option class="d-none subcategory-option  subcat_1547" data-parent="1547" value="1595" >Кисломолочные продукты и йогурты</option><option class="d-none subcategory-option  subcat_1547" data-parent="1547" value="1680" >Молоко и сливки</option><option class="d-none subcategory-option  subcat_1547" data-parent="1547" value="1545" >Молочная консервация</option><option class="d-none subcategory-option  subcat_1547" data-parent="1547" value="1546" >Молочные десерты и снеки</option><option class="d-none subcategory-option  subcat_1547" data-parent="1547" value="1703" >Прочая молочная продукция</option><option class="d-none subcategory-option  subcat_1547" data-parent="1547" value="1505" >Сливочное масло</option><option class="d-none subcategory-option  subcat_1547" data-parent="1547" value="1521" >Сыры</option><option class="d-none subcategory-option  subcat_1547" data-parent="1547" value="1541" >Творог и творожные продукты</option><option class="category-option has-subcategories" value="1675">МЯСО, ПТИЦА И ЯЙЦА&nbsp;</option><option class="d-none subcategory-option  subcat_1675" data-parent="1675" value="1617" >Замороженное мясо, птица и субпродукты</option><option class="d-none subcategory-option  subcat_1675" data-parent="1675" value="1759" >Колбасные изделия и сосиски</option><option class="d-none subcategory-option  subcat_1675" data-parent="1675" value="1767" >Копчености</option><option class="d-none subcategory-option  subcat_1675" data-parent="1675" value="1674" >Мясные деликатесы</option><option class="d-none subcategory-option  subcat_1675" data-parent="1675" value="1525" >Охлажденное мясо</option><option class="d-none subcategory-option  subcat_1675" data-parent="1675" value="1524" >Охлажденное мясо дичи</option><option class="d-none subcategory-option  subcat_1675" data-parent="1675" value="1527" >Охлажденное мясо птицы</option><option class="d-none subcategory-option  subcat_1675" data-parent="1675" value="1526" >Охлажденные мясные субпродукты</option><option class="d-none subcategory-option  subcat_1675" data-parent="1675" value="1708" >Прочая мясная и животная продукция</option><option class="d-none subcategory-option  subcat_1675" data-parent="1675" value="1565" >Яйца и яйцепродукты</option><option class="category-option has-subcategories" value="1697">ОРГАНИКА И ЗДОРОВОЕ ПИТАНИЕ&nbsp;</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1552" >БАДы и добавки</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1629" >Безглютеновые продукты</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1660" >Безлактозная продукция</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1798" >Веганские продукты</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1490" >Детское питание</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1549" >Диабетическое питание</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1550" >Диетическое питание</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1636" >Мед</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1696" >Органические продукты и биопродукты</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1712" >Прочая органическая продукция и продукция для здорового питания</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1730" >Растительное молоко</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1731" >Растительное мясо</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1774" >Спортивное питание</option><option class="d-none subcategory-option  subcat_1697" data-parent="1697" value="1593" >Фермерская продукция</option><option class="category-option has-subcategories" value="1182">РЫБА И МОРЕПРОДУКТЫ&nbsp;</option><option class="d-none subcategory-option  subcat_1182" data-parent="1182" value="1663" >Живая и охлажденная рыба</option><option class="d-none subcategory-option  subcat_1182" data-parent="1182" value="1613" >Замороженная рыба</option><option class="d-none subcategory-option  subcat_1182" data-parent="1182" value="1517" >Икра</option><option class="d-none subcategory-option  subcat_1182" data-parent="1182" value="1761" >Морепродукты</option><option class="d-none subcategory-option  subcat_1182" data-parent="1182" value="1704" >Прочая рыбная продукция</option><option class="d-none subcategory-option  subcat_1182" data-parent="1182" value="1601" >Рыбные пресервы и полуфабрикаты</option><option class="d-none subcategory-option  subcat_1182" data-parent="1182" value="1756" >Соленая рыба и копчености</option><option class="category-option has-subcategories" value="1623">ФРУКТЫ И ОВОЩИ&nbsp;</option><option class="d-none subcategory-option  subcat_1623" data-parent="1623" value="1611" >Cвежие овощи</option><option class="d-none subcategory-option  subcat_1623" data-parent="1623" value="1713" >Другая растительная продукция</option><option class="d-none subcategory-option  subcat_1623" data-parent="1623" value="1631" >Зелень и салаты</option><option class="d-none subcategory-option  subcat_1623" data-parent="1623" value="1739" >Переработанные овощи, фрукты, грибы</option><option class="d-none subcategory-option  subcat_1623" data-parent="1623" value="1610" >Свежие грибы</option><option class="d-none subcategory-option  subcat_1623" data-parent="1623" value="1609" >Свежие фрукты и ягоды</option><option class="category-option " value="1203">ХАЛЯЛЬ&nbsp;</option><option class="category-option has-subcategories" value="1788">ЧАЙ, КОФЕ, КАКАО&nbsp;</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1637" >Горячий шоколад и какао</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1532" >Зерновой кофе</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1534" >Кофезаменители</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1533" >Кофейные напитки</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1665" >Листовой и прессованный чай</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1633" >Молотый кофе</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1714" >Прочие чайные и кофейные напитки</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1644" >Растворимый кофе</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1634" >Травяные чаи и тизаны</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1786" >Чай пакетированный</option><option class="d-none subcategory-option  subcat_1788" data-parent="1788" value="1787" >Чайные напитки</option><option class="category-option has-subcategories" value="1690">NON-FOOD И УСЛУГИ ДЛЯ БИЗНЕСА&nbsp;</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1648" >IT-услуги</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1493" >Банки и финансовые услуги</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1723" >Бумажно-гигиеническая продукция</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1638" >Бытовая химия​</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1726" >Корма и товары для животных</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1494" >Красота и уход</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1664" >Логистические и транспортные услуги</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1579" >Оборудование для HoReCa</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1578" >Оборудование для пищевых производств</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1554" >Одноразовая посуда и упаковка</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1543" >Посуда и столовые приборы</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1416" >Программное обеспечение</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1710" >Прочие товары категории non-food и услуги для бизнеса</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1476" >Реклама и маркетинг</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1818" >Спецодежда</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1793" >Табак и электронные сигареты</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1738" >Типографии и дизайн</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1516" >Товары прикассовой зоны</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1326" >Упаковочное оборудование</option><option class="d-none subcategory-option  subcat_1690" data-parent="1690" value="1564" >Услуги для электронной коммерции</option><option class="category-option has-subcategories" value="1316">ДРУГОЕ&nbsp;</option><option class="d-none subcategory-option  subcat_1316" data-parent="1316" value="1502" >Блогеры</option><option class="d-none subcategory-option  subcat_1316" data-parent="1316" value="1630" >Государственные структуры</option><option class="d-none subcategory-option  subcat_1316" data-parent="1316" value="1316" >Другое</option><option class="d-none subcategory-option  subcat_1316" data-parent="1316" value="1691" >Некоммерческие организации и фонды</option><option class="d-none subcategory-option  subcat_1316" data-parent="1316" value="1286" >СМИ</option>
+										</optgroup>
+									</select>
+
+								</div>
+
+														<!-- Tag Product -->
+							
+							<!-- Tag Product End-->
+
+
+																					<? php // if (isset($searchFilterCriteria['ShowCertification']) && strtolower($searchFilterCriteria['ShowCertification']) == 'yes') { 
+								?>
+							<!-- <div class="col-md-2  mb-2 ps-0" id="CertificationSearch">
+									<select name="unique_certification_id" id="unique_certification_id" class="select selectpicker" data-live-search="true" onchange="return disclaimerAlert();" Placeholder="Certification">
+										
+																			</select>
+								</div> -->
+							<? php //} 
+								?>
+
+
+
+						</div>
+						<!--</form>-->
+					</div>
+					<div class="col-md-4 text-end filter-menu">
+						<div class=" gap-2 d-flex justify-content-md-end">
+
+														<a class="btn btn-light  listButtonSearch" href="javascript:void(0);"
+								onclick="return changeView(1);" id="GirdView"><img
+									src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-grid.png" />
+								Сетка</a>
+							<a class="btn btn-light trans-bg  listButtonSearch" href="javascript:void(0);"
+								onclick="return changeView(2);" id="ListView"><img
+									src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-list.png" />
+								Список</a>
+							<div class="d-flex align-items-center">
+								<div class="lang-disp-desktop">
+									<ul class="d-flex pl-0 mb-0">
+										<div id="image-container pl-3" class="">
+											<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/russia.png" class="img-fluid" alt="Language Image" style="width:24px;">
+										</div>
+										<li class="mx-1"><a class="text-dark text-decoration-none"
+												href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/en/Exhibitor">EN</a>
+										</li>
+										<li class="mx-1"><a class="text-dark "
+												href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor">RU</a>
+										</li>
+										<!-- <li><a class="text-dark text-decoration-none" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/cn/Exhibitor">CN</a></li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<input type="hidden" name="ExhibitorDataView" id="ExhibitorDataView"
+							value="1">
+					</div>
+
+				</div>
+				<!--search box end-->
+				<!--alphabets-->
+				<nav aria-label="..." class="pt-3 pl-pr-0">
+					<ul class="pagination  list-pagination">
+						<li class="page-item">
+							<a class="page-link alphabetical_search" href="javascript:void(0);" id="alphabet_All"
+								onclick="return searchInitial('All');">Все</a>
+						</li>
+
+						&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_А" 
+									onclick="return searchInitial('А');">А
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Б" 
+									onclick="return searchInitial('Б');">Б
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_В" 
+									onclick="return searchInitial('В');">В
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Г" 
+									onclick="return searchInitial('Г');">Г
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Д" 
+									onclick="return searchInitial('Д');">Д
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Е" 
+									onclick="return searchInitial('Е');">Е
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Ё" 
+									onclick="return searchInitial('Ё');">Ё
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Ж" 
+									onclick="return searchInitial('Ж');">Ж
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_З" 
+									onclick="return searchInitial('З');">З
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_И" 
+									onclick="return searchInitial('И');">И
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Й" 
+									onclick="return searchInitial('Й');">Й
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_К" 
+									onclick="return searchInitial('К');">К
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Л" 
+									onclick="return searchInitial('Л');">Л
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_М" 
+									onclick="return searchInitial('М');">М
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Н" 
+									onclick="return searchInitial('Н');">Н
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_О" 
+									onclick="return searchInitial('О');">О
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_П" 
+									onclick="return searchInitial('П');">П
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Р" 
+									onclick="return searchInitial('Р');">Р
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_С" 
+									onclick="return searchInitial('С');">С
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Т" 
+									onclick="return searchInitial('Т');">Т
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_У" 
+									onclick="return searchInitial('У');">У
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Ф" 
+									onclick="return searchInitial('Ф');">Ф
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Х" 
+									onclick="return searchInitial('Х');">Х
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Ц" 
+									onclick="return searchInitial('Ц');">Ц
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Ч" 
+									onclick="return searchInitial('Ч');">Ч
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Ш" 
+									onclick="return searchInitial('Ш');">Ш
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Щ" 
+									onclick="return searchInitial('Щ');">Щ
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Ъ" 
+									onclick="return searchInitial('Ъ');">Ъ
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Ы" 
+									onclick="return searchInitial('Ы');">Ы
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Ь" 
+									onclick="return searchInitial('Ь');">Ь
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Э" 
+									onclick="return searchInitial('Э');">Э
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Ю" 
+									onclick="return searchInitial('Ю');">Ю
+									</a>
+								</li>&nbsp; 
+								<li class="page-item " aria-current="page">
+									<a class="alphabetical_search page-link " 
+									href="javascript:void(0);" 
+									id="alphabet_Я" 
+									onclick="return searchInitial('Я');">Я
+									</a>
+								</li><li class="w-100"></li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_A"
+						onclick="return searchInitial('A');">
+							A
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_B"
+						onclick="return searchInitial('B');">
+							B
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_C"
+						onclick="return searchInitial('C');">
+							C
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_D"
+						onclick="return searchInitial('D');">
+							D
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_E"
+						onclick="return searchInitial('E');">
+							E
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_F"
+						onclick="return searchInitial('F');">
+							F
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_G"
+						onclick="return searchInitial('G');">
+							G
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_H"
+						onclick="return searchInitial('H');">
+							H
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_I"
+						onclick="return searchInitial('I');">
+							I
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_J"
+						onclick="return searchInitial('J');">
+							J
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_K"
+						onclick="return searchInitial('K');">
+							K
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_L"
+						onclick="return searchInitial('L');">
+							L
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_M"
+						onclick="return searchInitial('M');">
+							M
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_N"
+						onclick="return searchInitial('N');">
+							N
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_O"
+						onclick="return searchInitial('O');">
+							O
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_P"
+						onclick="return searchInitial('P');">
+							P
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_Q"
+						onclick="return searchInitial('Q');">
+							Q
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_R"
+						onclick="return searchInitial('R');">
+							R
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_S"
+						onclick="return searchInitial('S');">
+							S
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_T"
+						onclick="return searchInitial('T');">
+							T
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_U"
+						onclick="return searchInitial('U');">
+							U
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_V"
+						onclick="return searchInitial('V');">
+							V
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_W"
+						onclick="return searchInitial('W');">
+							W
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_X"
+						onclick="return searchInitial('X');">
+							X
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_Y"
+						onclick="return searchInitial('Y');">
+							Y
+						</a>
+					</li>
+					<li class="page-item ">
+						<a class="alphabetical_search page-link "
+						href="javascript:void(0);"
+						id="alphabet_Z"
+						onclick="return searchInitial('Z');">
+							Z
+						</a>
+					</li>
+
+
+
+
+
+						<input type="hidden" name="alphabetSel" id="alphabetSel" value="">
+						<input type="hidden" name="event_slug" id="event_slug" value="worldfood-moscow-2026">
+						<input type="hidden" name="selected_pass_event" id="selected_pass_event"
+							value="22">
+
+						<li class="page-item">
+							<a class="page-link btn resetPagination active-reset alphabetical_search"
+								href="javascript:void(0);" onclick="return resetFilter();">Сбросить все</a>
+						</li>&nbsp;&nbsp;&nbsp;
+						<li class="ps-3">
+
+						</li>
+					</ul>
+					<input type="hidden" name="ok_text" id="ok_text" value="Хорошо">
+					<input type="hidden" name="no_record_text" id="no_record_text"
+						value="К сожалению, не найдено записей с названием компании, начинающимся с">
+				</nav>
+				<!--alphabets-->
+				<!--Key sectors start-->
+									<section class="keysec-box">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-2 d-flex justify-content-center align-items-center">
+									<h4 class="text-center pb-3 text-uppercase sector-title-main">
+
+										Разделы выставки									</h4>
+								</div>
+								<div class="col-lg-10">
+									<!--<ul class="mb-0 pl-0">
+									<li data-product="АЛКОГОЛЬНЫЕ НАПИТКИ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Alcoholic_Drinks.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">АЛКОГОЛЬНЫЕ НАПИТКИ</h6>
+													</li><li data-product="БАКАЛЕЯ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Grocery.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">БАКАЛЕЯ</h6>
+													</li><li data-product="БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Soft_Drinks.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ</h6>
+													</li><li data-product="ИНГРЕДИЕНТЫ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Ingredients.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">ИНГРЕДИЕНТЫ</h6>
+													</li><li data-product="ЗАМОРОЖЕННЫЕ ПРОДУКТЫ, ПОЛУФАБРИКАТЫ И ГОТОВАЯ КУЛИНАРИЯ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Frozen_products_Convenience_and_Ready-to-Eat_Food.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">ЗАМОРОЖЕННЫЕ ПРОДУКТЫ, ПОЛУФАБРИКАТЫ И ГОТОВАЯ КУЛИНАРИЯ</h6>
+													</li><li data-product="КОНДИТЕРСКИЕ И ХЛЕБОБУЛОЧНЫЕ ИЗДЕЛИЯ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Confectionary_and_Bakery.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">КОНДИТЕРСКИЕ И ХЛЕБОБУЛОЧНЫЕ ИЗДЕЛИЯ</h6>
+													</li><li data-product="КОНСЕРВАЦИЯ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Canned_Food.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">КОНСЕРВАЦИЯ</h6>
+													</li><li data-product="МАСЛОЖИРОВАЯ ПРОДУКЦИЯ И СОУСЫ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Oils_Fats_and_Sauces.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">МАСЛОЖИРОВАЯ ПРОДУКЦИЯ И СОУСЫ</h6>
+													</li><li data-product="МОЛОЧНАЯ ПРОДУКЦИЯ И СЫРЫ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Dairy_Products_and_Cheese.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">МОЛОЧНАЯ ПРОДУКЦИЯ И СЫРЫ</h6>
+													</li><li data-product="МЯСО, ПТИЦА И ЯЙЦА" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Meat_Poultry_and_Eggs.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">МЯСО, ПТИЦА И ЯЙЦА</h6>
+													</li><li data-product="ОРГАНИКА И ЗДОРОВОЕ ПИТАНИЕ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Organic_and_Healthy_Food.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">ОРГАНИКА И ЗДОРОВОЕ ПИТАНИЕ</h6>
+													</li><li data-product="РЫБА И МОРЕПРОДУКТЫ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Fish_and_Seafood.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">РЫБА И МОРЕПРОДУКТЫ</h6>
+													</li><li data-product="ФРУКТЫ И ОВОЩИ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Fruits_and_Vegetables.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">ФРУКТЫ И ОВОЩИ</h6>
+													</li><li data-product="ХАЛЯЛЬ" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Halal.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">ХАЛЯЛЬ</h6>
+													</li><li data-product="ЧАЙ, КОФЕ, КАКАО" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Tea_Coffee_and_Cocoa.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">ЧАЙ, КОФЕ, КАКАО</h6>
+													</li><li data-product="NON-FOOD И УСЛУГИ ДЛЯ БИЗНЕСА" class="product-select">
+														<div class="key-img-box">
+															<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Non-food.png" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">NON-FOOD И УСЛУГИ ДЛЯ БИЗНЕСА</h6>
+													</li><li data-product="ДРУГОЕ" class="product-select">
+														<div class="key-img-box">
+															<img src="" class="img-fluid" />
+														</div>
+														<h6 class="pt-2">ДРУГОЕ</h6>
+													</li>									</ul>-->
+									<div class="swiper keysec-swiper" style="padding:0 30px;">
+										<div class="swiper-wrapper">
+
+											<div class="swiper-slide product-select" data-product="АЛКОГОЛЬНЫЕ НАПИТКИ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Alcoholic_Drinks.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">АЛКОГОЛЬНЫЕ НАПИТКИ</h6>
+																		</div><div class="swiper-slide product-select" data-product="БАКАЛЕЯ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Grocery.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">БАКАЛЕЯ</h6>
+																		</div><div class="swiper-slide product-select" data-product="БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Soft_Drinks.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">БЕЗАЛКОГОЛЬНЫЕ НАПИТКИ</h6>
+																		</div><div class="swiper-slide product-select" data-product="ИНГРЕДИЕНТЫ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Ingredients.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">ИНГРЕДИЕНТЫ</h6>
+																		</div><div class="swiper-slide product-select" data-product="ЗАМОРОЖЕННЫЕ ПРОДУКТЫ, ПОЛУФАБРИКАТЫ И ГОТОВАЯ КУЛИНАРИЯ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Frozen_products_Convenience_and_Ready-to-Eat_Food.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">ЗАМОРОЖЕННЫЕ ПРОДУКТЫ, ПОЛУФАБРИКАТЫ И ГОТОВАЯ КУЛИНАРИЯ</h6>
+																		</div><div class="swiper-slide product-select" data-product="КОНДИТЕРСКИЕ И ХЛЕБОБУЛОЧНЫЕ ИЗДЕЛИЯ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Confectionary_and_Bakery.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">КОНДИТЕРСКИЕ И ХЛЕБОБУЛОЧНЫЕ ИЗДЕЛИЯ</h6>
+																		</div><div class="swiper-slide product-select" data-product="КОНСЕРВАЦИЯ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Canned_Food.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">КОНСЕРВАЦИЯ</h6>
+																		</div><div class="swiper-slide product-select" data-product="МАСЛОЖИРОВАЯ ПРОДУКЦИЯ И СОУСЫ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Oils_Fats_and_Sauces.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">МАСЛОЖИРОВАЯ ПРОДУКЦИЯ И СОУСЫ</h6>
+																		</div><div class="swiper-slide product-select" data-product="МОЛОЧНАЯ ПРОДУКЦИЯ И СЫРЫ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Dairy_Products_and_Cheese.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">МОЛОЧНАЯ ПРОДУКЦИЯ И СЫРЫ</h6>
+																		</div><div class="swiper-slide product-select" data-product="МЯСО, ПТИЦА И ЯЙЦА">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Meat_Poultry_and_Eggs.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">МЯСО, ПТИЦА И ЯЙЦА</h6>
+																		</div><div class="swiper-slide product-select" data-product="ОРГАНИКА И ЗДОРОВОЕ ПИТАНИЕ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Organic_and_Healthy_Food.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">ОРГАНИКА И ЗДОРОВОЕ ПИТАНИЕ</h6>
+																		</div><div class="swiper-slide product-select" data-product="РЫБА И МОРЕПРОДУКТЫ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Fish_and_Seafood.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">РЫБА И МОРЕПРОДУКТЫ</h6>
+																		</div><div class="swiper-slide product-select" data-product="ФРУКТЫ И ОВОЩИ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Fruits_and_Vegetables.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">ФРУКТЫ И ОВОЩИ</h6>
+																		</div><div class="swiper-slide product-select" data-product="ХАЛЯЛЬ">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Halal.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">ХАЛЯЛЬ</h6>
+																		</div><div class="swiper-slide product-select" data-product="ЧАЙ, КОФЕ, КАКАО">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Tea_Coffee_and_Cocoa.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">ЧАЙ, КОФЕ, КАКАО</h6>
+																		</div><div class="swiper-slide product-select" data-product="NON-FOOD И УСЛУГИ ДЛЯ БИЗНЕСА">
+																			<div class="key-img-box">
+																				<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/media/2015/Non-food.png" class="img-fluid" alt="key sector" />
+																			</div>
+																			<h6 class="pt-2 text-dark keysector-img-title">NON-FOOD И УСЛУГИ ДЛЯ БИЗНЕСА</h6>
+																		</div>
+										</div>
+																						<div class="swiper-button-prev"></div>
+												<div class="swiper-button-next"></div>
+																				</div>
+								</div>
+
+							</div>
+
+						</div>
+					</section>
+								<!--Key sectors end-->
+				<!--- data show-->
+
+
+				<div id="postList">
+
+					<section class="pt-3">
+	<div class="container pl-pr-0">
+		<div class="post-list">
+			<div class="row grid-layout row-cols-1 row-cols-md-4 g-4">
+							<!--<div class="col-md-9">-->
+				<div class="col-md-12">					<div class="row">
+				
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQxNjI=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/12708/2044_12708_12438_6597.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQxNjI=">14 ЗВЕЗДНЫЕ ОРЕХИ ГИДА										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B5118</h6>									
+									<p class="card-text">Турция									</p>
+								</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="javascript:void(0)" style="cursor:default">
+											<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/Event-icon-expo.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="javascript:void(0)">33 пингвина (ООО "Интеропт")										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B7057</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="javascript:void(0)" style="cursor:default">
+											<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/Event-icon-expo.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="javascript:void(0)">875										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B1135</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzY5NzA=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/13726/2044_13726_13451_5951.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzY5NzA=">Абдыш-Ата										</a></h5>
+									<h6"> Павильон 3 Зал 14 | Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A3047, A4051</h6>									
+									<p class="card-text">Кыргызстан									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzY5NzA=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzE4NzY=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/11879/2044_11879_11618_4099.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzE4NzY=">АВС Фрукты										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A9039</h6>									
+									<p class="card-text">Индия									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzE4NzY=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a><a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzE4NzY=/brochures" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/file.png" /><span class="tooltip-text">Брошюры</span></a><a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzE4NzY=/video"><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-play.png" style="width:26px" /><span class="tooltip-text">Видео</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYyNDE=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/13465/2044_13465_13192_7604.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYyNDE=">Авторский чай #ВМОМЕНТЕ										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A6157</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYyNDE=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a><a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYyNDE=/brand" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Бренды</span></a><a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYyNDE=/brochures" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/file.png" /><span class="tooltip-text">Брошюры</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYzNTg=" style="cursor:pointer">
+											<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/Event-icon-expo.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYzNTg=">Агентство инвестиционного развития Томской области, АНО										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B7057</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzY0MTg=" style="cursor:pointer">
+											<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/Event-icon-expo.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzY0MTg=">Агравиа										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A4131</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwNzE=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/11951/2044_11951_11689_3225.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwNzE=">Агрокластер Фуд Сити										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A1049</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMDU=" style="cursor:pointer">
+											<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/Event-icon-expo.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMDU=">АДЕЛЬДАН, ООО										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B3077</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUxNjQ=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/13067/2044_13067_12795_1091.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUxNjQ=">АДЕПТ ИМПЕКС ПРАЙВЕТ ЛИМИТЕД										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - Not_Assigned_Yet-1</h6>									
+									<p class="card-text">Индия									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUxNjQ=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a><a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUxNjQ=/brochures" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/file.png" /><span class="tooltip-text">Брошюры</span></a><a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUxNjQ=/video"><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-play.png" style="width:26px" /><span class="tooltip-text">Видео</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMjM=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/11935/2044_11935_11673_4441.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMjM=">АЙБАРУС, ООО										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A6019</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUzNzE=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/13150/2044_13150_12878_5898.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUzNzE=">Айчин Теджарат Арас										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - B3045</h6>									
+									<p class="card-text">Ближний Восток									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUzNzE=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a><a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUzNzE=/brochures" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/file.png" /><span class="tooltip-text">Брошюры</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQyNzM=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/12753/2044_12753_12483_4385.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQyNzM=">Акционерное общество										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B5119</h6>									
+									<p class="card-text">Турция									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQyNzM=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2ODE=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/12887/2044_12887_12616_8465.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2ODE=">АКЦИОНЕРНОЕ ОБЩЕСТВО JUST VIET										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A813314</h6>									
+									<p class="card-text">Вьетнам									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2ODE=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a><a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2ODE=/brochures" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/file.png" /><span class="tooltip-text">Брошюры</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2NzU=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/12885/2044_12885_12614_6389.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2NzU=">Акционерное общество Корпорация VISIMEX										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A813317</h6>									
+									<p class="card-text">Вьетнам									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2NzU=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a><a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2NzU=/brand" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Бренды</span></a><a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2NzU=/video"><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-play.png" style="width:26px" /><span class="tooltip-text">Видео</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2Nzg=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/12886/2044_12886_12615_4546.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2Nzg=">АКЦИОНЕРНОЕ ОБЩЕСТВО ПО ТЕХНОЛОГИИ ПЕРЕРАБОТКИ И ЭКСПОРТУ BANACO										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A813319</h6>									
+									<p class="card-text">Вьетнам									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzQ2Nzg=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUxMjU=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/13052/2044_13052_12780_6921.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUxMjU=">Алмас Кавир Джонуб Фисташковая компания.										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B4127</h6>									
+									<p class="card-text">Ближний Восток									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzUxMjU=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMTQ=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/11932/2044_11932_11670_9495.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMTQ=">Алтай Селигор										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B9067</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMTQ=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYzNDA=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/13506/2044_13506_13232_3528.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYzNDA=">Алтай Сила										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A6147</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYzNDA=/brochures" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/file.png" /><span class="tooltip-text">Брошюры</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYzMzE=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/13503/2044_13503_13229_3349.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzYzMzE=">Алтайское Поместье										</a></h5>
+									<h6"> Павильон 3 Зал 14</h6><br>									<h6 class="card-subtitle">Стенд № - A6147</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMTE=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/11931/2044_11931_11669_8823.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMTE=">Альфа, ООО										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B4037</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzM4MzI=" style="cursor:pointer">
+											<img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/Event-icon-expo.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzM4MzI=">АЛЬЯНС СЕРВИС										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B4029</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzM4MzI=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+					
+						<!--<div class="col-md-3 mb-3">-->
+						<div class="col-md-3 mb-3">							<div class="card h-100 ">
+																								<div class="card-img">
+									<a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMTc=" style="cursor:pointer">
+											<img src="https://itelgroup-bucket.storage.yandexcloud.net/Production/exb_doc/2044/11933/2044_11933_11671_2477.png" class="card-img-top" alt="...">
+									</a></div>
+								<div class="card-body">
+									<h5 class="card-title " style="text-transform:uppercase;"><a href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMTc=">АМОРЕ										</a></h5>
+									<h6"> Павильон 3 Зал 15</h6><br>									<h6 class="card-subtitle">Стенд № - B4121</h6>									
+									<p class="card-text">Россия									</p>
+								</div>
+																	<div class="card-footer">
+										<div class="footer-actions">
+											<a class="tooltip-image" href="https://exhibitors-itegroup.exhibitoronlinemanual.com/worldfood-moscow-2026/ru/Exhibitor/ExbDetails/MzIwMTc=/product" ><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/icon-images.png" /><span class="tooltip-text">Продукты</span></a>										</div>
+									</div>
+																
+								
+							</div>
+						</div>
+										</div>
+				</div>
+				
+							</div>
+		</div>
+	</div>
+</section>
+        <script>
+            function getData(page) {
+                $.ajax({
+                    method: "POST",
+                    url: "https://exhibitors-itegroup.exhibitoronlinemanual.com/ru/Exhibitor/ajaxPaginationData/" + page,
+                    data: {
+                        page: page
+                    },
+                    beforeSend: function() {
+                        $('.loading').show();
+                    },
+                    success: function(data) {
+                        $('.loading').hide();
+                        $('#postList').html(data);
+                    }
+                });
+            }
+        </script>
+<section><div class="container"><div class="row"><nav aria-label="..." class="pt-3"><div class="pagination align-items-center justify-content-end  list-pagination"><div class="pagination-info">Показано (компаний) от 1 до 24 из 837  </div>&nbsp;<span>1</span>&nbsp;<li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="searchFilter(24)">2</a></li>&nbsp;<li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="searchFilter(48)">3</a></li>&nbsp;<li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="searchFilter(24)">&#187;</a></li>&nbsp;<li class="page-item"><a class="page-link" href="javascript:void(0);" onclick="searchFilter(816)">Последняя</a></li></div></nav></div></div></section>				</div>
+				<!--- data show-->
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+
+<div class="footer_wrapper footerpanel" style="margin-top: auto !important;">
+<footer class="main-footer ">
+<div id="footer" class="dmgfooter">
+<div class="container">
+	<div class="row">
+		 <div class="col-lg-12 text-center dmglogo">
+			<a data-type="a" href="https://ite.group/ru" target="_blank" rel="noopener noreferrer"><img src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/images/logo-w.svg" class="img-fluid"></a>
+			<p class="pt-3">&copy; авторское право <script>document.write(new Date().getFullYear());</script> Группа компаний ITE | 
+				<a target="_blank" href="#">
+    				политика конфиденциальности				</a>
+			| 	Список участников разработан и размещен Xporience - Эксперты в области event-технологий | <a data-type="a" href="https://xporience.com/" target="_blank" rel="noopener noreferrer">www.xporience.com</a>
+			</p>
+		 </div>
+	</div>
+</div>
+  
+</div>
+</footer>
+
+
+</div><script src="http://localhost/exhibitor-listing-itegroup/themes/frontend/assets/js/jquery.min.js"></script>	<!--</div>-->
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content" id="AllAjaxData">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body clearfix">
+					<div class="one"></div>
+					<img id="modal-image" class="img-responsive" src=""><br />
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content" id="productInfo">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="senEnquiry" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content" id="EnquiryInfo">
+
+			</div>
+		</div>
+	</div>
+
+	<script src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/js/jquery.min.js"></script>
+	<script src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/js/bootstrap.bundle.min.js"></script>
+
+	<script src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/dist/js/bootstrap-select.js"></script>
+
+
+
+	<script type="text/javascript" src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/js/jquery.form.js"></script>
+	<script type="text/javascript" src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/js/jquery.validationEngine.js"></script>
+	<script type="text/javascript" src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/js/jquery.validationEngine-en.js"></script>
+	<script type="text/javascript" src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/js/fancyBox.js"></script>
+	<script type="text/javascript" src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/js/scripts.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+	<script type="text/javascript" src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/assets/swiper/swiper.js"></script>
+
+
+				<script src="https://exhibitors-itegroup.exhibitoronlinemanual.com/themes/frontend/js/exhibitorlist.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//$('#event_prod_cat_id').multiselect();
+		});
+	</script>
+	<script>
+		const swiper = new Swiper('.keysec-swiper', {
+			slidesPerView: 4,
+			spaceBetween: 20,
+			loop: false,
+			navigation: {
+			  nextEl: '.swiper-button-next',
+			  prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+			  320: { slidesPerView: 2 },
+			  576: { slidesPerView: 2 },
+			  768: { slidesPerView: 5 },
+			  992: { slidesPerView: 6 }
+			}
+		});
+	</script>
+</body>
+
+</html>

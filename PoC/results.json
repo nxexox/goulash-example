@@ -1,0 +1,536 @@
+[
+  {
+    "name": "Наш Партнёр",
+    "url": "https://our-partner.ru",
+    "category": "HoReCa",
+    "checked_at": "2026-11-03T20:08:57.578124+00:00",
+    "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+  },
+  {
+    "name": "Мос-Милк",
+    "url": "https://mos-milk.ru",
+    "category": "Молочная продукция",
+    "checked_at": "2026-11-03T20:08:57.578417+00:00",
+    "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+  },
+  {
+    "name": "Ингредико",
+    "url": "https://www.ingredico.ru",
+    "category": "Ингредиенты",
+    "checked_at": "2026-11-03T20:08:57.578489+00:00",
+    "status": 200,
+    "final_url": "https://www.ingredico.ru",
+    "bytes": 38752,
+    "title": "Ингредико  - Ingredico - сырье и ингредиенты для пищевой промышленности",
+    "jsonld_blocks": 0,
+    "contacts": [
+      "tel:+7%20495%20980-25-18",
+      "mailto:info@ingredico.ru",
+      "tel:+7%20495%20980-25-18",
+      "mailto:info@ingredico.ru"
+    ],
+    "useful_links": [
+      "/katalog/",
+      "/kompaniya/kontakty/",
+      "/kontakty/",
+      "/katalog/ingredienty/",
+      "/katalog/ingredienty/karraginany/",
+      "/katalog/ingredienty/cellulose_derivatives/",
+      "/katalog/ingredienty/kamedi/",
+      "/katalog/ingredienty/pektiny/",
+      "/katalog/ingredienty/al_ginat_natriya/",
+      "/katalog/syrie/",
+      "/katalog/syrie/soevaya_kletchatka_fajbriapfibriup1/",
+      "/katalog/syrie/piwevye_volokna_seamfajbr_ceamfibre/",
+      "/katalog/funkcionalnye_smesi/",
+      "/katalog/funkcionalnye_smesi/miksap_protomit/",
+      "/katalog/funkcionalnye_smesi/miksap_protagent/"
+    ]
+  },
+  {
+    "name": "Фуд Фреш",
+    "url": "https://food-fresh.ru",
+    "category": "HoReCa",
+    "checked_at": "2026-11-03T20:08:57.578539+00:00",
+    "status": 200,
+    "final_url": "https://food-fresh.ru",
+    "bytes": 345133,
+    "title": "Поставщик продуктов для ресторанов и кафе оптом в Москве и МО | Фуд Фреш",
+    "jsonld_blocks": 1,
+    "contacts": [
+      "tel:+74991100263",
+      "tel:+74991100263",
+      "tel:+79035326445",
+      "tel:+74991100263",
+      "tel:+74991100263",
+      "tel:+74991100263",
+      "tel:+79035326445",
+      "mailto:food-fresh.ru@mail.ru"
+    ],
+    "useful_links": [
+      "https://food-fresh.ru/dostavka-i-oplata/",
+      "https://food-fresh.ru/kontakty/",
+      "https://food-fresh.ru/wp-content/uploads/2026/10/prays-list-food-fresh.pdf",
+      "/dostavka-i-oplata/"
+    ]
+  },
+  {
+    "name": "Horecafoods",
+    "url": "https://horecafoods.ru",
+    "category": "HoReCa",
+    "checked_at": "2026-11-03T20:08:57.578582+00:00",
+    "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+  },
+  {
+    "name": "Густорико",
+    "url": "https://opentgp.ru/food/horeca/",
+    "category": "HoReCa",
+    "checked_at": "2026-11-03T20:08:57.578624+00:00",
+    "status": 200,
+    "final_url": "https://opentgp.ru/food/horeca/",
+    "bytes": 30128,
+    "title": "Оптовый поставщик для HoReCa — продукты и хозтовары | Густорико",
+    "jsonld_blocks": 1,
+    "contacts": [
+      "tel:+74952053500",
+      "tel:+74952053500",
+      "mailto:opentgp@yandex.ru",
+      "tel:+74952053500",
+      "mailto:opentgp@yandex.ru"
+    ],
+    "useful_links": []
+  },
+  {
+    "name": "AGAT FOODS",
+    "url": "https://agatfoods.ru",
+    "category": "HoReCa",
+    "checked_at": "2026-11-03T20:08:58.645349+00:00",
+    "status": 200,
+    "final_url": "https://agatfoods.ru",
+    "bytes": 3828,
+    "title": "AGAT FOODS — оптовые поставки продуктов для бизнеса",
+    "jsonld_blocks": 0,
+    "contacts": [],
+    "useful_links": []
+  },
+  {
+    "name": "АРОСА",
+    "url": "https://arosa.ru",
+    "category": "HoReCa",
+    "checked_at": "2026-11-03T20:08:58.826729+00:00",
+    "status": 200,
+    "final_url": "https://arosa.ru",
+    "bytes": 2891568,
+    "title": "АРОСА - оптовая продажа и доставка продуктов питания в рестораны и кафе - Ароса",
+    "jsonld_blocks": 0,
+    "contacts": [
+      "tel:+74959332023",
+      "tel:+74959332023",
+      "mailto:info@arosa.ru",
+      "mailto:info@arosa.ru",
+      "mailto:info@arosa.ru",
+      "tel:+74959332023",
+      "mailto:info@arosa.ru"
+    ],
+    "useful_links": [
+      "/contacts/?city=moskow",
+      "/contacts/?city=spb",
+      "/contacts/?city=sochi",
+      "/contacts/?city=krasnodar",
+      "/catalog/",
+      "/contacts/",
+      "/catalog/myaso/",
+      "/catalog/ptica/",
+      "/catalog/ryba-krevetki-moreprodukty/",
+      "/catalog/yaponskaya-kukhnya/",
+      "/catalog/italyanskaya-kukhnya/",
+      "/catalog/molochnye-produkty-yaytso/",
+      "/catalog/bakaleya/",
+      "/catalog/kartofel-fri-spetsialitety/",
+      "/catalog/konservaciya/"
+    ]
+  },
+  {
+    "name": "Неос Ингредиентс",
+    "url": "https://neos-ingredients.ru",
+    "category": "Ингредиенты",
+    "checked_at": "2026-11-03T20:08:59.086939+00:00",
+    "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+  },
+  {
+    "name": "GEOVITA",
+    "url": "https://geo-vita.com",
+    "category": "Упаковка",
+    "checked_at": "2026-11-03T20:08:59.585716+00:00",
+    "status": 200,
+    "final_url": "https://geo-vita.com",
+    "bytes": 294515,
+    "title": "Эко и био посуда GEOVITA - Одноразовая посуда и упаковка оптом от производителя ",
+    "jsonld_blocks": 0,
+    "contacts": [
+      "tel:88005055913",
+      "tel:88126765391",
+      "tel:84951344262",
+      "mailto:promo@geo-vita.com",
+      "mailto:promo@geo-vita.com"
+    ],
+    "useful_links": [
+      "https://geo-vita.com/dostavka/",
+      "https://geo-vita.com/contacts/",
+      "https://geo-vita.com/catalog/sale/",
+      "https://geo-vita.com/catalog/new/",
+      "https://geo-vita.com/catalog/tarelki/",
+      "https://geo-vita.com/catalog/supnicy/",
+      "https://geo-vita.com/catalog/lotki/",
+      "https://geo-vita.com/catalog/lanch-boksy/",
+      "https://geo-vita.com/catalog/kontejnery/",
+      "https://geo-vita.com/catalog/stakany/",
+      "https://geo-vita.com/catalog/upakovka-iz-bumagi/bumazhnye-trubochki/",
+      "https://geo-vita.com/catalog/pakety/",
+      "https://geo-vita.com/catalog/stolovye-pribory/",
+      "https://geo-vita.com/catalog/posuda-iz-kukuruznogo-krakhmala/",
+      "https://geo-vita.com/catalog/upakovka-na-vynos/kontejnery-dlya-supa/"
+    ]
+  },
+  {
+    "name": "Ingred PRO",
+    "url": "https://ingredpro.ru",
+    "category": "Барные ингредиенты",
+    "checked_at": "2026-11-03T20:09:00.162450+00:00",
+    "status": 402,
+    "final_url": "https://ingredpro.ru",
+    "bytes": 700,
+    "title": "402 Please renew your subscription.",
+    "jsonld_blocks": 0,
+    "contacts": [],
+    "useful_links": []
+  },
+  {
+    "name": "Коррекс",
+    "url": "https://www.korrex-td.ru",
+    "category": "Упаковка",
+    "checked_at": "2026-11-03T20:09:00.579569+00:00",
+    "status": 200,
+    "final_url": "https://www.korrex-td.ru",
+    "bytes": 191372,
+    "title": "\"Торговый дом \"Коррекс\" Упаковочные материалы и одноразовая посуда.",
+    "jsonld_blocks": 0,
+    "contacts": [
+      "tel:+7-343-270-59-08",
+      "mailto:td.korrex@yandex.ru",
+      "tel:+7-343-270-59-08",
+      "tel:+7-343-270-59-17",
+      "tel:+7-343-270-59-21",
+      "tel:+7-932-60-23-991",
+      "tel:+7-950-190-60-63",
+      "tel:td.korrex@yandex.ru"
+    ],
+    "useful_links": [
+      "/oplata-i-dostavka",
+      "/kontakty"
+    ]
+  },
+  {
+    "name": "Tasty Coffee",
+    "url": "https://tastycoffee.ru",
+    "category": "Кофе",
+    "checked_at": "2026-11-03T20:09:01.035564+00:00",
+    "status": 200,
+    "final_url": "https://tastycoffee.ru",
+    "bytes": 1165327,
+    "title": "Оптовые поставки свежеобжаренного кофе — Tasty Coffee",
+    "jsonld_blocks": 3,
+    "contacts": [],
+    "useful_links": [
+      "https://storage.yandexcloud.net/coffee-opt-static/media/statements/privacy.pdf",
+      "/contacts",
+      "/contacts/i-shop",
+      "/contacts/cafes",
+      "/contacts/requisites"
+    ]
+  },
+  {
+    "name": "SFT Trading",
+    "url": "https://sfttrading.ru",
+    "category": "Кофе",
+    "checked_at": "2026-11-03T20:09:01.704137+00:00",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "name": "Союзснаб",
+    "url": "https://ssnab.ru",
+    "category": "Ингредиенты",
+    "checked_at": "2026-11-03T20:09:01.831934+00:00",
+    "status": 200,
+    "final_url": "https://ssnab.ru",
+    "bytes": 378467,
+    "title": "Официальный сайт ГК «СОЮЗСНАБ» | Купить оптом пищевые ингредиенты от производителя",
+    "jsonld_blocks": 1,
+    "contacts": [
+      "tel:+78007071509",
+      "mailto:mail@ssnab.ru",
+      "tel:+78007071509",
+      "tel:+78007071509",
+      "tel:+78007071509",
+      "tel:+78007071509",
+      "mailto:mail@ssnab.ru",
+      "tel:+78007071509"
+    ],
+    "useful_links": [
+      "/contacts/"
+    ]
+  },
+  {
+    "name": "OSQ Group",
+    "url": "https://osqgroup.ru/about/",
+    "category": "Упаковка",
+    "checked_at": "2026-11-03T20:09:02.335429+00:00",
+    "status": 200,
+    "final_url": "https://osqgroup.ru/about/",
+    "bytes": 207572,
+    "title": "OSQ Group — экологичная упаковка из пищевого картона от производителя",
+    "jsonld_blocks": 1,
+    "contacts": [
+      "tel:+74957738718",
+      "mailto:clients@osqgroup.ru",
+      "tel:+74957738718",
+      "mailto:clients@osqgroup.ru",
+      "tel:+74957738718",
+      "mailto:clients@osqgroup.ru",
+      "mailto:marketing@osqgroup.ru",
+      "mailto:zakupki@osqgroup.ru"
+    ],
+    "useful_links": [
+      "/catalog/",
+      "/contacts/",
+      "/about/delivery/",
+      "/contacts/storage/",
+      "/contacts/distributors/",
+      "/contacts/storage/#tab-4",
+      "/catalog/upakovka-dlya-horeca/",
+      "/catalog/upakovka-dlya-retail/",
+      "/catalog/upakovka-dlya-pishchevykh-proizvodstv/",
+      "/catalog/konteynery/",
+      "/catalog/kruglye-konteynery/",
+      "/catalog/upakovka-dlya-fast-fuda/",
+      "/catalog/upakovka-dlya-sendvichey/",
+      "/catalog/upakovka-dlya-sushi-i-lapshi/",
+      "/catalog/konditerskaya-upakovka-i-korobki/"
+    ]
+  },
+  {
+    "name": "Гиорд",
+    "url": "https://www.giord.ru",
+    "category": "Ингредиенты",
+    "checked_at": "2026-11-03T20:09:03.356841+00:00",
+    "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+  },
+  {
+    "name": "Мистерия",
+    "url": "https://www.mystery.ru/catalogs/",
+    "category": "Упаковка",
+    "checked_at": "2026-11-03T20:09:03.449110+00:00",
+    "status": 200,
+    "final_url": "https://www.mystery.ru/catalogs/",
+    "bytes": 111678,
+    "title": "Каталоги",
+    "jsonld_blocks": 3,
+    "contacts": [
+      "tel:+78005501750",
+      "tel:+74959378959",
+      "tel:+78124413444",
+      "tel:+79205717212",
+      "tel:+78442955662",
+      "tel:+74732631554",
+      "tel:+73432959117",
+      "tel:+78432791339"
+    ],
+    "useful_links": [
+      "/catalog/",
+      "/catalog/0/?SHOW=NEW",
+      "/catalog/0/?SHOW=SALE",
+      "/catalog/2701/",
+      "/catalog/2715/",
+      "/catalog/2726/",
+      "/catalog/3374/",
+      "/catalog/2735/",
+      "/catalog/2752/",
+      "/catalog/2753/",
+      "/catalog/2754/",
+      "/catalog/2760/",
+      "/catalog/2761/",
+      "/catalog/2763/",
+      "/catalog/2854/"
+    ]
+  },
+  {
+    "name": "Уральский завоз",
+    "url": "https://www.bazaopt.ru",
+    "category": "Продукты",
+    "checked_at": "2026-11-03T20:09:04.834896+00:00",
+    "status": 200,
+    "final_url": "https://www.bazaopt.ru",
+    "bytes": 99081,
+    "title": "Уральский завоз — оптовая продажа продуктов питания, хозяйственных товаров и бытовой химии",
+    "jsonld_blocks": 0,
+    "contacts": [
+      "tel:+73433443599",
+      "tel:+73433443599"
+    ],
+    "useful_links": [
+      "./dostavka-v-hmao-i-yanao.html",
+      "./catalog.html",
+      "./09-zamorojennaya-ruba-dostavka-tolko-po-ekaterinburgu-ili-samovyvoz.html",
+      "./11-zamorojennaya-vupechka-testo-dostavka-tolko-po-ekaterinburgu-ili-samovyvoz.html",
+      "http://www.bazaopt.ru/./dostavka-v-hmao-i-yanao.html"
+    ]
+  },
+  {
+    "name": "Уралагротэкс",
+    "url": "https://uragrotex.ru",
+    "category": "Продукты",
+    "checked_at": "2026-11-03T20:09:07.232997+00:00",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'uragrotex.ru'. (_ssl.c:1082)>"
+  },
+  {
+    "name": "Фуд Экспресс",
+    "url": "https://food-exress.ru/feedback/",
+    "category": "Продукты",
+    "checked_at": "2026-11-03T20:09:07.995492+00:00",
+    "status": 200,
+    "final_url": "https://food-exress.ru/feedback/",
+    "bytes": 22928,
+    "title": "Контакты - Продукты питания оптом «Фуд Экспресс»",
+    "jsonld_blocks": 0,
+    "contacts": [
+      "mailto:ublegion@mail.ru",
+      "mailto:nikonoroff.il@yandex.ru",
+      "mailto:food-expressufa@mail.ru",
+      "mailto:nikonoroff.il@yandex.ru"
+    ],
+    "useful_links": []
+  },
+  {
+    "name": "ГрандПродуктЕкб",
+    "url": "https://grandproduktekb.ru",
+    "category": "Продукты",
+    "checked_at": "2026-11-03T20:09:09.057653+00:00",
+    "status": 200,
+    "final_url": "https://grandproduktekb.ru",
+    "bytes": 316979,
+    "title": "Партнёр по оптовым поставкам продуктов: качество, логистика, скидки",
+    "jsonld_blocks": 0,
+    "contacts": [
+      "mailto:operator@grandproduktekb.ru",
+      "tel:+7 (343) 214-77-01"
+    ],
+    "useful_links": []
+  },
+  {
+    "name": "ТК ДИП",
+    "url": "https://tkdip.ru",
+    "category": "Продукты",
+    "checked_at": "2026-11-03T20:09:10.216625+00:00",
+    "status": 200,
+    "final_url": "https://tkdip.ru",
+    "bytes": 402302,
+    "title": "Продукты оптом в Екатеринбурге и с доставкой по всей России купить в ТК \"ДИП\"",
+    "jsonld_blocks": 0,
+    "contacts": [
+      "tel:+73433790039",
+      "tel:+73432887388",
+      "tel:+73433630489",
+      "mailto:dip@tkdip.ru",
+      "tel:+73433790039",
+      "tel:+73432887388",
+      "tel:+73433630489",
+      "mailto:dip@tkdip.ru"
+    ],
+    "useful_links": [
+      "/upload/new-year.pdf",
+      "/catalog/produkty_pitaniya/",
+      "/catalog/produkty_pitaniya/ingredienty_dlya_pishchevogo_proizvodstva/",
+      "/catalog/produkty_pitaniya/ingredienty_dlya_pishchevogo_proizvodstva/bulony_dlya_horeca/",
+      "/catalog/produkty_pitaniya/ingredienty_dlya_pishchevogo_proizvodstva/zapravki_dlya_salatov/",
+      "/catalog/produkty_pitaniya/ingredienty_dlya_pishchevogo_proizvodstva/konservatsiya_dlya_horeca/",
+      "/catalog/produkty_pitaniya/ingredienty_dlya_pishchevogo_proizvodstva/koreyskoe_syre/",
+      "/catalog/produkty_pitaniya/ingredienty_dlya_pishchevogo_proizvodstva/krupy_dlya_horeca/",
+      "/catalog/produkty_pitaniya/ingredienty_dlya_pishchevogo_proizvodstva/makarony_dlya_horeca/",
+      "/catalog/produkty_pitaniya/ingredienty_dlya_pishchevogo_proizvodstva/marinady/",
+      "/catalog/produkty_pitaniya/ingredienty_dlya_pishchevogo_proizvodstva/sousy/",
+      "/catalog/produkty_pitaniya/bakaleya/",
+      "/catalog/produkty_pitaniya/bakaleya/aziatskaya_kukhnya/",
+      "/catalog/produkty_pitaniya/bakaleya/aziatskaya_kukhnya/aziatskaya_lapsha/",
+      "/catalog/produkty_pitaniya/bakaleya/aziatskaya_kukhnya/vasabi/"
+    ]
+  },
+  {
+    "name": "Наш Союз",
+    "url": "https://nash-souz.ru",
+    "category": "Молочная и мясная продукция",
+    "checked_at": "2026-11-03T20:09:11.669169+00:00",
+    "status": 200,
+    "final_url": "https://nash-souz.ru",
+    "bytes": 94556,
+    "title": "Продукты питания оптом в Екатеринбурге от поставщика - ООО \"Наш Союз\"",
+    "jsonld_blocks": 0,
+    "contacts": [
+      "tel:+7 (343) 379-55-90",
+      "tel:+7 (343) 379-55-90",
+      "tel:+7 (343) 379-55-90",
+      "tel:+7 (343) 379-55-90"
+    ],
+    "useful_links": [
+      "/catalog/syry/tm-selo-zelenoe/",
+      "https://nash-souz.su/catalog/syry/tm-brest-litovsk/",
+      "/catalog/myasnaya-gastronomiya/tm-velikolukskiy-myasokombinat/",
+      "/catalog/myasnaya-gastronomiya/tm-atyashevo/",
+      "/catalog/syry/tm-vitako/",
+      "https://nash-souz.su/catalog/syry/tm-teos/",
+      "https://nash-souz.su/catalog/syry/tm-sveza/",
+      "https://nash-souz.su/catalog/syry/tm-savushkin/",
+      "https://nash-souz.su/catalog/syry/tm-svitlogore/",
+      "https://nash-souz.su/catalog/syry/tm-tysyacha-ozyer/",
+      "https://nash-souz.su/catalog/syry/tm-kubanskaya-syrnaya-kompaniya/",
+      "/catalog/molochnaya-produktsiya-maslo-slivochnoe/tm-alpengurt/",
+      "/catalog/syry/tm-dolce-granto/",
+      "/catalog/syry/tm-zoloto-evropy/",
+      "/catalog/syry/tm-ichalki/"
+    ]
+  },
+  {
+    "name": "Global Foods",
+    "url": "https://globalfoods.ru",
+    "category": "HoReCa",
+    "checked_at": "2026-11-03T20:09:13.614084+00:00",
+    "status": 200,
+    "final_url": "https://globalfoods.ru",
+    "bytes": 424994,
+    "title": "Продукты для ресторанов и кафе - поставщик продуктов питания Глобал фудсFill 1 Copy 6arr-lefticon/arrow down yellow bigicon/arrow down yellow bigcertificatepincompasscookcrossdeliveryicon/download lightGroup 7GroupGroupfbfiltericon/catalog lightincartinstatile-iconlogologoloupemealpaymenticon/plusreturnShapeShapeShape2supportCheck Iconlist-icontime",
+    "jsonld_blocks": 0,
+    "contacts": [
+      "tel:+74957871144",
+      "tel:+74957871144",
+      "mailto:info@globalfoods.ru",
+      "tel:+74957871144",
+      "mailto:info@globalfoods.ru"
+    ],
+    "useful_links": [
+      "/catalog/myasnye_produkty/",
+      "/catalog/ryba_i_moreprodukty/",
+      "/catalog/molochnye_produkty/",
+      "/catalog/ovoshchi_i_frukty/",
+      "/catalog/napitki/",
+      "/catalog/konditerskie_tovary_i_ingredienty/",
+      "/catalog/bakaleya/",
+      "/catalog/khleb_i_testo/",
+      "/catalog/bulony_supy_pyure_sousy/",
+      "/catalog/produkty_dlya_panaziatskoy_kukhni/",
+      "/catalog/spetsii_pripravy/",
+      "/catalog/masla/",
+      "/catalog/soputstvuyushchie_tovary/",
+      "/catalog/podborki_1/",
+      "/klientam/dostavka/"
+    ]
+  }
+]

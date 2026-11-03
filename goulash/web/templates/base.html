@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Поиск поставщиков{% endblock %} — Goulash</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2300c2b8'/><path d='M9 9h8v6h6v8h-8v-6H9z' fill='%23000'/></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="/"><span class="logo-mark"></span>Goulash<b>.suppliers</b></a>
+    <nav>
+      <a href="/" {% if request.url.path in ['/', '/search'] %}class="on"{% endif %}>Поиск</a>
+      <a href="/shortlist" {% if request.url.path == '/shortlist' %}class="on"{% endif %}>Шорт-лист</a>
+      <a href="/about" {% if request.url.path == '/about' %}class="on"{% endif %}>Как это работает</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<div id="tray" class="tray" hidden>
+  <span id="tray-count"></span>
+  <a id="tray-go" class="btn primary" href="#">Сравнить</a>
+  <button id="tray-clear" class="btn ghost" type="button">Очистить</button>
+</div>
+<footer class="wrap foot">
+  Прототип тестового задания. Данные — публичные каталоги выставок и сайты компаний; каждый факт со ссылкой на источник.
+  Неизвестное помечено «нет данных», а не нулём.
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

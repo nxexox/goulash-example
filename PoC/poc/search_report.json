@@ -1,0 +1,33 @@
+{
+  "шоколад": [
+    {
+      "name": "ПОБЕДА, КОНДИТЕРСКАЯ ФАБРИКА, ООО",
+      "website": "http://www.pobedavkusa.ru",
+      "matched": [
+        "шоколад"
+      ],
+      "source": "https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/376915?stand=17D010"
+    }
+  ],
+  "ароматизаторы": [
+    {
+      "name": "ВКУСАРОМА, УК ООО",
+      "website": "https://vkusaroma.ru/",
+      "matched": [
+        "ароматизаторы"
+      ],
+      "source": "https://sppiunion.ru/uchastniki/id1003"
+    }
+  ],
+  "сыр": [
+    {
+      "name": "ПЛАВЫЧ, ЗАВОД ПЛАВЛЕНЫХ СЫРОВ",
+      "website": "http://www.plavych.ru",
+      "matched": [
+        "сыр"
+      ],
+      "source": "https://icatalog.expocentr.ru/ru/exhibitions/870c9c18-e84b-11ef-80ce-a0d3c1fab97f/exhibitors/377093?stand=3E090"
+    }
+  ],
+  "несуществующийтовар": []
+}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from "_macros.html" import completeness, shortlist_form %}
+{% block title %}Шорт-лист{% endblock %}
+{% block content %}
+<h1>Шорт-лист</h1>
+{% if not cards %}
+  <div class="empty"><p>Пока пусто. Добавляйте поставщиков из поиска через «☆ В шорт-лист».</p></div>
+{% else %}
+  {% for key, title in STATUSES.items() %}
+    {% set group = cards|selectattr('shortlist', 'equalto', key)|list %}
+    {% if group %}
+      <h2 class="section-title">{{ title }} <span class="muted">{{ group|length }}</span></h2>
+      {% for s in group %}
+      <article class="card compact">
+        <div class="card-head">
+          <div>
+            <h3><a href="/supplier/{{ s.id }}">{{ s.name }}</a></h3>
+            <div class="meta">{{ s.city or s.country or '' }}{% if s.phones %} · {{ s.phones[0].value }}{% endif %}{% if s.emails %} · {{ s.emails[0].value }}{% endif %}</div>
+            {% if s.notes %}<div class="small">📝 {{ s.notes[0].text|truncate(140) }}</div>{% endif %}
+          </div>
+          <div class="card-actions">
+            <label class="cmp"><input type="checkbox" class="cmp-box" value="{{ s.id }}"> Сравнить</label>
+            {{ shortlist_form(s, '/shortlist') }}
+          </div>
+        </div>
+        <div class="complete">Полнота {{ completeness(s) }}</div>
+      </article>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  <p><a class="btn ghost" href="/compare?ids={{ cards|map(attribute='id')|join(',') }}">Сравнить весь шорт-лист</a></p>
+{% endif %}
+{% endblock %}
