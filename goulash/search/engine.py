@@ -187,6 +187,12 @@ def _score(card: SupplierCard, row, labels: list[str], relaxed: bool, cat_ids: s
         score += 25
         reasons.append(f"Офис/производство в регионе ({card.city})")
 
+    if row["exact"] and 0 < len(card.categories) <= 3:
+        score += 12  # a specialist usually beats a broad distributor for a specific product
+        reasons.append("Профильный поставщик")
+    elif row["exact"] and len(card.categories) <= 6:
+        score += 6
+
     filled, total = card.completeness
     score += 15 * filled / total
     if card.facts.get("moq") or card.facts.get("price"):
