@@ -38,7 +38,9 @@
   {% endif %}
   {% if result.hits and result.query.terms and not (result.hits|selectattr('exact')|list) %}
     <div class="note warn">Точных совпадений по «{{ result.query.terms|map(attribute='word')|join(' ') }}» нет —
-      показываем поставщиков из подходящей категории. Наличие товара уточните у поставщика.</div>
+      показываем поставщиков из {{ 'категорий' if fallback_categories|length > 1 else 'категории' }}
+      {% for title, url in fallback_categories %}<a href="{{ url }}">«{{ title }}»</a>{{ ', ' if not loop.last }}{% else %}похожих категорий{% endfor %}.
+      Наличие товара уточните у поставщика.</div>
   {% endif %}
   {% for h in result.query.hints %}<div class="note">{{ h }}</div>{% endfor %}
 </div>

@@ -154,6 +154,12 @@ def search_page(
     ):
         if params[key]:
             applied.append((label, search_url(**(params | {key: ""}))))
+    # categories the query was widened to when the product itself is not in the catalog ("марс" -> chocolate)
+    fallback_categories = [
+        (BY_ID[c].title, search_url(category=c, region=filters.region))
+        for c in sorted(result.query.category_ids | ({category} if category else set()))
+        if c in BY_ID
+    ]
     suggestions = []
     if not result.hits:
         cats = result.query.category_ids or {c for c, _, n in repo.category_counts(conn)[:6]}
@@ -168,6 +174,7 @@ def search_page(
             "applied": applied,
             "reset_url": "/search",
             "suggestions": suggestions,
+            "fallback_categories": fallback_categories,
             "region_all_url": search_url(region=filters.region) if filters.region else None,
             "shortlist": set(repo.shortlist_ids(conn)),
         },
