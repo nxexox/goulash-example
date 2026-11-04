@@ -2,7 +2,7 @@ VENV ?= .venv
 PY := $(VENV)/bin/python
 PORT ?= 8000
 
-.PHONY: venv db run lint fmt test crawl work stats seed load-seed import-poc docker
+.PHONY: venv db run lint fmt test crawl work stats seed load-seed import-poc registry discover cycle docker
 
 $(PY):
 	python3 -m venv $(VENV)
@@ -32,6 +32,15 @@ crawl: $(PY)  ## catalog walk + supplier sites; PAGES=listing pages per source
 
 work: $(PY)
 	$(PY) -m goulash work --max-jobs $(or $(MAX_JOBS),300)
+
+registry: $(PY)  ## download the newest FNS SME registry (~2.2 GB, resumable) and import food companies
+	$(PY) -m goulash registry-import
+
+cycle: $(PY)  ## the full background cycle the worker runs: catalogs, registry refresh, discovery
+	$(PY) -m goulash cycle
+
+discover: $(PY)  ## find websites for registry companies (domain guessing, or Yandex Search API if a key is set)
+	$(PY) -m goulash discover --limit $(or $(LIMIT),100)
 
 stats: $(PY)
 	$(PY) -m goulash stats

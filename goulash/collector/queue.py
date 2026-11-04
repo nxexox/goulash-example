@@ -77,3 +77,16 @@ def fail(conn: psycopg.Connection, job: dict, error: str, retryable: bool) -> No
         (status, delay, error[:500], job["id"]),
     )
     conn.commit()
+
+
+def defer(conn: psycopg.Connection, job_id: int, delay: str) -> None:
+    """Re-schedule a job that is waiting on something external (a deferred search); not counted as a failure."""
+    conn.execute(
+        """
+        UPDATE jobs SET status = 'pending', attempts = greatest(attempts - 1, 0), run_after = now() + %s::interval,
+                        lease_until = NULL, updated_at = now()
+        WHERE id = %s
+        """,
+        (delay, job_id),
+    )
+    conn.commit()

@@ -1,15 +1,19 @@
-# Scheduled background collection: walks catalog pages from the saved checkpoint, refreshes supplier sites,
-# writes straight into the production database. Needs repository secret DATABASE_URL (Neon connection string).
+# Scheduled background worker: one full collection cycle (`python -m goulash cycle`), writing straight into the
+# production database. Needs repository secret DATABASE_URL (Neon connection string). Optional secrets
+# YANDEX_SEARCH_API_KEY / YANDEX_FOLDER_ID switch website discovery from domain guessing to Yandex Search API.
 name: collect
 
 on:
   schedule:
-    - cron: "0 3 * * 1"   # Mondays 03:00 UTC
+    - cron: "0 3 * * *"   # daily 03:00 UTC: catalogs resume from checkpoints, registry refreshes monthly
   workflow_dispatch:
     inputs:
       pages:
-        description: "Listing pages per source"
+        description: "Catalog listing pages per source"
         default: "10"
+      discover:
+        description: "Registry companies to look up"
+        default: "1000"
 
 concurrency:
   group: collect
@@ -18,14 +22,17 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 340
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      YANDEX_SEARCH_API_KEY: ${{ secrets.YANDEX_SEARCH_API_KEY }}
+      YANDEX_FOLDER_ID: ${{ secrets.YANDEX_FOLDER_ID }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install -q .
-      - run: python -m goulash crawl --pages ${{ inputs.pages || '10' }} --max-jobs 400 --threads 4
-      - run: python -m goulash stats
+      - run: >
+          python -m goulash cycle --pages ${{ inputs.pages || '10' }} --discover ${{ inputs.discover || '1000' }}
+          --threads 6 --wait 120

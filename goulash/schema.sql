@@ -125,3 +125,26 @@ CREATE TABLE IF NOT EXISTS vocabulary (
     freq          INT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS vocabulary_trgm ON vocabulary USING GIN(term gin_trgm_ops);
+
+-- FNS SME registry companies (food OKVED). Not shown in search: a row becomes a supplier only after its own
+-- website is found, verified (INN or name+city on the site) and has contacts.
+CREATE TABLE IF NOT EXISTS registry (
+    inn           TEXT PRIMARY KEY,
+    ogrn          TEXT,
+    name          TEXT NOT NULL,
+    okved         TEXT NOT NULL,
+    rubric        TEXT NOT NULL,
+    categories    TEXT[] NOT NULL DEFAULT '{}',
+    region        TEXT,
+    region_raw    TEXT,
+    city          TEXT,
+    msp_category  TEXT,                          -- 1 micro | 2 small | 3 medium
+    discovery     TEXT NOT NULL DEFAULT 'new',   -- new | queued | found | no_site | no_contacts
+    search_token  TEXT,                          -- pending deferred search
+    website       TEXT,
+    match         TEXT,                          -- inn | name+city
+    supplier_id   BIGINT REFERENCES suppliers(id) ON DELETE SET NULL,
+    seen_at       TIMESTAMPTZ NOT NULL DEFAULT now(),
+    checked_at    TIMESTAMPTZ
+);
+CREATE INDEX IF NOT EXISTS registry_discovery ON registry(discovery, msp_category);

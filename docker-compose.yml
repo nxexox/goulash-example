@@ -24,5 +24,19 @@ services:
       db:
         condition: service_healthy
 
+  # Background worker for a VPS: the same cycle as the GitHub Actions cron, once a day.
+  worker:
+    build: .
+    environment:
+      DATABASE_URL: postgresql://goulash:goulash@db:5432/goulash
+    command: ["sh", "-c", "while true; do python -m goulash cycle; sleep 86400; done"]
+    volumes:
+      - workerdata:/app/data/registry
+    profiles: ["worker"]
+    depends_on:
+      db:
+        condition: service_healthy
+
 volumes:
   pgdata:
+  workerdata:

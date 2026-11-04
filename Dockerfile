@@ -9,7 +9,7 @@ RUN pip install .
 
 COPY data/seed ./data/seed
 
-RUN useradd --create-home app && chown -R app /app
+RUN mkdir -p data/registry data/snapshots && useradd --create-home app && chown -R app /app
 USER app
 
 # Render/Koyeb pass $PORT. Stateless: all data lives in PostgreSQL (DATABASE_URL).

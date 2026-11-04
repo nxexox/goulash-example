@@ -6,10 +6,12 @@ import hashlib
 import json
 import logging
 import sys
+import time
+from collections import Counter
 from pathlib import Path
 
 from goulash import config, db, geo
-from goulash.collector import ingest, queue, worker
+from goulash.collector import discovery, ingest, queue, registry, worker
 from goulash.collector.adapters import ADAPTERS
 from goulash.collector.html import parse_html
 from goulash.taxonomy import categories_for_text
@@ -21,6 +23,14 @@ def cmd_init(args, conn):
     db.init_schema(conn)
     worker.register_sources(conn)
     print("schema ok")
+
+
+def _rebuild_vocabulary() -> int:
+    """Fresh connection: the command's own one may have sat idle for an hour while worker threads ran."""
+    with db.connect() as c:
+        n = ingest.rebuild_vocabulary(c)
+        c.commit()
+        return n
 
 
 def cmd_crawl(args, conn):
@@ -35,12 +45,12 @@ def cmd_crawl(args, conn):
         )
     conn.commit()
     print(worker.run(max_jobs=args.max_jobs, threads=args.threads))
-    print("vocabulary terms:", ingest.rebuild_vocabulary(conn))
+    print("vocabulary terms:", _rebuild_vocabulary())
 
 
 def cmd_work(args, conn):
     print(worker.run(kinds=args.kind, max_jobs=args.max_jobs, threads=args.threads))
-    print("vocabulary terms:", ingest.rebuild_vocabulary(conn))
+    print("vocabulary terms:", _rebuild_vocabulary())
 
 
 def cmd_import_poc(args, conn):
@@ -177,6 +187,97 @@ def cmd_reindex(args, conn):
     print(f"{len(rows)} suppliers, {ingest.rebuild_vocabulary(conn)} terms")
 
 
+def cmd_registry_import(args, conn):
+    """Load food companies (by main OKVED) from the FNS SME registry. Without --path downloads the newest monthly
+    archive; an archive that was already imported is skipped. Re-runnable: upsert by INN."""
+    if args.path:
+        path = Path(args.path)
+        marker = path.with_suffix(".name")  # written by registry.download: the monthly archive's real name
+        name = marker.read_text().strip() if marker.exists() else path.name
+    else:
+        name = registry.latest_archive()
+        src = conn.execute("SELECT checkpoint FROM sources WHERE id = %s", (registry.SOURCE_ID,)).fetchone()
+        if (src["checkpoint"] or {}).get("archive") == name and not args.force:
+            print(f"registry {name} already imported")
+            return
+        path = registry.download(name, config.REGISTRY_ZIP)
+    by_class: Counter = Counter()
+    n = 0
+    batch: list = []
+    for c in registry.iter_companies(path):
+        batch.append(c)
+        by_class[c.okved[:2]] += 1
+        n += 1
+        if len(batch) == 2000:
+            registry.upsert_many(conn, batch)
+            conn.commit()
+            batch.clear()
+            print(f"{n} companies...", flush=True)
+    registry.upsert_many(conn, batch)
+    # Companies already in the catalog (INN seen on their site/card) need no search.
+    linked = conn.execute(
+        """UPDATE registry r SET supplier_id = f.supplier_id, discovery = 'found', match = 'inn', checked_at = now()
+           FROM facts f WHERE f.field = 'inn' AND f.value = r.inn AND r.supplier_id IS NULL"""
+    ).rowcount
+    conn.execute(
+        "UPDATE sources SET checkpoint = %s, last_success = now() WHERE id = %s",
+        (json.dumps({"archive": name, "companies": n}), registry.SOURCE_ID),
+    )
+    conn.commit()
+    print(f"{n} companies imported from {name} {dict(by_class)}, {linked} linked to existing suppliers")
+
+
+def cmd_discover(args, conn):
+    """Queue website discovery for registry companies and run it until the deferred searches are collected."""
+    print("candidate provider:", type(discovery.default_provider()).__name__)
+    where, params = ["discovery = 'new'"], []
+    if args.okved:
+        where.append("okved LIKE %s")
+        params.append(args.okved + "%")
+    if args.region:
+        where.append("region = %s")
+        params.append(args.region)
+    # Medium and small companies first: they are the likeliest to run a website with contacts.
+    rows = conn.execute(
+        f"""SELECT inn FROM registry WHERE {" AND ".join(where)}
+            ORDER BY msp_category DESC NULLS LAST, left(okved, 2) = '46', inn LIMIT %s""",
+        [*params, args.limit],
+    ).fetchall()
+    for r in rows:
+        queue.enqueue(conn, "find_site", f"registry:{r['inn']}", {"inn": r["inn"]})
+        conn.execute("UPDATE registry SET discovery = 'queued' WHERE inn = %s", (r["inn"],))
+    conn.commit()
+    print(f"{len(rows)} companies queued")
+    deadline = time.monotonic() + args.wait * 60
+    while True:
+        print(worker.run(kinds=["find_site"], max_jobs=args.limit * 3, threads=args.threads))
+        pending = conn.execute(
+            "SELECT count(*) AS n FROM jobs WHERE kind = 'find_site' AND status IN ('pending', 'retry_pending')"
+        ).fetchone()["n"]
+        if not pending or time.monotonic() > deadline:
+            break
+        print(f"{pending} searches still running, waiting...", flush=True)
+        time.sleep(60)
+    print("vocabulary terms:", _rebuild_vocabulary())
+
+
+def cmd_cycle(args, conn):
+    """One full background cycle, the same everywhere (cron in CI, a VPS worker, a laptop):
+    catalogs from their checkpoints -> monthly registry refresh -> website discovery for the next batch.
+    Each step gets its own connection: steps run for hours and an idle connection is dropped by the server."""
+    steps = [
+        (cmd_crawl, argparse.Namespace(source=None, pages=args.pages, max_jobs=args.max_jobs, threads=args.threads)),
+        (cmd_registry_import, argparse.Namespace(path=None, force=False)),
+        (cmd_discover, argparse.Namespace(limit=args.discover, okved=None, region=None,
+                                          threads=args.discover_threads, wait=args.wait)),
+        (cmd_stats, args),
+    ]  # fmt: skip
+    for fn, ns in steps:
+        with db.connect() as c:
+            fn(ns, c)
+            c.commit()
+
+
 def cmd_stats(args, conn):
     q = {
         "suppliers": "SELECT count(*) AS n FROM suppliers",
@@ -191,6 +292,10 @@ def cmd_stats(args, conn):
         for r in conn.execute(
             "SELECT field, count(DISTINCT supplier_id) AS n FROM facts GROUP BY field ORDER BY field"
         ).fetchall()
+    }
+    out["registry"] = {
+        r["discovery"]: r["n"]
+        for r in conn.execute("SELECT discovery, count(*) AS n FROM registry GROUP BY discovery ORDER BY 1").fetchall()
     }
     out["jobs"] = {
         f"{r['kind']}:{r['status']}": r["n"]
@@ -226,6 +331,25 @@ def main(argv=None):
     s.add_argument("--path")
     s.set_defaults(fn=cmd_load_seed)
     sub.add_parser("reindex").set_defaults(fn=cmd_reindex)
+    r = sub.add_parser("registry-import", help="load food companies from the FNS SME registry archive")
+    r.add_argument("--path", help="local archive instead of downloading the newest one")
+    r.add_argument("--force", action="store_true", help="re-import an archive that was already imported")
+    r.set_defaults(fn=cmd_registry_import)
+    d = sub.add_parser("discover", help="find and verify websites of registry companies")
+    d.add_argument("--limit", type=int, default=100)
+    d.add_argument("--okved", help="OKVED prefix, e.g. 10.51")
+    d.add_argument("--region")
+    d.add_argument("--threads", type=int, default=6)
+    d.add_argument("--wait", type=int, default=180, help="minutes to wait for deferred searches")
+    d.set_defaults(fn=cmd_discover)
+    y = sub.add_parser("cycle", help="full background cycle: catalogs, registry refresh, website discovery")
+    y.add_argument("--pages", type=int, default=10)
+    y.add_argument("--max-jobs", type=int, default=1000)
+    y.add_argument("--discover", type=int, default=1000, help="registry companies to look up per cycle")
+    y.add_argument("--discover-threads", type=int, default=16, help="lookups mostly wait on DNS and handshakes")
+    y.add_argument("--threads", type=int, default=6)
+    y.add_argument("--wait", type=int, default=180)
+    y.set_defaults(fn=cmd_cycle)
     sub.add_parser("stats").set_defaults(fn=cmd_stats)
     args = p.parse_args(argv)
     with db.connect() as conn:
