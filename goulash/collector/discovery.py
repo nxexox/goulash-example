@@ -14,6 +14,7 @@ import socket
 import threading
 import time
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from typing import Protocol
 
@@ -148,7 +149,7 @@ def translit(word: str) -> list[str]:
     return [o for o in dict.fromkeys(out) if o]
 
 
-def guess_domains(core: str, limit: int = 16) -> list[str]:
+def guess_domains(core: str, limit: int = 20) -> list[str]:
     words_ = [w for w in re.findall(r"[a-zа-я0-9]+", core) if w]
     if not words_:
         return []
@@ -168,6 +169,9 @@ def guess_domains(core: str, limit: int = 16) -> list[str]:
         names += first + alt
         if all(re.fullmatch(r"[а-я0-9]+", w) for w in ws):
             names.append("".join(ws) + ".рф")
+    if 3 <= len(short) <= 5:
+        # "малоярославецкий сыродельный завод" -> msz: plants and holdings often use the initials
+        names.append("".join(translit(w)[0][0] for w in short if translit(w)))
     domains = []
     for n in dict.fromkeys(names):
         if n.endswith(".рф"):
@@ -195,13 +199,14 @@ class DomainGuess:
         return "guess:" + (m.group(1) if m else query)
 
     def results(self, token: str) -> list[SearchHit]:
-        core = token.removeprefix("guess:")
-        hits = []
-        for d in guess_domains(core):
-            if resolves(d):
-                host = d.encode("idna").decode() if not d.isascii() else d
-                hits.append(SearchHit(url=f"https://{host}/", title=d))
-        return hits
+        domains = guess_domains(token.removeprefix("guess:"))
+        with ThreadPoolExecutor(max_workers=8) as pool:  # DNS lookups wait on the network, not the CPU
+            alive = list(pool.map(resolves, domains))
+        return [
+            SearchHit(url=f"https://{d.encode('idna').decode() if not d.isascii() else d}/", title=d)
+            for d, ok in zip(domains, alive, strict=True)
+            if ok
+        ]
 
 
 def default_provider() -> SearchProvider:

@@ -170,6 +170,7 @@ def test_domain_guess_from_company_name(monkeypatch):
     assert domains[:2] == ["syrovarnyaural.ru", "syrovarnyaural.com"]
     assert "syrovarnya-ural.ru" in domains and "сыроварняурал.рф" in domains
     assert "ekoniva.ru" in discovery.guess_domains(discovery.core_name('АО "ЭКОНИВА-АПК ХОЛДИНГ"'))
+    assert "msz.ru" in discovery.guess_domains(discovery.core_name('ООО "МАЛОЯРОСЛАВЕЦКИЙ СЫРОДЕЛЬНЫЙ ЗАВОД"'))
     monkeypatch.setattr(discovery, "resolves", lambda d: d in {"syrovarnya-ural.ru", "сыроварняурал.рф"})
     g = discovery.DomainGuess()
     hits = g.results(g.submit(discovery.build_query('ООО "СЫРОВАРНЯ УРАЛ"', "Екатеринбург", None)))
