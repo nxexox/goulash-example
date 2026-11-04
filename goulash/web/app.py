@@ -14,8 +14,8 @@ from fastapi.templating import Jinja2Templates
 
 from goulash import db, repo
 from goulash.geo import REGION_NAMES
-from goulash.search.engine import Filters, search
-from goulash.taxonomy import CATEGORIES
+from goulash.search.engine import SORTS, Filters, search
+from goulash.taxonomy import BY_ID, CATEGORIES
 
 HERE = Path(__file__).parent
 TZ = ZoneInfo("Europe/Moscow")
@@ -53,12 +53,22 @@ def _ago(dt: datetime | None) -> str:
 
 
 templates.env.filters["ago"] = _ago
+
+
+def _plural(n: int, one: str, few: str, many: str) -> str:
+    if n % 10 == 1 and n % 100 != 11:
+        return one
+    return few if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14 else many
+
+
+templates.env.filters["plural"] = _plural
 templates.env.filters["date"] = lambda dt: dt.astimezone(TZ).strftime("%d.%m.%Y") if dt else "—"
 templates.env.globals.update(
     REGIONS=REGION_NAMES,
     CATEGORIES=CATEGORIES,
     FIELDS=repo.DECISION_FIELDS,
     STATUSES=repo.SHORTLIST_STATUSES,
+    SORTS=SORTS,
 )
 
 
@@ -67,8 +77,11 @@ def get_conn():
         yield conn
 
 
-def _filters(region: str, category: str, only_region: str, has_contacts: str, has_conditions: str) -> Filters:
+def _filters(
+    region: str, category: str, only_region: str, has_contacts: str, has_conditions: str, sort: str = "relevance"
+) -> Filters:
     return Filters(
+        sort=sort if sort in SORTS else "relevance",
         region=region or None,
         category=category or None,
         only_region=bool(only_region),
@@ -108,18 +121,54 @@ def search_page(
     only_region: str = "",
     has_contacts: str = "",
     has_conditions: str = "",
+    sort: str = "relevance",
     conn=Depends(get_conn),
 ):
-    filters = _filters(region, category, only_region, has_contacts, has_conditions)
+    filters = _filters(region, category, only_region, has_contacts, has_conditions, sort)
     result = search(conn, q, filters)
-    filters.region = result.region  # show a region parsed from the query in the select
+    # A place typed in the query moves into the region filter and out of the search box, so the next change of
+    # the region select is not overridden by a stale city left in the text.
+    shown_q = result.query.product_text if result.query.place else q
+    filters.region = result.region
+    params = {
+        "q": shown_q,
+        "region": filters.region or "",
+        "category": category,
+        "only_region": only_region,
+        "has_contacts": has_contacts,
+        "has_conditions": has_conditions,
+        "sort": "" if sort == "relevance" else sort,
+    }
+    applied = []  # (label, url without this filter)
+    if shown_q:
+        applied.append((f"Запрос: {shown_q}", search_url(**(params | {"q": ""}))))
+    if filters.region:
+        how = f" (из запроса «{result.query.place}»)" if result.query.place else ""
+        applied.append((f"Регион: {filters.region}{how}", search_url(**(params | {"region": "", "only_region": ""}))))
+    if category in BY_ID:
+        applied.append((f"Категория: {BY_ID[category].title}", search_url(**(params | {"category": ""}))))
+    for key, label in (
+        ("only_region", "Только связанные с регионом"),
+        ("has_contacts", "С контактами"),
+        ("has_conditions", "С условиями"),
+    ):
+        if params[key]:
+            applied.append((label, search_url(**(params | {key: ""}))))
+    suggestions = []
+    if not result.hits:
+        cats = result.query.category_ids or {c for c, _, n in repo.category_counts(conn)[:6]}
+        suggestions = [(BY_ID[c].title, search_url(category=c, region=filters.region)) for c in cats if c in BY_ID]
     return templates.TemplateResponse(
         request,
         "search.html",
         {
-            "q": q,
+            "q": shown_q,
             "f": filters,
             "result": result,
+            "applied": applied,
+            "reset_url": "/search",
+            "suggestions": suggestions,
+            "region_all_url": search_url(region=filters.region) if filters.region else None,
             "shortlist": set(repo.shortlist_ids(conn)),
         },
     )
@@ -199,9 +248,10 @@ def api_search(
     only_region: str = "",
     has_contacts: str = "",
     has_conditions: str = "",
+    sort: str = "relevance",
     conn=Depends(get_conn),
 ):
-    r = search(conn, q, _filters(region, category, only_region, has_contacts, has_conditions))
+    r = search(conn, q, _filters(region, category, only_region, has_contacts, has_conditions, sort))
     return JSONResponse(
         {
             "query": q,

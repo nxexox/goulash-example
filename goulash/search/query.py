@@ -9,6 +9,11 @@ from goulash.text import STOPWORDS, normalize, stem, words
 
 QTY_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*(кг|г|гр|т|тонн\w*|л|мл|шт|уп|короб\w*|паллет\w*|₽|руб\w*|тыс\w*)\b", re.I)
 UNIT = {"гр": "г", "тонн": "т", "руб": "₽"}
+# Words people type around the product that say nothing about it. Query-side only: the index is untouched.
+QUERY_NOISE = {
+    "что", "то", "нибудь", "где", "купить", "куплю", "оптом", "опт", "поставщик", "поставщики", "поставщика",
+    "поставщиков", "нужен", "нужна", "нужно", "нужны", "ищу", "закупка", "закупить", "недорого", "дешево",
+}  # fmt: skip
 
 
 @dataclass
@@ -26,6 +31,8 @@ class ParsedQuery:
     region: str | None = None
     quantities: list[str] = field(default_factory=list)
     hints: list[str] = field(default_factory=list)
+    place: str | None = None  # the place as typed ("питер"), moved from the query text into the region filter
+    product_text: str = ""  # the query without the place: what stays in the search box
 
     @property
     def category_ids(self) -> set[str]:
@@ -49,12 +56,20 @@ def parse(raw: str) -> ParsedQuery:
         q.region = geo.region_of_city(q.city)
     elif region_spans:
         q.region = region_spans[0][0]
+    place_idx: set[int] = set()
     for _, a, b in city_spans + region_spans:
-        covered.update(range(a, b))
-    # "область"/"край" next to a region name are part of the place, not the product
-    covered.update(i for i, w in enumerate(toks) if w in {"область", "обл", "край", "республика"})
+        place_idx.update(range(a, b))
+    if place_idx:
+        # "область"/"край"/"в" next to a region name are part of the place, not the product
+        place_idx.update(i for i, w in enumerate(toks) if w in {"область", "обл", "край", "республика"})
+        q.place = " ".join(toks[i] for i in sorted(place_idx) if toks[i] not in {"область", "обл", "край"})
+    covered.update(place_idx)
+    rest = [w for i, w in enumerate(toks) if i not in covered and w not in QUERY_NOISE]
+    while rest and rest[-1] in {"в", "во", "по", "для", "из"}:
+        rest.pop()  # "сыр в питер" -> "сыр"
+    q.product_text = " ".join(rest + q.quantities)
     for i, w in enumerate(toks):
-        if i in covered or w in STOPWORDS or len(w) < 2 or w.isdigit():
+        if i in covered or w in STOPWORDS or w in QUERY_NOISE or len(w) < 2 or w.isdigit():
             continue
         s = stem(w)
         q.terms.append(Term(word=w, stem=s, categories=categories_for_stem(s)))
@@ -63,10 +78,5 @@ def parse(raw: str) -> ParsedQuery:
         q.hints.append(
             f"«{', '.join(q.quantities)}» — фасовка или объём заказа? Поставщики редко публикуют это; "
             "уточните при звонке. Количество не используется как фильтр."
-        )
-    if q.region:
-        q.hints.append(
-            f"Регион доставки: {q.region}. Город офиса и зона доставки — разные вещи, "
-            "показываем отдельно подтверждённые и неподтверждённые."
         )
     return q

@@ -22,7 +22,7 @@ SHORTLIST_STATUSES = {
     "negotiating": "Переговоры",
     "rejected": "Не подходит",
 }
-SOURCE_TITLES = {"prodexpo": "Продэкспо-2026", "worldfood": "WorldFood 2026"}
+SOURCE_TITLES = {"prodexpo": "Продэкспо-2026", "worldfood": "WorldFood 2026", "fns_rsmp": "Реестр МСП ФНС"}
 
 
 @dataclass
@@ -63,14 +63,19 @@ class SupplierCard:
 
     @property
     def completeness(self) -> tuple[int, int]:
-        checks = [
-            bool(self.website),
-            bool(self.phones),
-            bool(self.emails),
-            bool(self.address or self.city),
-            *(bool(self.facts.get(k)) for k in DECISION_FIELDS),
+        items = self.data_items
+        return sum(known for _, known in items), len(items)
+
+    @property
+    def data_items(self) -> list[tuple[str, bool]]:
+        """What we know about the supplier, field by field: explains the "Данные: 5 из 9" score."""
+        return [
+            ("Сайт", bool(self.website)),
+            ("Телефон", bool(self.phones)),
+            ("E-mail", bool(self.emails)),
+            ("Адрес", bool(self.address or self.city)),
+            *((title, bool(self.facts.get(k))) for k, (title, _) in DECISION_FIELDS.items()),
         ]
-        return sum(checks), len(checks)
 
     @property
     def questions(self) -> list[str]:

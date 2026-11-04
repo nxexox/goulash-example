@@ -1,8 +1,8 @@
 {% macro search_form(q='', f=None, big=False) %}
-<form class="search {% if big %}big{% endif %}" action="/search" method="get">
+<form id="search-form" class="search {% if big %}big{% endif %}" action="/search" method="get" data-auto="{{ 'off' if big else 'on' }}">
   <div class="search-row">
-    <input name="q" value="{{ q }}" placeholder="Что ищете? Например: моцарелла, специи халяль, соки Краснодар" autofocus aria-label="Запрос">
-    <select name="region" aria-label="Регион доставки">
+    <input name="q" value="{{ q }}" placeholder="Товар и город: моцарелла Екатеринбург, соки Краснодар, сникерс спб" autofocus aria-label="Что ищете" autocomplete="off">
+    <select name="region" aria-label="Регион доставки" data-search data-placeholder="Регион доставки — любой">
       <option value="">Регион доставки — любой</option>
       {% for r in REGIONS %}<option value="{{ r }}" {% if f and f.region == r %}selected{% endif %}>{{ r }}</option>{% endfor %}
     </select>
@@ -10,13 +10,14 @@
   </div>
   {% if not big %}
   <div class="filters">
-    <select name="category" aria-label="Категория">
+    <select name="category" aria-label="Категория" data-search data-placeholder="Все категории">
       <option value="">Все категории</option>
       {% for c in CATEGORIES %}<option value="{{ c.id }}" {% if f and f.category == c.id %}selected{% endif %}>{{ c.title }}</option>{% endfor %}
     </select>
-    <label><input type="checkbox" name="only_region" value="1" {% if f and f.only_region %}checked{% endif %}> Только связанные с регионом</label>
-    <label><input type="checkbox" name="has_contacts" value="1" {% if f and f.has_contacts %}checked{% endif %}> С контактами</label>
-    <label><input type="checkbox" name="has_conditions" value="1" {% if f and f.has_conditions %}checked{% endif %}> С условиями (MOQ / цена / доставка)</label>
+    <label class="check {% if not (f and f.region) %}disabled{% endif %}" title="{% if not (f and f.region) %}Сначала выберите регион{% endif %}">
+      <input type="checkbox" name="only_region" value="1" {% if f and f.only_region %}checked{% endif %} {% if not (f and f.region) %}disabled{% endif %}> Только связанные с регионом</label>
+    <label class="check"><input type="checkbox" name="has_contacts" value="1" {% if f and f.has_contacts %}checked{% endif %}> С контактами</label>
+    <label class="check"><input type="checkbox" name="has_conditions" value="1" {% if f and f.has_conditions %}checked{% endif %}> С условиями: мин. заказ, цена, доставка</label>
   </div>
   {% endif %}
 </form>
@@ -40,16 +41,24 @@
 
 {% macro completeness(s) %}
   {% set got, total = s.completeness %}
-  <span class="meter" title="Заполнено {{ got }} из {{ total }} полей: сайт, телефон, e-mail, адрес, MOQ, цена, документы, доставка, регионы">
-    <span style="width: {{ (100 * got / total)|round }}%"></span>
-  </span>
-  <span class="muted small">{{ got }}/{{ total }}</span>
+  <details class="data-fill">
+    <summary title="Сколько полей карточки удалось найти в источниках">
+      <span class="meter"><span style="width: {{ (100 * got / total)|round }}%"></span></span>
+      Данные: {{ got }} из {{ total }}
+    </summary>
+    <div class="pop">
+    <ul>
+      {% for title, known in s.data_items %}<li class="{{ 'yes' if known else 'no' }}">{{ '✓' if known else '✗' }} {{ title }}</li>{% endfor %}
+    </ul>
+    <p class="muted small">Сколько полей нашлось в источниках. Недостающее — в вопросах для звонка на странице поставщика.</p>
+    </div>
+  </details>
 {% endmacro %}
 
 {% macro shortlist_form(s, back) %}
 <form method="post" action="/supplier/{{ s.id }}/shortlist" class="inline">
   <input type="hidden" name="back" value="{{ back }}">
-  <select name="status" onchange="this.form.submit()" aria-label="Статус в шорт-листе" class="status-select {% if s.shortlist %}set{% endif %}">
+  <select name="status" onchange="this.form.submit()" aria-label="Статус в шорт-листе" class="status-select {% if s.shortlist %}set{% endif %}" data-plain>
     <option value="">☆ В шорт-лист</option>
     {% for k, v in STATUSES.items() %}<option value="{{ k }}" {% if s.shortlist == k %}selected{% endif %}>★ {{ v }}</option>{% endfor %}
   </select>

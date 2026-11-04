@@ -118,3 +118,16 @@ def test_price_without_product_and_third_party_inn_are_skipped():
     assert not text_facts(["100 ₽/кг Подробнее"], "u")
     assert not [f for f in text_facts(["Доставка силами Партнера ООО Детека. ИНН 7707083893"], "u") if f.field == "inn"]
     assert not [f for f in text_facts(["Organic Mango Farming"], "u") if f.field == "certificates"]
+
+
+def test_query_place_moves_out_of_the_text():
+    q = parse("купить моцарелла для пиццы 2 кг в питер")
+    assert q.region == "Санкт-Петербург и Ленинградская область" and q.place == "питер"
+    assert q.product_text == "моцарелла для пиццы 2 кг"
+    assert parse("что-то питер").product_text == "" and not parse("что-то питер").terms
+    assert parse("сыр").place is None
+
+
+def test_brand_names_map_to_categories():
+    assert parse("сникерс").terms[0].categories == {"chocolate"}
+    assert "coffee_tea" in parse("нескафе").category_ids

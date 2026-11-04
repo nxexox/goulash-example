@@ -4,6 +4,28 @@
 {% block content %}
 {{ search_form(q, f) }}
 
+<div id="results" class="results">
+{% if applied or result.hits %}
+<div class="results-head">
+  <div class="results-count">
+    {% if result.hits %}Найдено <b>{{ result.hits|length }}</b> {{ result.hits|length|plural('поставщик', 'поставщика', 'поставщиков') }}{% else %}Ничего не найдено{% endif %}
+  </div>
+  {% if result.hits|length > 1 %}
+  <label class="sort">Сортировка
+    <select name="sort" form="search-form" aria-label="Сортировка" data-plain-ts>
+      {% for k, v in SORTS.items() %}<option value="{{ k }}" {% if f.sort == k %}selected{% endif %}>{{ v }}</option>{% endfor %}
+    </select>
+  </label>
+  {% endif %}
+</div>
+{% if applied %}
+<div class="applied">
+  {% for label, url in applied %}<a class="chip-x" href="{{ url }}" title="Убрать">{{ label }} <span aria-hidden="true">✕</span></a>{% endfor %}
+  {% if applied|length > 1 %}<a class="reset" href="{{ reset_url }}">Сбросить всё</a>{% endif %}
+</div>
+{% endif %}
+{% endif %}
+
 <div class="notes-bar">
   {% for word, fixed in result.corrections %}
     <div class="note info">Исправили опечатку: «{{ word }}» → искали «{{ fixed }}…»</div>
@@ -13,6 +35,10 @@
   {% endif %}
   {% if result.relaxed %}
     <div class="note warn">Нет поставщиков, у которых совпали бы все слова. Показаны частичные совпадения.</div>
+  {% endif %}
+  {% if result.hits and result.query.terms and not (result.hits|selectattr('exact')|list) %}
+    <div class="note warn">Точных совпадений по «{{ result.query.terms|map(attribute='word')|join(' ') }}» нет —
+      показываем поставщиков из подходящей категории. Наличие товара уточните у поставщика.</div>
   {% endif %}
   {% for h in result.query.hints %}<div class="note">{{ h }}</div>{% endfor %}
 </div>
@@ -36,7 +62,7 @@
     </div>
   </div>
   <div class="badges">
-    {% if not h.exact %}<span class="badge mid">Совпадение только по категории</span>{% endif %}
+    {% if not h.exact and result.query.terms %}<span class="badge mid">Совпадение только по категории</span>{% endif %}
     {{ region_badge(h.region_fit, result.region) }}
     {% for t in s.category_titles[:4] %}<span class="tag">{{ t }}</span>{% endfor %}
   </div>
@@ -54,7 +80,7 @@
   </dl>
   <div class="card-foot">
     <ul class="reasons">{% for r in h.reasons %}<li>{{ r }}</li>{% endfor %}</ul>
-    <div class="complete">Полнота {{ completeness(s) }}</div>
+    <div class="complete">{{ completeness(s) }}</div>
   </div>
 </article>
 {% endmacro %}
@@ -74,12 +100,16 @@
   {% endif %}
 {% elif q or f.category or f.region %}
   <div class="empty">
-    <h2>Ничего не нашли</h2>
-    <p>Попробуйте более общее слово или выберите категорию.</p>
+    <h2>По этому запросу поставщиков нет</h2>
+    <p>Каталоги описывают товары общими словами («шоколадные батончики», а не бренд), поэтому попробуйте категорию
+      или более общее слово.</p>
+    {% if suggestions %}<div class="chips">{% for title, url in suggestions %}<a class="chip" href="{{ url }}">{{ title }}</a>{% endfor %}</div>{% endif %}
+    {% if region_all_url %}<p><a href="{{ region_all_url }}">Все поставщики региона «{{ f.region }}» →</a></p>{% endif %}
   </div>
 {% endif %}
 
 {% if result.discovery_logged %}
-  <div class="note info">Мало результатов — запрос «{{ q }}» записан в очередь на поиск новых источников. Фоновый сбор учтёт его при следующем обходе.</div>
+  <div class="note info">Мало результатов — запрос «{{ result.query.raw }}» записан в очередь на поиск новых источников. Фоновый сбор учтёт его при следующем обходе.</div>
 {% endif %}
+</div>
 {% endblock %}

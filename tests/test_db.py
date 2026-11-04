@@ -147,6 +147,11 @@ def test_web_pages(conn, db_url):
         ]:
             assert client.get(url).status_code == 200, url
         assert client.get("/supplier/999999").status_code == 404
+        # a place typed in the query becomes the region filter and wins over a stale select value
+        page = client.get("/search", params={"q": "сыр екатеринбург", "region": "Москва и Московская область"}).text
+        assert "Регион: Свердловская область (из запроса «екатеринбург»)" in page and 'value="сыр"' in page
+        page = client.get("/search", params={"q": "сыр", "sort": "name"}).text
+        assert page.index("МОЛОКО ПЛЮС") < page.index("СЫРОВАРНЯ УРАЛ")
         client.post(f"/supplier/{sid}/notes", data={"text": "Позвонить во вторник"})
         client.post(f"/supplier/{sid}/shortlist", data={"status": "to_contact"})
         page = client.get(f"/supplier/{sid}").text

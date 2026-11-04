@@ -12,7 +12,10 @@ _pool: ConnectionPool | None = None
 
 
 def connect(url: str | None = None) -> psycopg.Connection:
-    return psycopg.connect(url or config.DATABASE_URL, row_factory=dict_row)
+    # TCP keepalives: managed Postgres (Neon) and NATs drop silent connections during long crawl steps.
+    return psycopg.connect(
+        url or config.DATABASE_URL, row_factory=dict_row, keepalives=1, keepalives_idle=30, keepalives_interval=10
+    )
 
 
 def init_schema(conn: psycopg.Connection) -> None:

@@ -18,11 +18,21 @@ TYPO_SIMILARITY = 0.45
 
 @dataclass
 class Filters:
-    region: str | None = None  # explicit region select; overrides region parsed from query
+    region: str | None = None  # region select; a place typed in the query wins (it is the user's latest intent)
     category: str | None = None
     only_region: bool = False  # hide suppliers without any link to the region
     has_contacts: bool = False
     has_conditions: bool = False  # any of moq / price / delivery known
+    sort: str = "relevance"  # key of SORTS
+
+
+SORTS = {
+    "relevance": "По релевантности",
+    "data": "Больше данных",
+    "conditions": "Сначала с условиями",
+    "fresh": "Недавно проверенные",
+    "name": "По названию",
+}
 
 
 @dataclass
@@ -78,7 +88,7 @@ def _tsquery(groups: list[set[str]], mode: str) -> str:
 def search(conn, raw: str, filters: Filters | None = None, limit: int = 40) -> SearchResult:
     filters = filters or Filters()
     q = parse(raw)
-    region = filters.region or q.region
+    region = q.region or filters.region
     res = SearchResult(query=q, region=region)
 
     groups: list[set[str]] = []
@@ -122,7 +132,7 @@ def search(conn, raw: str, filters: Filters | None = None, limit: int = 40) -> S
             continue
         res.hits.append(hit)
     res.hits.sort(key=lambda h: -h.score)
-    res.hits = res.hits[:limit]
+    res.hits = _sorted(res.hits[:limit], filters.sort)  # re-order the most relevant, never widen the set
 
     if len(res.hits) < config.DISCOVERY_THRESHOLD and q.raw:
         conn.execute(
@@ -132,6 +142,19 @@ def search(conn, raw: str, filters: Filters | None = None, limit: int = 40) -> S
         conn.commit()
         res.discovery_logged = True
     return res
+
+
+def _sorted(hits: list[Hit], sort: str) -> list[Hit]:
+    def has_terms(h: Hit) -> bool:
+        return any(h.card.facts.get(k) for k in ("moq", "price", "delivery"))
+
+    keys = {
+        "data": lambda h: (-h.card.completeness[0], -h.score),
+        "conditions": lambda h: (not has_terms(h), -h.score),
+        "fresh": lambda h: (-h.card.last_seen.timestamp(), -h.score),
+        "name": lambda h: h.card.name.strip('"«» ').lower(),
+    }
+    return sorted(hits, key=keys[sort]) if sort in keys else hits
 
 
 def _retrieve(conn, groups, mode, cat_ids, filters: Filters, region):
