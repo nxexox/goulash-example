@@ -243,9 +243,10 @@ def cmd_discover(args, conn):
             ORDER BY msp_category DESC NULLS LAST, left(okved, 2) = '46', inn LIMIT %s""",
         [*params, args.limit],
     ).fetchall()
-    for r in rows:
-        queue.enqueue(conn, "find_site", f"registry:{r['inn']}", {"inn": r["inn"]})
-        conn.execute("UPDATE registry SET discovery = 'queued' WHERE inn = %s", (r["inn"],))
+    with conn.pipeline():  # one round trip per batch, not per company: matters against a remote database
+        for r in rows:
+            queue.enqueue(conn, "find_site", f"registry:{r['inn']}", {"inn": r["inn"]})
+    conn.execute("UPDATE registry SET discovery = 'queued' WHERE inn = ANY(%s)", ([r["inn"] for r in rows],))
     conn.commit()
     print(f"{len(rows)} companies queued")
     deadline = time.monotonic() + args.wait * 60

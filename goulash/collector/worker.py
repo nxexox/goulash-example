@@ -21,13 +21,20 @@ log = logging.getLogger("goulash.worker")
 
 
 class Context:
-    def __init__(self, fetcher: Fetcher, snapshots: SnapshotStore, search: SearchProvider | None = None):
+    def __init__(
+        self,
+        fetcher: Fetcher,
+        snapshots: SnapshotStore,
+        search: SearchProvider | None = None,
+        probe: Fetcher | None = None,
+    ):
         self.fetcher = fetcher
         self.snapshots = snapshots
         self.search = search
+        self.probe = probe or fetcher  # fast-fail fetcher for guessed candidate sites
 
-    def get_page(self, url: str) -> tuple[Page, str]:
-        resp = self.fetcher.fetch(FetchRequest(url))
+    def get_page(self, url: str, probe: bool = False) -> tuple[Page, str]:
+        resp = (self.probe if probe else self.fetcher).fetch(FetchRequest(url))
         if resp.status >= 400:
             raise FetchError(f"HTTP {resp.status} for {url}", retryable=resp.status >= 500 or resp.status == 429)
         digest = self.snapshots.put(resp.body)
@@ -102,12 +109,12 @@ def handle_enrich_site(conn, ctx: Context, payload: dict) -> str:
 
 
 def _site_pages(ctx: Context, url: str) -> tuple[list[Page], list[tuple]]:
-    page, digest = ctx.get_page(url)
+    page, digest = ctx.get_page(url, probe=True)
     first = extract_site(page)
     raw, pages = [page], [(first, digest)]
     for sub in first.subpages[:3]:
         try:
-            p, d = ctx.get_page(sub)
+            p, d = ctx.get_page(sub, probe=True)
             raw.append(p)
             pages.append((extract_site(p), d))
         except FetchError as e:
@@ -191,7 +198,8 @@ def run(
 ) -> dict:
     kinds = kinds or list(HANDLERS)
     search = search or discovery.default_provider()
-    ctx = Context(fetcher or build_fetcher(max_requests=max_jobs * 15), SnapshotStore(), search)
+    probe = fetcher or build_fetcher(max_requests=max_jobs * 15, timeout=8, attempts=1)
+    ctx = Context(fetcher or build_fetcher(max_requests=max_jobs * 15), SnapshotStore(), search, probe)
     stats = {"done": 0, "failed": 0, "deferred": 0, "busy": 0}
     lock = threading.Lock()
 
