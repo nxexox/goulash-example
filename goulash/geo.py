@@ -3,6 +3,7 @@
 Office location is not a delivery area: callers keep the two apart.
 """
 
+import difflib
 import re
 
 from goulash.text import normalize, stem, words
@@ -165,6 +166,19 @@ for _r in REGIONS:
     if len(_w) == 1 and not _w[0].startswith(("москв", "санкт")):
         _REGION_KEYS[(stem(_w[0]),)] = _r
 _MAX_KEY = max(len(k) for k in _CITY_KEYS)
+
+
+_FUZZY_NAMES = {normalize(c): c for cs in REGIONS.values() for c in cs}
+
+
+def fuzzy_city(word: str) -> str | None:
+    """A city typed with a typo ("екатериньбург", "крснодар"). Only long words: short ones collide too easily."""
+    w = normalize(word)
+    if len(w) < 6:
+        return None
+    # typos score 0.92+, look-alike product words (корова ~ Ковров, выбора ~ Выборг) 0.85 or less
+    hit = difflib.get_close_matches(w, _FUZZY_NAMES, n=1, cutoff=0.88)
+    return _FUZZY_NAMES[hit[0]] if hit else None
 
 
 def region_of_city(city: str | None) -> str | None:

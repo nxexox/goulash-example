@@ -2,7 +2,7 @@
 {% from "_macros.html" import search_form, fact_value, region_badge, completeness, shortlist_form %}
 {% block title %}{{ q or 'Поиск' }}{% endblock %}
 {% block content %}
-{{ search_form(q, f) }}
+{{ search_form(q, f, facets=result.facets) }}
 
 <div id="results" class="results">
 {% if applied or result.hits %}

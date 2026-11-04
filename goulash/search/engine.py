@@ -24,6 +24,31 @@ class Filters:
     has_contacts: bool = False
     has_conditions: bool = False  # any of moq / price / delivery known
     sort: str = "relevance"  # key of SORTS
+    need: set[str] = field(default_factory=set)  # keys of NEEDS: every one must be known
+
+
+# Separate "must have" filters, grouped as in the UI. Each checks one kind of data, so the count next to it is honest.
+NEEDS: dict[str, tuple[str, str]] = {
+    "phone": ("Контакты", "Телефон"),
+    "email": ("Контакты", "E-mail"),
+    "site": ("Контакты", "Сайт"),
+    "moq": ("Условия", "Мин. заказ"),
+    "price": ("Условия", "Цена"),
+    "delivery": ("Условия", "Доставка"),
+    "certificates": ("Условия", "Документы"),
+}
+
+
+def has(card: SupplierCard, need: str) -> bool:
+    if need == "phone":
+        return bool(card.phones)
+    if need == "email":
+        return bool(card.emails)
+    if need == "site":
+        return bool(card.website)
+    if need == "delivery":
+        return bool(card.facts.get("delivery") or card.facts.get("delivery_regions"))
+    return bool(card.facts.get(need))
 
 
 SORTS = {
@@ -53,6 +78,7 @@ class SearchResult:
     unmatched: list[str] = field(default_factory=list)
     relaxed: bool = False
     discovery_logged: bool = False
+    facets: dict[str, int] = field(default_factory=dict)  # need -> results that have it (before need filters)
 
     @property
     def in_region(self) -> list[Hit]:
@@ -76,6 +102,20 @@ def _correct(conn, stem: str) -> str | None:
     return row["term"] if row and row["sim"] >= TYPO_SIMILARITY else None
 
 
+def _more_common(conn, stem: str) -> str | None:
+    """A known but rare word that is a typo of a common one ("шоколат" on one site vs "шоколад" on fifty)."""
+    row = conn.execute("SELECT freq FROM vocabulary WHERE term = %s", (stem,)).fetchone()
+    if not row or row["freq"] > 2:
+        return None
+    alt = conn.execute(
+        """SELECT term FROM vocabulary WHERE term %% %s AND term <> %s AND freq >= 10 * %s
+                  AND similarity(term, %s) >= 0.5 AND left(term, 2) = left(%s, 2)
+           ORDER BY similarity(term, %s) DESC, freq DESC LIMIT 1""",
+        (stem, stem, row["freq"], stem, stem, stem),
+    ).fetchone()
+    return alt["term"] if alt else None
+
+
 def _lexeme(s: str) -> str:
     return re.sub(r"[^\w]", "", s)
 
@@ -96,7 +136,12 @@ def search(conn, raw: str, filters: Filters | None = None, limit: int = 40) -> S
     for t in q.terms:
         labels.append(t.word)
         g = equivalent_stems(t.stem)
-        if not any(_known(conn, s) for s in g):
+        if common := _more_common(conn, t.stem):
+            res.corrections.append((t.word, common))
+            labels[-1] = common + "…"
+            g = g | equivalent_stems(common)
+            t.categories |= categories_for_stem(common)
+        elif not any(_known(conn, s) for s in g):
             fixed = _correct(conn, t.stem)
             if fixed:
                 res.corrections.append((t.word, fixed))
@@ -129,6 +174,10 @@ def search(conn, raw: str, filters: Filters | None = None, limit: int = 40) -> S
         if filters.has_contacts and not (card.phones or card.emails):
             continue
         if filters.has_conditions and not any(card.facts.get(k) for k in ("moq", "price", "delivery")):
+            continue
+        for n in NEEDS:
+            res.facets[n] = res.facets.get(n, 0) + has(card, n)
+        if not all(has(card, n) for n in filters.need):
             continue
         res.hits.append(hit)
     res.hits.sort(key=lambda h: -h.score)

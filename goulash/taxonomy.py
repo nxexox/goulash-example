@@ -386,14 +386,20 @@ BY_ID = {c.id: c for c in CATEGORIES}
 
 # single stem -> category ids; multi-word aliases -> tuple of stems
 _STEM_INDEX: dict[str, set[str]] = {}
+_STEM_WORD: dict[str, str] = {}  # stem -> a readable word for it, to show a typo fix in the search box
 _PHRASES: list[tuple[tuple[str, ...], str]] = []
 for _c in CATEGORIES:
     for _a in (_c.title, *_c.aliases):
         _s = tuple(stems(_a, drop_stop=False))
         if len(_s) == 1:
             _STEM_INDEX.setdefault(_s[0], set()).add(_c.id)
+            _STEM_WORD.setdefault(_s[0], _a.lower())
         elif _s:
             _PHRASES.append((_s, _c.id))
+
+
+def word_for_stem(s: str) -> str | None:
+    return _STEM_WORD.get(s)
 
 
 def categories_for_text(text: str) -> list[str]:

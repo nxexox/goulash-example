@@ -150,6 +150,9 @@ def test_web_pages(conn, db_url):
         # a place typed in the query becomes the region filter and wins over a stale select value
         page = client.get("/search", params={"q": "сыр екатеринбург", "region": "Москва и Московская область"}).text
         assert "Регион: Свердловская область (из запроса «екатеринбург»)" in page and 'value="сыр"' in page
+        page = client.get("/search", params={"q": "творог", "need": ["moq"]}).text
+        assert "МОЛОКО ПЛЮС" in page and "Есть: мин. заказ" in page
+        assert "СЫРОВАРНЯ УРАЛ" not in client.get("/search", params={"q": "сыр", "need": ["moq"]}).text
         page = client.get("/search", params={"q": "сыр", "sort": "name"}).text
         assert page.index("МОЛОКО ПЛЮС") < page.index("СЫРОВАРНЯ УРАЛ")
         client.post(f"/supplier/{sid}/notes", data={"text": "Позвонить во вторник"})

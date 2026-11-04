@@ -1,4 +1,4 @@
-{% macro search_form(q='', f=None, big=False) %}
+{% macro search_form(q='', f=None, big=False, facets=None) %}
 <form id="search-form" class="search {% if big %}big{% endif %}" action="/search" method="get" data-auto="{{ 'off' if big else 'on' }}">
   <div class="search-row">
     <input name="q" value="{{ q }}" placeholder="Товар и город: моцарелла Екатеринбург, соки Краснодар, сникерс спб" autofocus aria-label="Что ищете" autocomplete="off">
@@ -14,10 +14,25 @@
       <option value="">Все категории</option>
       {% for c in CATEGORIES %}<option value="{{ c.id }}" {% if f and f.category == c.id %}selected{% endif %}>{{ c.title }}</option>{% endfor %}
     </select>
-    <label class="check {% if not (f and f.region) %}disabled{% endif %}" title="{% if not (f and f.region) %}Сначала выберите регион{% endif %}">
-      <input type="checkbox" name="only_region" value="1" {% if f and f.only_region %}checked{% endif %} {% if not (f and f.region) %}disabled{% endif %}> Только связанные с регионом</label>
-    <label class="check"><input type="checkbox" name="has_contacts" value="1" {% if f and f.has_contacts %}checked{% endif %}> С контактами</label>
-    <label class="check"><input type="checkbox" name="has_conditions" value="1" {% if f and f.has_conditions %}checked{% endif %}> С условиями: мин. заказ, цена, доставка</label>
+    {% set region_on = f and f.region %}
+    <div class="toggles" role="group" aria-label="Регион">
+      <span class="tg-label">Регион</span>
+      <label class="pill {% if not region_on %}off{% endif %}" title="{{ 'Скрыть поставщиков без офиса или доставки в регионе' if region_on else 'Сначала выберите регион' }}">
+        <input type="checkbox" name="only_region" value="1" {% if f and f.only_region %}checked{% endif %} {% if not region_on %}disabled{% endif %}>
+        <span>Только связанные</span></label>
+    </div>
+    {% for group in ['Контакты', 'Условия'] %}
+    <div class="toggles" role="group" aria-label="{{ group }}">
+      <span class="tg-label">{{ group }}</span>
+      {% for key, (g, label) in NEEDS.items() if g == group %}
+        {% set n = facets.get(key) if facets else none %}
+        {% set on = f and key in f.need %}
+        <label class="pill {% if n == 0 and not on %}off{% endif %}" title="Только поставщики, у которых известно: {{ label|lower }}">
+          <input type="checkbox" name="need" value="{{ key }}" {% if on %}checked{% endif %} {% if n == 0 and not on %}disabled{% endif %}>
+          <span>{{ label }}{% if n is not none %} <i>{{ n }}</i>{% endif %}</span></label>
+      {% endfor %}
+    </div>
+    {% endfor %}
   </div>
   {% endif %}
 </form>

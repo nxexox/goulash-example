@@ -131,3 +131,11 @@ def test_query_place_moves_out_of_the_text():
 def test_brand_names_map_to_categories():
     assert parse("сникерс").terms[0].categories == {"chocolate"}
     assert "coffee_tea" in parse("нескафе").category_ids
+
+
+def test_misspelt_city_is_a_place_not_a_product():
+    q = parse("сыр екатериньбург")
+    assert q.region == "Свердловская область" and q.place_fixed == "Екатеринбург" and q.product_text == "сыр"
+    assert parse("сыр крснодар").place_fixed == "Краснодар"
+    for word in ("корова", "кормов", "выбора", "красного"):  # look-alike product words stay products
+        assert parse(word).region is None, word

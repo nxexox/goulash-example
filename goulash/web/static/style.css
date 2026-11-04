@@ -70,10 +70,24 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); ou
 .search-row input { flex: 1 1 320px; }
 .search-row select, .search-row .ts-wrapper { flex: 0 1 300px; }
 .search.big .search-row input, .search.big .search-row select, .search.big .btn { padding: 14px 16px; font-size: 16px; }
-.filters { display: flex; gap: 8px 16px; flex-wrap: wrap; align-items: center; margin: 10px 0 0; font-size: 14px; }
+.filters { display: flex; gap: 10px 20px; flex-wrap: wrap; align-items: center; margin: 12px 0 0; font-size: 14px; }
 .filters label { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); cursor: pointer; }
 .filters .ts-wrapper { flex: 0 1 260px; min-width: 220px; }
-.filters label.disabled { opacity: 0.5; cursor: not-allowed; }
+.toggles { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.tg-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-right: 2px; }
+.pill { position: relative; display: inline-flex; }
+.pill input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.pill span { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink); border-radius: 999px; padding: 6px 12px; font-size: 13px; cursor: pointer; user-select: none;
+  transition: background 0.12s, border-color 0.12s; }
+.pill span i { font-style: normal; color: var(--muted); font-size: 12px; }
+.pill:hover span { border-color: var(--accent); }
+.pill input:checked + span { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-ink); }
+.pill input:checked + span::before { content: "✓"; font-size: 11px; }
+.pill input:checked + span i { color: var(--accent-ink); }
+.pill input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pill.off span { opacity: 0.45; cursor: not-allowed; }
+.pill.off:hover span { border-color: var(--line); }
 .filters input[type=checkbox], .cmp input { accent-color: var(--accent); width: 16px; height: 16px; padding: 0; }
 .examples { margin-top: 12px; color: var(--muted); font-size: 14px; display: flex; gap: 6px 12px; flex-wrap: wrap; }
 
@@ -166,6 +180,7 @@ body.loading .search .btn.primary { opacity: 0.7; }
 .data-fill li.no { color: var(--muted); }
 @media (max-width: 600px) {
   .search-row .btn { flex: 1 1 100%; }
+  .filters .ts-wrapper { flex: 1 1 100%; }
   .data-fill .pop { right: auto; left: 0; }
 }
 

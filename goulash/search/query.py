@@ -32,6 +32,7 @@ class ParsedQuery:
     quantities: list[str] = field(default_factory=list)
     hints: list[str] = field(default_factory=list)
     place: str | None = None  # the place as typed ("питер"), moved from the query text into the region filter
+    place_fixed: str | None = None  # the city a misspelt place was read as ("екатериньбург" -> Екатеринбург)
     product_text: str = ""  # the query without the place: what stays in the search box
 
     @property
@@ -59,6 +60,15 @@ def parse(raw: str) -> ParsedQuery:
     place_idx: set[int] = set()
     for _, a, b in city_spans + region_spans:
         place_idx.update(range(a, b))
+    if not city_spans and not region_spans:
+        # a misspelt city is still a place, not a product word: try the city dictionary with a typo tolerance
+        for i, w in enumerate(toks):
+            if categories_for_stem(stem(w)):
+                continue
+            if city := geo.fuzzy_city(w):
+                q.city, q.region, q.place_fixed = city, geo.region_of_city(city), city
+                place_idx.add(i)
+                break
     if place_idx:
         # "область"/"край"/"в" next to a region name are part of the place, not the product
         place_idx.update(i for i, w in enumerate(toks) if w in {"область", "обл", "край", "республика"})

@@ -1,5 +1,6 @@
 """Web UI + JSON API. Online path reads only the prepared database: no external sites, no LLM."""
 
+import re
 from contextlib import asynccontextmanager
 from dataclasses import asdict
 from datetime import UTC, datetime
@@ -7,15 +8,15 @@ from pathlib import Path
 from urllib.parse import urlencode
 from zoneinfo import ZoneInfo
 
-from fastapi import Depends, FastAPI, Form, HTTPException, Request
+from fastapi import Depends, FastAPI, Form, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from goulash import db, repo
 from goulash.geo import REGION_NAMES
-from goulash.search.engine import SORTS, Filters, search
-from goulash.taxonomy import BY_ID, CATEGORIES
+from goulash.search.engine import NEEDS, SORTS, Filters, search
+from goulash.taxonomy import BY_ID, CATEGORIES, word_for_stem
 
 HERE = Path(__file__).parent
 TZ = ZoneInfo("Europe/Moscow")
@@ -69,6 +70,7 @@ templates.env.globals.update(
     FIELDS=repo.DECISION_FIELDS,
     STATUSES=repo.SHORTLIST_STATUSES,
     SORTS=SORTS,
+    NEEDS=NEEDS,
 )
 
 
@@ -78,10 +80,17 @@ def get_conn():
 
 
 def _filters(
-    region: str, category: str, only_region: str, has_contacts: str, has_conditions: str, sort: str = "relevance"
+    region: str,
+    category: str,
+    only_region: str,
+    has_contacts: str,
+    has_conditions: str,
+    sort: str = "relevance",
+    need: list[str] | None = None,
 ) -> Filters:
     return Filters(
         sort=sort if sort in SORTS else "relevance",
+        need={n for n in need or [] if n in NEEDS},
         region=region or None,
         category=category or None,
         only_region=bool(only_region),
@@ -119,41 +128,45 @@ def search_page(
     region: str = "",
     category: str = "",
     only_region: str = "",
-    has_contacts: str = "",
-    has_conditions: str = "",
+    need: list[str] = Query(default=[]),
     sort: str = "relevance",
     conn=Depends(get_conn),
 ):
-    filters = _filters(region, category, only_region, has_contacts, has_conditions, sort)
+    filters = _filters(region, category, only_region, "", "", sort, need)
     result = search(conn, q, filters)
+    parsed = result.query
     # A place typed in the query moves into the region filter and out of the search box, so the next change of
-    # the region select is not overridden by a stale city left in the text.
-    shown_q = result.query.product_text if result.query.place else q
+    # the region select is not overridden by a stale city left in the text. Fixed typos are shown fixed.
+    shown_q = parsed.product_text if parsed.place else q
+    for word, fixed in result.corrections:
+        if better := word_for_stem(fixed):
+            shown_q = re.sub(rf"(?i)\b{re.escape(word)}\b", better, shown_q)
     filters.region = result.region
     params = {
         "q": shown_q,
         "region": filters.region or "",
         "category": category,
         "only_region": only_region,
-        "has_contacts": has_contacts,
-        "has_conditions": has_conditions,
-        "sort": "" if sort == "relevance" else sort,
+        "need": sorted(filters.need),
+        "sort": "" if filters.sort == "relevance" else filters.sort,
     }
     applied = []  # (label, url without this filter)
     if shown_q:
         applied.append((f"Запрос: {shown_q}", search_url(**(params | {"q": ""}))))
     if filters.region:
-        how = f" (из запроса «{result.query.place}»)" if result.query.place else ""
+        how = ""
+        if parsed.place_fixed:
+            how = f" (из запроса «{parsed.place}», исправили на «{parsed.place_fixed}»)"
+        elif parsed.place:
+            how = f" (из запроса «{parsed.place}»)"
         applied.append((f"Регион: {filters.region}{how}", search_url(**(params | {"region": "", "only_region": ""}))))
     if category in BY_ID:
         applied.append((f"Категория: {BY_ID[category].title}", search_url(**(params | {"category": ""}))))
-    for key, label in (
-        ("only_region", "Только связанные с регионом"),
-        ("has_contacts", "С контактами"),
-        ("has_conditions", "С условиями"),
-    ):
-        if params[key]:
-            applied.append((label, search_url(**(params | {key: ""}))))
+    if only_region and filters.region:
+        applied.append(("Только связанные с регионом", search_url(**(params | {"only_region": ""}))))
+    for n in sorted(filters.need, key=list(NEEDS).index):
+        group, label = NEEDS[n]
+        applied.append((f"Есть: {label.lower()}", search_url(**(params | {"need": sorted(filters.need - {n})}))))
     # categories the query was widened to when the product itself is not in the catalog ("марс" -> chocolate)
     fallback_categories = [
         (BY_ID[c].title, search_url(category=c, region=filters.region))
@@ -256,9 +269,10 @@ def api_search(
     has_contacts: str = "",
     has_conditions: str = "",
     sort: str = "relevance",
+    need: list[str] = Query(default=[]),
     conn=Depends(get_conn),
 ):
-    r = search(conn, q, _filters(region, category, only_region, has_contacts, has_conditions, sort))
+    r = search(conn, q, _filters(region, category, only_region, has_contacts, has_conditions, sort, need))
     return JSONResponse(
         {
             "query": q,
@@ -310,7 +324,7 @@ def healthz(conn=Depends(get_conn)):
 
 
 def search_url(**params) -> str:
-    return "/search?" + urlencode({k: v for k, v in params.items() if v})
+    return "/search?" + urlencode({k: v for k, v in params.items() if v}, doseq=True)
 
 
 templates.env.globals["search_url"] = search_url
