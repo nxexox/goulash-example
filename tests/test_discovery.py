@@ -95,6 +95,11 @@ def test_verify_by_inn_or_full_name_and_city():
     req = parse_html("<p>Реквизиты: ИНН 6670000001 КПП 667001001</p>", "https://a.ru/rekvizity")
     assert discovery.verify([req], "6670000001", "ООО ДРУГОЕ", None) == "inn"
     assert discovery.verify([page], "6670000001", "ООО МОЛОКО", None) is None  # bare brand word is not enough
+    # a short one-word name must appear as the legal name, not as a plain word next to a big city
+    word = parse_html("<p>Энергия вкуса! Доставка по Санкт-Петербургу</p>", "https://e.ru/")
+    assert discovery.verify([word], "1", 'ООО "ЭНЕРГИЯ"', "Санкт-Петербург") is None
+    legal = parse_html("<p>© ООО «Энергия», Санкт-Петербург</p>", "https://e.ru/")
+    assert discovery.verify([legal], "1", 'ООО "ЭНЕРГИЯ"', "Санкт-Петербург") == "name+city"
     # no city in the registry: the region must be on the site; with neither known only the INN counts
     assert discovery.verify([page], "1", 'ООО "СЫРОВАРНЯ УРАЛ"', None, "Свердловская область") is None
     reg = parse_html("<p>ООО Сыроварня Урал, Свердловская обл.</p>", "https://a.ru/")

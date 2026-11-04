@@ -256,6 +256,12 @@ def verify(pages: list[Page], inn: str, name: str, city: str | None, region: str
     core = core_name(name)
     if len(core) < 6 or core not in text:
         return None
+    if " " not in core or len(core) < 12:
+        # a short or one-word name ("энергия", "новый уровень") shows up on unrelated sites, so it must appear as
+        # the legal name: 'ООО «Энергия»' in the footer or requisites, not just as a word on the page
+        legal = rf"\b(?:ооо|ао|пао|зао|оао|ип|пк|тд|гк|компания)\s*[\"«“„']*\s*{re.escape(core)}\b"
+        if not re.search(legal, text):
+            return None
     if city:
         return "name+city" if normalize(city) in text else None
     if region:
